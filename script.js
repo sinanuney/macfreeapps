@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchAndRenderCategories() {
         try {
-            const response = await fetch('http://127.0.0.1:5001/api/categories');
+            const response = await fetch('/api/categories');
             if (!response.ok) throw new Error('Kategoriler yüklenemedi');
             const categoryData = await response.json();
             
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show loading state
         showLoadingState();
 
-        const url = new URL('/api/apps', 'http://127.0.0.1:5001');
+        const url = new URL('/api/apps', window.location.origin);
         url.searchParams.append('page', page);
         url.searchParams.append('limit', 20); // 20 uygulama per sayfa
         if (search) url.searchParams.append('search', search);
@@ -691,7 +691,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show loading state
         showLoadingState();
 
-        const url = new URL('/api/apps', 'http://127.0.0.1:5001');
+        const url = new URL('/api/apps', window.location.origin);
         url.searchParams.append('page', page);
         url.searchParams.append('limit', 20);
         if (search) url.searchParams.append('search', search);

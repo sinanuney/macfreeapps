@@ -1,0 +1,91 @@
+{
+    "name": "MacFreeApps - Ücretsiz Mac Uygulamaları",
+    "short_name": "MacFreeApps",
+    "description": "MacFreeApps ile ücretsiz Mac uygulamalarını keşfedin. En popüler ve güncel Mac uygulamaları, indirme linkleri ve detaylı açıklamalar.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "tr",
+    "dir": "ltr",
+    "categories": ["productivity", "utilities", "entertainment"],
+    "icons": [
+        {
+            "src": "/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "MacFreeApps Desktop View"
+        },
+        {
+            "src": "/screenshot-mobile.png",
+            "sizes": "375x667",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "MacFreeApps Mobile View"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Oyunlar",
+            "short_name": "Oyunlar",
+            "description": "Mac oyunlarını görüntüle",
+            "url": "/?category=Oyunlar",
+            "icons": [
+                {
+                    "src": "/favicon-32x32.png",
+                    "sizes": "32x32"
+                }
+            ]
+        },
+        {
+            "name": "Programlar",
+            "short_name": "Programlar",
+            "description": "Mac programlarını görüntüle",
+            "url": "/?category=Programlar",
+            "icons": [
+                {
+                    "src": "/favicon-32x32.png",
+                    "sizes": "32x32"
+                }
+            ]
+        },
+        {
+            "name": "Favoriler",
+            "short_name": "Favoriler",
+            "description": "Favori uygulamalarınızı görüntüle",
+            "url": "/?category=Favoriler",
+            "icons": [
+                {
+                    "src": "/favicon-32x32.png",
+                    "sizes": "32x32"
+                }
+            ]
+        }
+    ]
+}

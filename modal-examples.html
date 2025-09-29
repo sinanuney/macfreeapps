@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal/Popup Sistemi Örnekleri</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1rem;">
+        <h1>Modal/Popup Sistemi Örnekleri</h1>
+        <p>Bu sayfa modal sisteminin farklı kullanım örneklerini gösterir.</p>
+
+        <div class="examples-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+            
+            <!-- Modal Examples -->
+            <div class="example-section">
+                <h2><i class="fas fa-window-maximize"></i> Modal Örnekleri</h2>
+                
+                <div class="example-buttons">
+                    <button class="btn btn-primary" onclick="showModal({
+                        title: 'Bilgi Modalı',
+                        content: '<p>Bu bir bilgi modalıdır. Kullanıcıya önemli bilgileri göstermek için kullanılır.</p>',
+                        type: 'info',
+                        size: 'md'
+                    })">
+                        Bilgi Modalı
+                    </button>
+
+                    <button class="btn btn-success" onclick="showModal({
+                        title: 'Başarı Modalı',
+                        content: '<p><i class="fas fa-check-circle" style="color: #28a745; font-size: 2rem; display: block; text-align: center; margin-bottom: 1rem;"></i>İşlem başarıyla tamamlandı!</p>',
+                        type: 'success',
+                        size: 'sm'
+                    })">
+                        Başarı Modalı
+                    </button>
+
+                    <button class="btn btn-warning" onclick="showModal({
+                        title: 'Uyarı Modalı',
+                        content: '<p><i class="fas fa-exclamation-triangle" style="color: #ffc107; font-size: 2rem; display: block; text-align: center; margin-bottom: 1rem;"></i>Bu işlem geri alınamaz!</p>',
+                        type: 'warning',
+                        size: 'md'
+                    })">
+                        Uyarı Modalı
+                    </button>
+
+                    <button class="btn btn-danger" onclick="showModal({
+                        title: 'Hata Modalı',
+                        content: '<p><i class="fas fa-times-circle" style="color: #dc3545; font-size: 2rem; display: block; text-align: center; margin-bottom: 1rem;"></i>Bir hata oluştu!</p>',
+                        type: 'danger',
+                        size: 'md'
+                    })">
+                        Hata Modalı
+                    </button>
+
+                    <button class="btn btn-info" onclick="showModal({
+                        title: 'Büyük Modal',
+                        content: '<p>Bu büyük bir modal örneğidir. Daha fazla içerik göstermek için kullanılır.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>',
+                        type: 'info',
+                        size: 'lg',
+                        buttons: [
+                            {
+                                text: 'İptal',
+                                class: 'btn-secondary',
+                                onclick: () => console.log('İptal edildi')
+                            },
+                            {
+                                text: 'Kaydet',
+                                class: 'btn-primary',
+                                onclick: () => console.log('Kaydedildi')
+                            }
+                        ]
+                    })">
+                        Büyük Modal
+                    </button>
+                </div>
+            </div>
+
+            <!-- Confirmation Examples -->
+            <div class="example-section">
+                <h2><i class="fas fa-question-circle"></i> Onay Diyalogları</h2>
+                
+                <div class="example-buttons">
+                    <button class="btn btn-warning" onclick="showConfirm({
+                        title: 'Silme Onayı',
+                        message: 'Bu öğeyi silmek istediğinizden emin misiniz?',
+                        confirmText: 'Sil',
+                        cancelText: 'İptal',
+                        onConfirm: () => showToast({title: 'Silindi', message: 'Öğe başarıyla silindi', type: 'success'}),
+                        onCancel: () => showToast({title: 'İptal', message: 'Silme işlemi iptal edildi', type: 'info'})
+                    })">
+                        Silme Onayı
+                    </button>
+
+                    <button class="btn btn-primary" onclick="showConfirm({
+                        title: 'Çıkış Onayı',
+                        message: 'Değişiklikleriniz kaydedilmedi. Çıkmak istediğinizden emin misiniz?',
+                        confirmText: 'Çık',
+                        cancelText: 'Kal',
+                        onConfirm: () => showToast({title: 'Çıkıldı', message: 'Sayfadan çıkıldı', type: 'info'}),
+                        onCancel: () => showToast({title: 'Kaldı', message: 'Sayfada kaldınız', type: 'success'})
+                    })">
+                        Çıkış Onayı
+                    </button>
+                </div>
+            </div>
+
+            <!-- Toast Examples -->
+            <div class="example-section">
+                <h2><i class="fas fa-bell"></i> Toast Bildirimleri</h2>
+                
+                <div class="example-buttons">
+                    <button class="btn btn-success" onclick="showToast({
+                        title: 'Başarılı',
+                        message: 'İşlem başarıyla tamamlandı!',
+                        type: 'success',
+                        duration: 3000
+                    })">
+                        Başarı Toast
+                    </button>
+
+                    <button class="btn btn-danger" onclick="showToast({
+                        title: 'Hata',
+                        message: 'Bir hata oluştu!',
+                        type: 'error',
+                        duration: 5000
+                    })">
+                        Hata Toast
+                    </button>
+
+                    <button class="btn btn-warning" onclick="showToast({
+                        title: 'Uyarı',
+                        message: 'Dikkatli olun!',
+                        type: 'warning',
+                        duration: 4000
+                    })">
+                        Uyarı Toast
+                    </button>
+
+                    <button class="btn btn-info" onclick="showToast({
+                        title: 'Bilgi',
+                        message: 'Yeni bir güncelleme mevcut.',
+                        type: 'info',
+                        duration: 6000
+                    })">
+                        Bilgi Toast
+                    </button>
+                </div>
+            </div>
+
+            <!-- Popup Examples -->
+            <div class="example-section">
+                <h2><i class="fas fa-comment"></i> Popup Örnekleri</h2>
+                
+                <div class="example-buttons">
+                    <button class="btn btn-primary" onclick="showPopup({
+                        content: '<h4>Hoş Geldiniz!</h4><p>Yeni özellikler hakkında bilgi almak ister misiniz?</p>',
+                        position: 'top-right',
+                        duration: 5000
+                    })">
+                        Sağ Üst Popup
+                    </button>
+
+                    <button class="btn btn-success" onclick="showPopup({
+                        content: '<h4>Yeni Mesaj</h4><p>Size yeni bir mesaj geldi.</p>',
+                        position: 'top-left',
+                        duration: 4000
+                    })">
+                        Sol Üst Popup
+                    </button>
+
+                    <button class="btn btn-warning" onclick="showPopup({
+                        content: '<h4>Bildirim</h4><p>Önemli bir güncelleme yapıldı.</p>',
+                        position: 'bottom-right',
+                        duration: 6000
+                    })">
+                        Sağ Alt Popup
+                    </button>
+
+                    <button class="btn btn-info" onclick="showPopup({
+                        content: '<h4>Merkez Popup</h4><p>Bu popup ekranın ortasında görünür.</p>',
+                        position: 'center',
+                        duration: 0
+                    })">
+                        Merkez Popup
+                    </button>
+                </div>
+            </div>
+
+            <!-- Alert Examples -->
+            <div class="example-section">
+                <h2><i class="fas fa-exclamation"></i> Alert Diyalogları</h2>
+                
+                <div class="example-buttons">
+                    <button class="btn btn-info" onclick="showAlert({
+                        title: 'Bilgi',
+                        message: 'Bu bir bilgi mesajıdır.',
+                        type: 'info'
+                    })">
+                        Bilgi Alert
+                    </button>
+
+                    <button class="btn btn-success" onclick="showAlert({
+                        title: 'Başarı',
+                        message: 'İşlem başarıyla tamamlandı!',
+                        type: 'success'
+                    })">
+                        Başarı Alert
+                    </button>
+
+                    <button class="btn btn-warning" onclick="showAlert({
+                        title: 'Uyarı',
+                        message: 'Bu işlem geri alınamaz!',
+                        type: 'warning'
+                    })">
+                        Uyarı Alert
+                    </button>
+
+                    <button class="btn btn-danger" onclick="showAlert({
+                        title: 'Hata',
+                        message: 'Bir hata oluştu!',
+                        type: 'danger'
+                    })">
+                        Hata Alert
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading Examples -->
+            <div class="example-section">
+                <h2><i class="fas fa-spinner"></i> Yükleme Örnekleri</h2>
+                
+                <div class="example-buttons">
+                    <button class="btn btn-primary" onclick="
+                        showLoading('Veriler yükleniyor...');
+                        setTimeout(() => {
+                            closeLoading();
+                            showToast({title: 'Tamamlandı', message: 'Veriler yüklendi', type: 'success'});
+                        }, 3000);
+                    ">
+                        Yükleme Modalı
+                    </button>
+
+                    <button class="btn btn-success" onclick="
+                        showLoading('İşlem yapılıyor...');
+                        setTimeout(() => {
+                            closeLoading();
+                            showToast({title: 'Başarılı', message: 'İşlem tamamlandı', type: 'success'});
+                        }, 2000);
+                    ">
+                        Kısa Yükleme
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Usage Examples -->
+        <div class="usage-examples" style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 12px;">
+            <h2><i class="fas fa-code"></i> Kullanım Örnekleri</h2>
+            
+            <div class="code-examples">
+                <h3>Modal Kullanımı:</h3>
+                <pre style="background: #2d3748; color: #e2e8f0; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>showModal({
+    title: 'Modal Başlığı',
+    content: '&lt;p&gt;Modal içeriği&lt;/p&gt;',
+    type: 'info', // info, success, warning, danger
+    size: 'md',   // sm, md, lg, xl
+    buttons: [
+        {
+            text: 'İptal',
+            class: 'btn-secondary',
+            onclick: () => console.log('İptal')
+        },
+        {
+            text: 'Tamam',
+            class: 'btn-primary',
+            onclick: () => console.log('Tamam')
+        }
+    ]
+});</code></pre>
+
+                <h3>Toast Kullanımı:</h3>
+                <pre style="background: #2d3748; color: #e2e8f0; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>showToast({
+    title: 'Başarılı',
+    message: 'İşlem tamamlandı!',
+    type: 'success', // success, error, warning, info
+    position: 'top-right', // top-right, top-left, bottom-right, bottom-left
+    duration: 5000 // ms (0 = otomatik kapanmaz)
+});</code></pre>
+
+                <h3>Onay Diyalogu:</h3>
+                <pre style="background: #2d3748; color: #e2e8f0; padding: 1rem; border-radius: 8px; overflow-x: auto;"><code>showConfirm({
+    title: 'Onay',
+    message: 'Bu işlemi onaylıyor musunuz?',
+    confirmText: 'Evet',
+    cancelText: 'Hayır',
+    onConfirm: () => console.log('Onaylandı'),
+    onCancel: () => console.log('İptal edildi')
+});</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal-system.js"></script>
+</body>
+</html>

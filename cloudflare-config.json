@@ -1,0 +1,216 @@
+{
+  "cloudflare": {
+    "zones": [
+      {
+        "zone_id": "your-zone-id",
+        "domain": "macfreeapps.com",
+        "settings": {
+          "cache_level": "aggressive",
+          "browser_cache_ttl": 31536000,
+          "edge_cache_ttl": 86400,
+          "minify": {
+            "css": true,
+            "js": true,
+            "html": true
+          },
+          "compression": "brotli",
+          "http2": true,
+          "http3": true,
+          "0rtt": true,
+          "websockets": true,
+          "ipv6": true,
+          "ip_geolocation": true,
+          "webp": true,
+          "polish": "lossless",
+          "mirage": true,
+          "rocket_loader": true,
+          "automatic_https_rewrites": true,
+          "opportunistic_encryption": true,
+          "tls_1_3": true,
+          "always_use_https": true,
+          "hsts": {
+            "enabled": true,
+            "max_age": 31536000,
+            "include_subdomains": true,
+            "preload": true
+          },
+          "security_headers": {
+            "x_frame_options": "DENY",
+            "x_content_type_options": "nosniff",
+            "x_xss_protection": "1; mode=block",
+            "referrer_policy": "strict-origin-when-cross-origin"
+          },
+          "page_rules": [
+            {
+              "url": "macfreeapps.com/*.css",
+              "settings": {
+                "cache_level": "cache_everything",
+                "edge_cache_ttl": 31536000,
+                "browser_cache_ttl": 31536000
+              }
+            },
+            {
+              "url": "macfreeapps.com/*.js",
+              "settings": {
+                "cache_level": "cache_everything",
+                "edge_cache_ttl": 31536000,
+                "browser_cache_ttl": 31536000
+              }
+            },
+            {
+              "url": "macfreeapps.com/*.png",
+              "settings": {
+                "cache_level": "cache_everything",
+                "edge_cache_ttl": 31536000,
+                "browser_cache_ttl": 31536000,
+                "polish": "lossless"
+              }
+            },
+            {
+              "url": "macfreeapps.com/*.jpg",
+              "settings": {
+                "cache_level": "cache_everything",
+                "edge_cache_ttl": 31536000,
+                "browser_cache_ttl": 31536000,
+                "polish": "lossless"
+              }
+            },
+            {
+              "url": "macfreeapps.com/api/*",
+              "settings": {
+                "cache_level": "bypass",
+                "security_level": "high"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "aws": {
+    "cloudfront": {
+      "distribution_id": "E1234567890ABC",
+      "price_class": "PriceClass_100",
+      "origins": [
+        {
+          "domain_name": "macfreeapps.com",
+          "origin_path": "",
+          "custom_origin_config": {
+            "http_port": 80,
+            "https_port": 443,
+            "origin_protocol_policy": "https-only",
+            "origin_ssl_protocols": ["TLSv1.2"],
+            "origin_keepalive_timeout": 5,
+            "origin_read_timeout": 30
+          }
+        }
+      ],
+      "default_cache_behavior": {
+        "target_origin_id": "macfreeapps.com",
+        "viewer_protocol_policy": "redirect-to-https",
+        "cache_policy_id": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+        "compress": true,
+        "allowed_methods": ["GET", "HEAD", "OPTIONS"],
+        "cached_methods": ["GET", "HEAD"]
+      },
+      "cache_behaviors": [
+        {
+          "path_pattern": "*.css",
+          "target_origin_id": "macfreeapps.com",
+          "viewer_protocol_policy": "redirect-to-https",
+          "cache_policy_id": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+          "compress": true,
+          "ttl": {
+            "default_ttl": 31536000,
+            "max_ttl": 31536000,
+            "min_ttl": 0
+          }
+        },
+        {
+          "path_pattern": "*.js",
+          "target_origin_id": "macfreeapps.com",
+          "viewer_protocol_policy": "redirect-to-https",
+          "cache_policy_id": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+          "compress": true,
+          "ttl": {
+            "default_ttl": 31536000,
+            "max_ttl": 31536000,
+            "min_ttl": 0
+          }
+        },
+        {
+          "path_pattern": "*.png",
+          "target_origin_id": "macfreeapps.com",
+          "viewer_protocol_policy": "redirect-to-https",
+          "cache_policy_id": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+          "compress": true,
+          "ttl": {
+            "default_ttl": 31536000,
+            "max_ttl": 31536000,
+            "min_ttl": 0
+          }
+        },
+        {
+          "path_pattern": "api/*",
+          "target_origin_id": "macfreeapps.com",
+          "viewer_protocol_policy": "redirect-to-https",
+          "cache_policy_id": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+          "compress": true,
+          "ttl": {
+            "default_ttl": 300,
+            "max_ttl": 3600,
+            "min_ttl": 0
+          }
+        }
+      ],
+      "custom_error_responses": [
+        {
+          "error_code": 404,
+          "response_code": 200,
+          "response_page_path": "/404.html"
+        }
+      ]
+    }
+  },
+  "nginx": {
+    "server": {
+      "listen": 80,
+      "listen": 443,
+      "server_name": "macfreeapps.com",
+      "root": "/var/www/macfreeapps",
+      "index": "index.html",
+      "gzip": {
+        "on": true,
+        "min_length": 1000,
+        "comp_level": 6,
+        "types": "text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript"
+      },
+      "brotli": {
+        "on": true,
+        "comp_level": 6,
+        "min_length": 1000,
+        "types": "text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript"
+      },
+      "location": {
+        "/": {
+          "try_files": "$uri $uri/ /index.html",
+          "expires": "1h",
+          "add_header": "Cache-Control public"
+        },
+        "~* \\.(css|js|png|jpg|jpeg|gif|ico|svg)$": {
+          "expires": "1y",
+          "add_header": "Cache-Control public, immutable"
+        },
+        "/api/": {
+          "proxy_pass": "http://127.0.0.1:5001",
+          "proxy_set_header": "Host $host",
+          "proxy_set_header": "X-Real-IP $remote_addr",
+          "proxy_set_header": "X-Forwarded-For $proxy_add_x_forwarded_for",
+          "proxy_set_header": "X-Forwarded-Proto $scheme",
+          "expires": "5m",
+          "add_header": "Cache-Control public"
+        }
+      }
+    }
+  }
+}

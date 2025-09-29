@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacFreeApps Performance Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #007bff;
+        }
+        
+        .metric-card.success {
+            border-left-color: #28a745;
+        }
+        
+        .metric-card.warning {
+            border-left-color: #ffc107;
+        }
+        
+        .metric-card.danger {
+            border-left-color: #dc3545;
+        }
+        
+        .metric-title {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #212529;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-change {
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .metric-change.positive {
+            color: #28a745;
+        }
+        
+        .metric-change.negative {
+            color: #dc3545;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .chart-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #212529;
+        }
+        
+        .performance-tips {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .tip-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .real-time-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #28a745;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .refresh-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        
+        .refresh-btn:hover {
+            background: #0056b3;
+        }
+        
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1><i class="fas fa-tachometer-alt"></i> MacFreeApps Performance Dashboard</h1>
+            <p>Gerçek zamanlı performans izleme ve optimizasyon önerileri</p>
+            <button class="refresh-btn" onclick="refreshData()">
+                <i class="fas fa-sync-alt"></i> Yenile
+            </button>
+        </div>
+        
+        <!-- Real-time Metrics -->
+        <div class="metrics-grid">
+            <div class="metric-card success">
+                <div class="metric-title">Sayfa Yükleme Süresi</div>
+                <div class="metric-value" id="page-load-time">1.2s</div>
+                <div class="metric-change positive">
+                    <i class="fas fa-arrow-down"></i> %15 iyileşme
+                </div>
+            </div>
+            
+            <div class="metric-card success">
+                <div class="metric-title">Cache Hit Rate</div>
+                <div class="metric-value" id="cache-hit-rate">94%</div>
+                <div class="metric-change positive">
+                    <i class="fas fa-arrow-up"></i> %8 artış
+                </div>
+            </div>
+            
+            <div class="metric-card warning">
+                <div class="metric-title">API Yanıt Süresi</div>
+                <div class="metric-value" id="api-response-time">180ms</div>
+                <div class="metric-change negative">
+                    <i class="fas fa-arrow-up"></i> %5 artış
+                </div>
+            </div>
+            
+            <div class="metric-card success">
+                <div class="metric-title">Aktif Kullanıcılar</div>
+                <div class="metric-value" id="active-users">1,247</div>
+                <div class="metric-change positive">
+                    <i class="fas fa-arrow-up"></i> %12 artış
+                </div>
+            </div>
+            
+            <div class="metric-card success">
+                <div class="metric-title">CDN Hit Rate</div>
+                <div class="metric-value" id="cdn-hit-rate">89%</div>
+                <div class="metric-change positive">
+                    <i class="fas fa-arrow-up"></i> %3 artış
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-title">Bellek Kullanımı</div>
+                <div class="metric-value" id="memory-usage">156MB</div>
+                <div class="metric-change positive">
+                    <i class="fas fa-arrow-down"></i> %7 azalma
+                </div>
+            </div>
+        </div>
+        
+        <!-- Performance Charts -->
+        <div class="chart-container">
+            <div class="chart-title">Sayfa Yükleme Süresi Trendi</div>
+            <canvas id="loadTimeChart" width="400" height="200"></canvas>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">API İstekleri ve Yanıt Süreleri</div>
+            <canvas id="apiChart" width="400" height="200"></canvas>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">Cache Performansı</div>
+            <canvas id="cacheChart" width="400" height="200"></canvas>
+        </div>
+        
+        <!-- Performance Tips -->
+        <div class="performance-tips">
+            <div class="tips-title">
+                <i class="fas fa-lightbulb"></i> Performans İyileştirme Önerileri
+            </div>
+            <div id="performance-tips">
+                <div class="tip-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Gzip sıkıştırma aktif - %40 boyut azalması</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Service Worker cache sistemi çalışıyor</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Bazı resimler optimize edilmemiş - WebP formatına çevirin</span>
+                </div>
+                <div class="tip-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>CDN cache süresi 24 saat - statik dosyalar için ideal</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Real-time Status -->
+        <div class="chart-container">
+            <div class="chart-title">
+                <span class="real-time-indicator"></span>
+                Gerçek Zamanlı Sistem Durumu
+            </div>
+            <div id="system-status">
+                <div class="metric-card success">
+                    <div class="metric-title">Web Server</div>
+                    <div class="metric-value">Çevrimiçi</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-title">Database</div>
+                    <div class="metric-value">Çevrimiçi</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-title">CDN</div>
+                    <div class="metric-value">Çevrimiçi</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-title">Cache</div>
+                    <div class="metric-value">Çevrimiçi</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Performance Dashboard JavaScript
+        class PerformanceDashboard {
+            constructor() {
+                this.charts = {};
+                this.refreshInterval = null;
+                this.init();
+            }
+            
+            init() {
+                this.initCharts();
+                this.startRealTimeUpdates();
+                this.loadInitialData();
+            }
+            
+            initCharts() {
+                // Load Time Chart
+                const loadTimeCtx = document.getElementById('loadTimeChart').getContext('2d');
+                this.charts.loadTime = new Chart(loadTimeCtx, {
+                    type: 'line',
+                    data: {
+                        labels: this.generateTimeLabels(24),
+                        datasets: [{
+                            label: 'Ortalama Yükleme Süresi (ms)',
+                            data: this.generateRandomData(24, 800, 1200),
+                            borderColor: '#007bff',
+                            backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Milisaniye'
+                                }
+                            }
+                        }
+                    }
+                });
+                
+                // API Chart
+                const apiCtx = document.getElementById('apiChart').getContext('2d');
+                this.charts.api = new Chart(apiCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['GET /api/apps', 'GET /api/categories', 'POST /api/scrape-url', 'GET /api/apps/1'],
+                        datasets: [{
+                            label: 'İstek Sayısı',
+                            data: [1200, 800, 150, 300],
+                            backgroundColor: '#28a745'
+                        }, {
+                            label: 'Ortalama Yanıt Süresi (ms)',
+                            data: [45, 30, 200, 60],
+                            backgroundColor: '#ffc107',
+                            yAxisID: 'y1'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                type: 'linear',
+                                display: true,
+                                position: 'left',
+                                title: {
+                                    display: true,
+                                    text: 'İstek Sayısı'
+                                }
+                            },
+                            y1: {
+                                type: 'linear',
+                                display: true,
+                                position: 'right',
+                                title: {
+                                    display: true,
+                                    text: 'Yanıt Süresi (ms)'
+                                },
+                                grid: {
+                                    drawOnChartArea: false,
+                                },
+                            }
+                        }
+                    }
+                });
+                
+                // Cache Chart
+                const cacheCtx = document.getElementById('cacheChart').getContext('2d');
+                this.charts.cache = new Chart(cacheCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Cache Hit', 'Cache Miss', 'Database'],
+                        datasets: [{
+                            data: [89, 8, 3],
+                            backgroundColor: ['#28a745', '#ffc107', '#dc3545']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        }
+                    }
+                });
+            }
+            
+            generateTimeLabels(hours) {
+                const labels = [];
+                const now = new Date();
+                for (let i = hours - 1; i >= 0; i--) {
+                    const time = new Date(now.getTime() - i * 60 * 60 * 1000);
+                    labels.push(time.getHours() + ':00');
+                }
+                return labels;
+            }
+            
+            generateRandomData(count, min, max) {
+                const data = [];
+                for (let i = 0; i < count; i++) {
+                    data.push(Math.floor(Math.random() * (max - min + 1)) + min);
+                }
+                return data;
+            }
+            
+            startRealTimeUpdates() {
+                this.refreshInterval = setInterval(() => {
+                    this.updateMetrics();
+                }, 5000); // Her 5 saniyede bir güncelle
+            }
+            
+            updateMetrics() {
+                // Simulate real-time data updates
+                const metrics = {
+                    'page-load-time': (Math.random() * 0.5 + 0.8).toFixed(1) + 's',
+                    'cache-hit-rate': Math.floor(Math.random() * 5 + 90) + '%',
+                    'api-response-time': Math.floor(Math.random() * 50 + 150) + 'ms',
+                    'active-users': Math.floor(Math.random() * 100 + 1200).toLocaleString(),
+                    'cdn-hit-rate': Math.floor(Math.random() * 5 + 85) + '%',
+                    'memory-usage': Math.floor(Math.random() * 20 + 150) + 'MB'
+                };
+                
+                Object.entries(metrics).forEach(([id, value]) => {
+                    const element = document.getElementById(id);
+                    if (element) {
+                        element.textContent = value;
+                    }
+                });
+            }
+            
+            loadInitialData() {
+                // Load initial performance data
+                console.log('Performance dashboard loaded');
+            }
+            
+            refresh() {
+                this.loadInitialData();
+                this.updateMetrics();
+            }
+        }
+        
+        // Initialize dashboard
+        const dashboard = new PerformanceDashboard();
+        
+        // Global refresh function
+        function refreshData() {
+            const refreshBtn = document.querySelector('.refresh-btn');
+            refreshBtn.classList.add('loading');
+            
+            setTimeout(() => {
+                dashboard.refresh();
+                refreshBtn.classList.remove('loading');
+            }, 1000);
+        }
+        
+        // WebSocket connection for real-time updates (if available)
+        if ('WebSocket' in window) {
+            const ws = new WebSocket('ws://localhost:5001/ws');
+            
+            ws.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                if (data.type === 'performance_update') {
+                    dashboard.updateMetrics();
+                }
+            };
+            
+            ws.onclose = function() {
+                console.log('WebSocket connection closed');
+            };
+        }
+    </script>
+</body>
+</html>

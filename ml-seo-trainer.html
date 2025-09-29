@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacFreeApps AI Model Eğitici</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+    <style>
+        .ml-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .ml-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .ml-section h2 {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .ml-section h2 i {
+            font-size: 1.5em;
+            animation: pulse 2s infinite;
+        }
+        
+        .data-collection {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        }
+        
+        .model-training {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+        }
+        
+        .model-testing {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #333;
+        }
+        
+        .model-deployment {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+        }
+        
+        .data-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .data-item h4 {
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        
+        .data-item p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .ml-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .btn-ml {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-ml:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-ml:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .progress-container {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0.5rem 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+        
+        .model-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .training-log {
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+        }
+        
+        .log-entry {
+            margin: 0.25rem 0;
+            padding: 0.25rem;
+            border-radius: 5px;
+        }
+        
+        .log-info { background: rgba(33, 150, 243, 0.2); }
+        .log-success { background: rgba(76, 175, 80, 0.2); }
+        .log-warning { background: rgba(255, 193, 7, 0.2); }
+        .log-error { background: rgba(244, 67, 54, 0.2); }
+        
+        .prediction-result {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .prediction-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .confidence-bar {
+            width: 100px;
+            height: 8px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff5722, #ff9800, #ffc107, #8bc34a, #4caf50);
+            transition: width 0.3s ease;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .dark-mode .ml-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        }
+        
+        .dark-mode .data-collection {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        }
+        
+        .dark-mode .model-training {
+            background: linear-gradient(135deg, #16a085 0%, #27ae60 100%);
+        }
+        
+        .dark-mode .model-testing {
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+        }
+        
+        .dark-mode .model-deployment {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="ml-container">
+        <h1><i class="fas fa-brain"></i> MacFreeApps AI Model Eğitici</h1>
+        <p>Kendi SEO AI modelinizi eğitin ve Mac uygulamaları için özel öneriler oluşturun!</p>
+        
+        <!-- Veri Toplama Bölümü -->
+        <div class="ml-section data-collection">
+            <h2><i class="fas fa-database"></i> Veri Toplama</h2>
+            <p>SEO performansı yüksek uygulamalardan veri toplayarak modelimizi eğitiyoruz.</p>
+            
+            <div class="ml-controls">
+                <button class="btn-ml" id="collect-data-btn">
+                    <i class="fas fa-download"></i> Veri Topla
+                </button>
+                <button class="btn-ml" id="analyze-data-btn">
+                    <i class="fas fa-chart-bar"></i> Veri Analiz Et
+                </button>
+                <button class="btn-ml" id="export-data-btn">
+                    <i class="fas fa-file-export"></i> Veri Dışa Aktar
+                </button>
+            </div>
+            
+            <div class="data-item">
+                <h4>Toplanan Veri Örnekleri</h4>
+                <div id="data-samples"></div>
+            </div>
+            
+            <div class="progress-container">
+                <h4>Veri Toplama İlerlemesi</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="data-progress"></div>
+                </div>
+                <p id="data-progress-text">0/1000 örnek toplandı</p>
+            </div>
+        </div>
+        
+        <!-- Model Eğitimi Bölümü -->
+        <div class="ml-section model-training">
+            <h2><i class="fas fa-cogs"></i> Model Eğitimi</h2>
+            <p>TensorFlow.js ile derin öğrenme modelimizi eğitiyoruz.</p>
+            
+            <div class="model-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="training-epochs">0</div>
+                    <div class="stat-label">Epoch</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="training-accuracy">0%</div>
+                    <div class="stat-label">Doğruluk</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="training-loss">0.00</div>
+                    <div class="stat-label">Kayıp</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="training-time">0s</div>
+                    <div class="stat-label">Süre</div>
+                </div>
+            </div>
+            
+            <div class="ml-controls">
+                <button class="btn-ml" id="start-training-btn">
+                    <i class="fas fa-play"></i> Eğitimi Başlat
+                </button>
+                <button class="btn-ml" id="pause-training-btn" disabled>
+                    <i class="fas fa-pause"></i> Duraklat
+                </button>
+                <button class="btn-ml" id="stop-training-btn" disabled>
+                    <i class="fas fa-stop"></i> Durdur
+                </button>
+                <button class="btn-ml" id="save-model-btn" disabled>
+                    <i class="fas fa-save"></i> Modeli Kaydet
+                </button>
+            </div>
+            
+            <div class="progress-container">
+                <h4>Eğitim İlerlemesi</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="training-progress"></div>
+                </div>
+                <p id="training-progress-text">Eğitim başlamadı</p>
+            </div>
+            
+            <div class="training-log" id="training-log">
+                <div class="log-entry log-info">Model eğitici hazır. Veri toplama işlemini başlatın.</div>
+            </div>
+        </div>
+        
+        <!-- Model Testi Bölümü -->
+        <div class="ml-section model-testing">
+            <h2><i class="fas fa-flask"></i> Model Testi</h2>
+            <p>Eğitilmiş modelinizi test edin ve performansını değerlendirin.</p>
+            
+            <div class="ml-controls">
+                <button class="btn-ml" id="load-model-btn">
+                    <i class="fas fa-upload"></i> Model Yükle
+                </button>
+                <button class="btn-ml" id="test-model-btn" disabled>
+                    <i class="fas fa-vial"></i> Modeli Test Et
+                </button>
+                <button class="btn-ml" id="validate-model-btn" disabled>
+                    <i class="fas fa-check-circle"></i> Doğrula
+                </button>
+            </div>
+            
+            <div class="prediction-result" id="prediction-result" style="display: none;">
+                <h4>Model Tahminleri</h4>
+                <div id="prediction-content"></div>
+            </div>
+        </div>
+        
+        <!-- Model Dağıtımı Bölümü -->
+        <div class="ml-section model-deployment">
+            <h2><i class="fas fa-rocket"></i> Model Dağıtımı</h2>
+            <p>Eğitilmiş modelinizi canlı sisteme entegre edin.</p>
+            
+            <div class="ml-controls">
+                <button class="btn-ml" id="deploy-model-btn" disabled>
+                    <i class="fas fa-rocket"></i> Canlıya Al
+                </button>
+                <button class="btn-ml" id="update-admin-btn" disabled>
+                    <i class="fas fa-sync"></i> Admin Panelini Güncelle
+                </button>
+                <button class="btn-ml" id="monitor-model-btn" disabled>
+                    <i class="fas fa-chart-line"></i> Performansı İzle
+                </button>
+            </div>
+            
+            <div class="data-item">
+                <h4>Dağıtım Durumu</h4>
+                <p id="deployment-status">Model henüz dağıtılmadı</p>
+                <p id="model-performance">Performans verisi yok</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="ml-seo-trainer.js"></script>
+</body>
+</html>

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacFree Admin - Uygulama Yöneticisi</title>
+    
+    <!-- SEO Meta Tags for Admin -->
+    <meta name="description" content="MacFree uygulama yöneticisi - Mac uygulamalarını ekle, düzenle ve yönet">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="MacFree">
+    <meta name="theme-color" content="#007bff">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- X-Frame-Options removed - should be set via HTTP headers -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container admin-container">
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+        
+        <!-- HIZLI ERİŞİM MENÜSÜ -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; margin: 0 0 20px 0; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <h2 style="margin: 0 0 15px 0; text-align: center; font-size: 20px;">🚀 HIZLI ERİŞİM MENÜSÜ 🚀</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                <a href="index.html" style="background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: all 0.3s;" target="_blank">🏠 Ana Sayfa</a>
+                <a href="ml-seo-trainer.html" style="background: #17a2b8; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: all 0.3s;" target="_blank">🧠 AI Eğitici</a>
+                <a href="performance-dashboard.html" style="background: #ffc107; color: #333; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: all 0.3s;" target="_blank">📊 Performans</a>
+                <a href="robots.txt" style="background: #6f42c1; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: all 0.3s;" target="_blank">🤖 Robots</a>
+                <a href="sitemap.xml" style="background: #e83e8c; color: white; padding: 10px 20px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: all 0.3s;" target="_blank">🗺️ Sitemap</a>
+            </div>
+        </div>
+        
+        <h1>Uygulama Yöneticisi</h1>
+        
+        <!-- İçerik Moderasyonu Paneli -->
+        <div class="moderation-panel" style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 15px; margin: 20px 0;">
+            <h3 style="margin: 0 0 10px 0; color: #856404;"><i class="fas fa-shield-alt"></i> İçerik Moderasyonu</h3>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button id="scanContent" class="btn-moderation">
+                    <i class="fas fa-search"></i> İçerik Tara
+                </button>
+                <button id="checkSpam" class="btn-moderation">
+                    <i class="fas fa-ban"></i> Spam Kontrolü
+                </button>
+                <button id="validateContent" class="btn-moderation">
+                    <i class="fas fa-check-circle"></i> İçerik Doğrula
+                </button>
+                <button id="generateReport" class="btn-moderation">
+                    <i class="fas fa-chart-bar"></i> Rapor Oluştur
+                </button>
+            </div>
+            <div id="moderationResults" style="margin-top: 15px; display: none;">
+                <h4>Moderasyon Sonuçları:</h4>
+                <div id="moderationList"></div>
+            </div>
+        </div>
+        
+        <!-- İçerik Analizi Paneli -->
+        <div class="analytics-panel" style="background: #f0f8ff; border: 1px solid #87ceeb; border-radius: 8px; padding: 15px; margin: 20px 0;">
+            <h3 style="margin: 0 0 10px 0; color: #4682b4;"><i class="fas fa-chart-line"></i> İçerik Analizi ve Raporlama</h3>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button id="generateAnalytics" class="btn-analytics">
+                    <i class="fas fa-chart-bar"></i> Analiz Oluştur
+                </button>
+                <button id="contentInsights" class="btn-analytics">
+                    <i class="fas fa-lightbulb"></i> İçerik İçgörüleri
+                </button>
+                <button id="categoryAnalysis" class="btn-analytics">
+                    <i class="fas fa-tags"></i> Kategori Analizi
+                </button>
+                <button id="qualityReport" class="btn-analytics">
+                    <i class="fas fa-star"></i> Kalite Raporu
+                </button>
+                <button id="exportAnalytics" class="btn-analytics">
+                    <i class="fas fa-file-export"></i> Rapor Dışa Aktar
+                </button>
+            </div>
+            <div id="analyticsResults" style="margin-top: 15px; display: none;">
+                <h4>Analiz Sonuçları:</h4>
+                <div id="analyticsContent"></div>
+            </div>
+        </div>
+
+        <section class="form-section">
+            <h2>Yeni Uygulama Ekle</h2>
+            <p>Uygulama eklemek için iki yöntem kullanabilirsiniz:</p>
+            
+            <!-- Ekleme Yöntemi Seçimi -->
+            <div class="add-method-selector">
+                <div class="method-tabs">
+                    <button type="button" class="method-tab active" data-method="url">
+                        <i class="fas fa-link"></i> URL ile Otomatik Ekleme
+                    </button>
+                    <button type="button" class="method-tab" data-method="manual">
+                        <i class="fas fa-edit"></i> Manuel Ekleme
+                    </button>
+                </div>
+            </div>
+
+            <!-- URL ile Ekleme Formu -->
+            <div id="url-add-form" class="add-form-content active">
+                <p class="form-description">Uygulama bilgilerini otomatik olarak çekmek için web sitesi veya App Store linkini yapıştırın.</p>
+                <form id="add-app-form">
+                    <div class="form-group">
+                        <label for="app-url">Uygulama URL'si <span class="required">*</span></label>
+                        <input type="url" id="app-url" required placeholder="https://apps.apple.com/tr/app/... veya https://play.google.com/store/apps/...">
+                        <small class="form-help">Desteklenen siteler: App Store, Google Play, GitHub, resmi web siteleri</small>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Bilgileri Çek
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- URL'den Çekilen Verileri Düzenleme Formu -->
+            <div id="scraped-data-form" class="add-form-content">
+                <div class="scraped-form-header">
+                    <h3><i class="fas fa-edit"></i> Çekilen Verileri Düzenle</h3>
+                    <p class="form-description">URL'den çekilen bilgileri kontrol edin ve gerekirse düzenleyin.</p>
+                </div>
+                <form id="scraped-app-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="scraped-name">Uygulama Adı <span class="required">*</span></label>
+                            <input type="text" id="scraped-name" required placeholder="Uygulama adı">
+                        </div>
+                        <div class="form-group">
+                            <label for="scraped-category">Kategori</label>
+                            <select id="scraped-category" class="category-select">
+                                <option value="">Kategori Seçin</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="scraped-version">Sürüm</label>
+                            <input type="text" id="scraped-version" placeholder="örn: Sürüm 3.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="scraped-size">Dosya Boyutu</label>
+                            <input type="text" id="scraped-size" placeholder="Dosya boyutu">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scraped-image">İkon URL'si</label>
+                        <input type="url" id="scraped-image" placeholder="İkon URL'si">
+                        <div id="scraped-image-preview" class="image-preview-container" style="display: none;">
+                            <img id="scraped-preview-img" src="" alt="Önizleme" class="image-preview">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scraped-download">İndirme Linki</label>
+                        <input type="url" id="scraped-download" placeholder="İndirme linki">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scraped-website">Resmi Web Sitesi</label>
+                        <input type="url" id="scraped-website" placeholder="Web sitesi">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scraped-description">Açıklama</label>
+                        <textarea id="scraped-description" rows="4" placeholder="Açıklama"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scraped-internal-images">Uygulama İçi Görseller</label>
+                        <textarea id="scraped-internal-images" rows="3" placeholder="Her satıra bir görsel URL'si yazın..."></textarea>
+                        <small class="form-help">Her satıra bir görsel URL'si yazın. Örnek:<br>
+                        https://example.com/screenshot1.jpg<br>
+                        https://example.com/screenshot2.jpg</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scraped-system-requirements">Sistem Gereksinimleri</label>
+                        <textarea id="scraped-system-requirements" rows="4" placeholder="Sistem gereksinimlerini yazın..."></textarea>
+                        <small class="form-help">Örnek: iOS 14.0 veya üzeri, Android 8.0 veya üzeri, Windows 10, macOS 11.0, vb.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scraped-update-notes">Güncelleme Yenilikleri</label>
+                        <textarea id="scraped-update-notes" rows="5" placeholder="Güncelleme notlarını yazın..."></textarea>
+                        <small class="form-help">Her satıra bir güncelleme notu yazın. Örnek:<br>
+                        📅 12 Eyl 2025 - Sürüm 1.0.20<br>
+                        • Yeni özellik eklendi<br>
+                        • Hata düzeltmeleri</small>
+                    </div>
+
+                    <!-- SEO Bölümü -->
+                    <div class="seo-section">
+                        <h4><i class="fas fa-search"></i> SEO Ayarları</h4>
+                        
+                        <div class="form-group">
+                            <label for="scraped-seo-title">SEO Başlığı</label>
+                            <input type="text" id="scraped-seo-title" placeholder="Arama motorları için özel başlık" maxlength="60">
+                            <small class="form-help">60 karakter altında, anahtar kelimeleri içeren başlık</small>
+                            <div class="character-count">
+                                <span id="scraped-seo-title-count">0</span>/60
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="scraped-seo-description">SEO Açıklaması</label>
+                            <textarea id="scraped-seo-description" rows="3" placeholder="Arama motorları için meta açıklama" maxlength="160"></textarea>
+                            <small class="form-help">160 karakter altında, uygulamanın özelliklerini özetleyen açıklama</small>
+                            <div class="character-count">
+                                <span id="scraped-seo-description-count">0</span>/160
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="scraped-seo-keywords">Anahtar Kelimeler</label>
+                            <input type="text" id="scraped-seo-keywords" placeholder="mac, uygulama, ücretsiz, oyun, program" maxlength="200">
+                            <small class="form-help">Virgülle ayrılmış anahtar kelimeler (maksimum 200 karakter)</small>
+                            <div class="character-count">
+                                <span id="scraped-seo-keywords-count">0</span>/200
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="scraped-seo-slug">URL Slug</label>
+                            <input type="text" id="scraped-seo-slug" placeholder="uygulama-adi" pattern="[a-z0-9-]+" maxlength="100">
+                            <small class="form-help">URL'de kullanılacak kısa isim (sadece küçük harf, rakam ve tire)</small>
+                            <div class="character-count">
+                                <span id="scraped-seo-slug-count">0</span>/100
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="scraped-seo-image-alt">Görsel Alt Metni</label>
+                            <input type="text" id="scraped-seo-image-alt" placeholder="Uygulama logosu ve özellikleri" maxlength="125">
+                            <small class="form-help">Görsel için açıklayıcı alt metin (125 karakter altında)</small>
+                            <div class="character-count">
+                                <span id="scraped-seo-image-alt-count">0</span>/125
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="scraped-seo-featured">Öne Çıkarılan Uygulama</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="scraped-seo-featured">
+                                    <span class="checkmark"></span>
+                                    Ana sayfada öne çıkarılsın
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- AI SEO Assistant -->
+                        <div class="ai-seo-assistant">
+                            <h5><i class="fas fa-robot"></i> AI SEO Asistanı</h5>
+                            <div class="ai-controls">
+                                <button type="button" class="btn btn-ai" id="scraped-ai-suggest-title">
+                                    <i class="fas fa-magic"></i> Başlık Öner
+                                </button>
+                                <button type="button" class="btn btn-ai" id="scraped-ai-suggest-description">
+                                    <i class="fas fa-magic"></i> Açıklama Öner
+                                </button>
+                                <button type="button" class="btn btn-ai" id="scraped-ai-suggest-keywords">
+                                    <i class="fas fa-magic"></i> Anahtar Kelime Öner
+                                </button>
+                                <button type="button" class="btn btn-ai" id="scraped-ai-analyze-seo">
+                                    <i class="fas fa-chart-line"></i> SEO Analiz Et
+                                </button>
+                            </div>
+                            <div class="ai-suggestions" id="scraped-ai-suggestions" style="display: none;">
+                                <h6><i class="fas fa-lightbulb"></i> AI Önerileri</h6>
+                                <div class="suggestion-content" id="scraped-suggestion-content"></div>
+                            </div>
+                        </div>
+
+                        <!-- SEO Önizleme -->
+                        <div class="seo-preview">
+                            <h5><i class="fas fa-eye"></i> SEO Önizleme</h5>
+                            <div class="seo-preview-content">
+                                <div class="seo-preview-title" id="scraped-seo-preview-title">Başlık burada görünecek</div>
+                                <div class="seo-preview-url" id="scraped-seo-preview-url">https://macfree.app/uygulama-adi</div>
+                                <div class="seo-preview-description" id="scraped-seo-preview-description">Açıklama burada görünecek</div>
+                            </div>
+                        </div>
+
+                        <!-- SEO Skorlama -->
+                        <div class="seo-scoring">
+                            <h5><i class="fas fa-star"></i> SEO Skoru</h5>
+                            <div class="score-container">
+                                <div class="score-circle" id="scraped-score-circle">
+                                    <span class="score-number" id="scraped-score-number">0</span>
+                                    <span class="score-label">/100</span>
+                                </div>
+                                <div class="score-details" id="scraped-score-details">
+                                    <div class="score-item">
+                                        <span class="score-name">Başlık</span>
+                                        <div class="score-bar">
+                                            <div class="score-fill" id="scraped-title-score" style="width: 0%"></div>
+                                        </div>
+                                        <span class="score-value" id="scraped-title-value">0/100</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <span class="score-name">Açıklama</span>
+                                        <div class="score-bar">
+                                            <div class="score-fill" id="scraped-description-score" style="width: 0%"></div>
+                                        </div>
+                                        <span class="score-value" id="scraped-description-value">0/100</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <span class="score-name">Anahtar Kelimeler</span>
+                                        <div class="score-bar">
+                                            <div class="score-fill" id="scraped-keywords-score" style="width: 0%"></div>
+                                        </div>
+                                        <span class="score-value" id="scraped-keywords-value">0/100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Uygulamayı Kaydet
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="back-to-url-form">
+                            <i class="fas fa-arrow-left"></i> Geri Dön
+                        </button>
+                        <button type="button" class="btn btn-danger" id="clear-scraped-form">
+                            <i class="fas fa-times"></i> İptal
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Manuel Ekleme Formu -->
+            <div id="manual-add-form" class="add-form-content">
+                <p class="form-description">Uygulama bilgilerini manuel olarak girin.</p>
+                <form id="manual-add-app-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="manual-name">Uygulama Adı <span class="required">*</span></label>
+                            <input type="text" id="manual-name" required placeholder="örn: WhatsApp">
+                        </div>
+                        <div class="form-group">
+                            <label for="manual-category">Kategori</label>
+                            <div class="category-container">
+                                <select id="manual-category" class="category-select">
+                                    <option value="">Kategori Seçin</option>
+                                </select>
+                                <button type="button" id="suggestCategoryManual" class="btn-suggest">
+                                    <i class="fas fa-magic"></i> AI Öner
+                                </button>
+                            </div>
+                            <div id="categorySuggestionsManual" class="suggestions-container" style="display: none;">
+                                <h4>AI Kategori Önerileri:</h4>
+                                <div id="suggestionsListManual"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benzer Uygulamalar -->
+                    <div id="similarAppsManual" class="similar-apps-container" style="display: none;">
+                        <h4><i class="fas fa-lightbulb"></i> Benzer Uygulamalar Bulundu</h4>
+                        <div id="similarAppsListManual"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="manual-version">Sürüm</label>
+                            <input type="text" id="manual-version" placeholder="örn: Sürüm 3.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="manual-size">Dosya Boyutu</label>
+                            <input type="text" id="manual-size" placeholder="örn: 89.2 MB">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manual-image">İkon URL'si</label>
+                        <input type="url" id="manual-image" placeholder="https://example.com/icon.png">
+                        <div id="image-preview" class="image-preview-container" style="display: none;">
+                            <img id="preview-img" src="" alt="Önizleme" class="image-preview">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manual-download">İndirme Linki</label>
+                        <input type="url" id="manual-download" placeholder="https://example.com/download">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manual-website">Resmi Web Sitesi</label>
+                        <input type="url" id="manual-website" placeholder="https://example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manual-description">Açıklama</label>
+                        <textarea id="manual-description" rows="4" placeholder="Uygulama hakkında kısa bir açıklama yazın..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manual-badge">Rozet Durumu</label>
+                        <div class="badge-selection">
+                            <label class="badge-option">
+                                <input type="radio" name="manual-badge" value="new" id="manual-badge-new">
+                                <span class="badge-label new">YENİ</span>
+                            </label>
+                            <label class="badge-option">
+                                <input type="radio" name="manual-badge" value="updated" id="manual-badge-updated">
+                                <span class="badge-label updated">GÜNCELLENDİ</span>
+                            </label>
+                            <label class="badge-option">
+                                <input type="radio" name="manual-badge" value="none" id="manual-badge-none" checked>
+                                <span class="badge-label none">ROZETSİZ</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manual-internal-images">Uygulama İçi Görseller</label>
+                        <textarea id="manual-internal-images" rows="3" placeholder="Her satıra bir görsel URL'si yazın..."></textarea>
+                        <small class="form-help">Her satıra bir görsel URL'si yazın. Örnek:<br>
+                        https://example.com/screenshot1.jpg<br>
+                        https://example.com/screenshot2.jpg</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manual-system-requirements">Sistem Gereksinimleri</label>
+                        <textarea id="manual-system-requirements" rows="4" placeholder="Sistem gereksinimlerini yazın..."></textarea>
+                        <small class="form-help">Örnek: iOS 14.0 veya üzeri, Android 8.0 veya üzeri, Windows 10, macOS 11.0, vb.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manual-update-notes">Güncelleme Yenilikleri</label>
+                        <textarea id="manual-update-notes" rows="5" placeholder="Güncelleme notlarını yazın..."></textarea>
+                        <small class="form-help">Her satıra bir güncelleme notu yazın. Örnek:<br>
+                        📅 12 Eyl 2025 - Sürüm 1.0.20<br>
+                        • Yeni özellik eklendi<br>
+                        • Hata düzeltmeleri</small>
+                    </div>
+
+                    <!-- SEO Bölümü -->
+                    <div class="seo-section">
+                        <h4><i class="fas fa-search"></i> SEO Ayarları</h4>
+                        
+                        <div class="form-group">
+                            <label for="manual-seo-title">SEO Başlığı</label>
+                            <input type="text" id="manual-seo-title" placeholder="Arama motorları için özel başlık" maxlength="60">
+                            <small class="form-help">60 karakter altında, anahtar kelimeleri içeren başlık</small>
+                            <div class="character-count">
+                                <span id="manual-seo-title-count">0</span>/60
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manual-seo-description">SEO Açıklaması</label>
+                            <textarea id="manual-seo-description" rows="3" placeholder="Arama motorları için meta açıklama" maxlength="160"></textarea>
+                            <small class="form-help">160 karakter altında, uygulamanın özelliklerini özetleyen açıklama</small>
+                            <div class="character-count">
+                                <span id="manual-seo-description-count">0</span>/160
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manual-seo-keywords">Anahtar Kelimeler</label>
+                            <input type="text" id="manual-seo-keywords" placeholder="mac, uygulama, ücretsiz, oyun, program" maxlength="200">
+                            <small class="form-help">Virgülle ayrılmış anahtar kelimeler (maksimum 200 karakter)</small>
+                            <div class="character-count">
+                                <span id="manual-seo-keywords-count">0</span>/200
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manual-seo-slug">URL Slug</label>
+                            <input type="text" id="manual-seo-slug" placeholder="uygulama-adi" pattern="[a-z0-9-]+" maxlength="100">
+                            <small class="form-help">URL'de kullanılacak kısa isim (sadece küçük harf, rakam ve tire)</small>
+                            <div class="character-count">
+                                <span id="manual-seo-slug-count">0</span>/100
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manual-seo-image-alt">Görsel Alt Metni</label>
+                            <input type="text" id="manual-seo-image-alt" placeholder="Uygulama logosu ve özellikleri" maxlength="125">
+                            <small class="form-help">Görsel için açıklayıcı alt metin (125 karakter altında)</small>
+                            <div class="character-count">
+                                <span id="manual-seo-image-alt-count">0</span>/125
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manual-seo-featured">Öne Çıkarılan Uygulama</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="manual-seo-featured">
+                                    <span class="checkmark"></span>
+                                    Ana sayfada öne çıkarılsın
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- AI SEO Assistant -->
+                        <div class="ai-seo-assistant">
+                            <h5><i class="fas fa-robot"></i> AI SEO Asistanı</h5>
+                            <div class="ai-controls">
+                                <button type="button" class="btn btn-ai" id="manual-ai-suggest-title">
+                                    <i class="fas fa-magic"></i> Başlık Öner
+                                </button>
+                                <button type="button" class="btn btn-ai" id="manual-ai-suggest-description">
+                                    <i class="fas fa-magic"></i> Açıklama Öner
+                                </button>
+                                <button type="button" class="btn btn-ai" id="manual-ai-suggest-keywords">
+                                    <i class="fas fa-magic"></i> Anahtar Kelime Öner
+                                </button>
+                                <button type="button" class="btn btn-ai" id="manual-ai-analyze-seo">
+                                    <i class="fas fa-chart-line"></i> SEO Analiz Et
+                                </button>
+                            </div>
+                            <div class="ai-suggestions" id="manual-ai-suggestions" style="display: none;">
+                                <h6><i class="fas fa-lightbulb"></i> AI Önerileri</h6>
+                                <div class="suggestion-content" id="manual-suggestion-content"></div>
+                            </div>
+                        </div>
+
+                        <!-- SEO Önizleme -->
+                        <div class="seo-preview">
+                            <h5><i class="fas fa-eye"></i> SEO Önizleme</h5>
+                            <div class="seo-preview-content">
+                                <div class="seo-preview-title" id="manual-seo-preview-title">Başlık burada görünecek</div>
+                                <div class="seo-preview-url" id="manual-seo-preview-url">https://macfree.app/uygulama-adi</div>
+                                <div class="seo-preview-description" id="manual-seo-preview-description">Açıklama burada görünecek</div>
+                            </div>
+                        </div>
+
+                        <!-- SEO Skorlama -->
+                        <div class="seo-scoring">
+                            <h5><i class="fas fa-star"></i> SEO Skoru</h5>
+                            <div class="score-container">
+                                <div class="score-circle" id="manual-score-circle">
+                                    <span class="score-number" id="manual-score-number">0</span>
+                                    <span class="score-label">/100</span>
+                                </div>
+                                <div class="score-details" id="manual-score-details">
+                                    <div class="score-item">
+                                        <span class="score-name">Başlık</span>
+                                        <div class="score-bar">
+                                            <div class="score-fill" id="manual-title-score" style="width: 0%"></div>
+                                        </div>
+                                        <span class="score-value" id="manual-title-value">0/100</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <span class="score-name">Açıklama</span>
+                                        <div class="score-bar">
+                                            <div class="score-fill" id="manual-description-score" style="width: 0%"></div>
+                                        </div>
+                                        <span class="score-value" id="manual-description-value">0/100</span>
+                                    </div>
+                                    <div class="score-item">
+                                        <span class="score-name">Anahtar Kelimeler</span>
+                                        <div class="score-bar">
+                                            <div class="score-fill" id="manual-keywords-score" style="width: 0%"></div>
+                                        </div>
+                                        <span class="score-value" id="manual-keywords-value">0/100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Uygulamayı Oluştur
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="clear-manual-form">
+                            <i class="fas fa-eraser"></i> Formu Temizle
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Düzenleme Modalı -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content large-modal">
+            <span class="close">&times;</span>
+            <h2 id="edit-modal-title">Uygulamayı Düzenle</h2>
+            
+            <form id="edit-app-form" class="app-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="edit-name">Uygulama Adı *</label>
+                        <input type="text" id="edit-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-category">Kategori *</label>
+                        <div class="category-container">
+                            <select id="edit-category" class="category-select" required>
+                                <option value="">Kategori Seçin</option>
+                            </select>
+                            <button type="button" id="suggestCategoryEdit" class="btn-suggest">
+                                <i class="fas fa-magic"></i> AI Öner
+                            </button>
+                        </div>
+                        <div id="categorySuggestionsEdit" class="suggestions-container" style="display: none;">
+                            <h4>AI Kategori Önerileri:</h4>
+                            <div id="suggestionsListEdit"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benzer Uygulamalar -->
+                    <div id="similarAppsEdit" class="similar-apps-container" style="display: none;">
+                        <h4><i class="fas fa-lightbulb"></i> Benzer Uygulamalar Bulundu</h4>
+                        <div id="similarAppsListEdit"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="edit-version">Sürüm</label>
+                        <input type="text" id="edit-version" placeholder="Sürüm 1.0">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-size">Dosya Boyutu</label>
+                        <input type="text" id="edit-size" placeholder="150 MB">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-image">Uygulama Görseli URL</label>
+                    <input type="url" id="edit-image" placeholder="https://example.com/image.png">
+                    <div id="edit-image-preview" class="image-preview" style="display: none;">
+                        <img id="edit-preview-img" src="" alt="Önizleme">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-download">İndirme Linki</label>
+                    <input type="url" id="edit-download" placeholder="https://example.com/download">
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-website">Website</label>
+                    <input type="url" id="edit-website" placeholder="https://example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-description">Açıklama</label>
+                    <textarea id="edit-description" rows="4" placeholder="Uygulama açıklaması..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-badge">Rozet Durumu</label>
+                    <div class="badge-selection">
+                        <label class="badge-option">
+                            <input type="radio" name="edit-badge" value="new" id="edit-badge-new">
+                            <span class="badge-label new">YENİ</span>
+                        </label>
+                        <label class="badge-option">
+                            <input type="radio" name="edit-badge" value="updated" id="edit-badge-updated">
+                            <span class="badge-label updated">GÜNCELLENDİ</span>
+                        </label>
+                        <label class="badge-option">
+                            <input type="radio" name="edit-badge" value="none" id="edit-badge-none" checked>
+                            <span class="badge-label none">ROZETSİZ</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-internal-images">Uygulama İçi Görseller</label>
+                    <textarea id="edit-internal-images" rows="3" placeholder="Her satıra bir görsel URL'si yazın..."></textarea>
+                    <small class="form-help">Her satıra bir görsel URL'si yazın. Örnek:<br>
+                    https://example.com/screenshot1.png<br>
+                    https://example.com/screenshot2.png</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-system-requirements">Sistem Gereksinimleri</label>
+                    <textarea id="edit-system-requirements" rows="3" placeholder="Sistem gereksinimleri..."></textarea>
+                    <small class="form-help">Her satıra bir gereksinim yazın. Örnek:<br>
+                    macOS 14.0 veya üst sürümünü gerektirir<br>
+                    Apple M1 veya üzeri çip gerektirir</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-update-notes">Güncelleme Yenilikleri</label>
+                    <textarea id="edit-update-notes" rows="5" placeholder="Güncelleme notlarını yazın..."></textarea>
+                    <small class="form-help">Her satıra bir güncelleme notu yazın. Örnek:<br>
+                    📅 12 Eyl 2025 - Sürüm 1.0.20<br>
+                    • Yeni özellik eklendi<br>
+                    • Hata düzeltmeleri</small>
+                </div>
+
+                <!-- SEO Bölümü -->
+                <div class="seo-section">
+                    <h4><i class="fas fa-search"></i> SEO Ayarları</h4>
+                    
+                    <div class="form-group">
+                        <label for="edit-seo-title">SEO Başlığı</label>
+                        <input type="text" id="edit-seo-title" placeholder="Arama motorları için özel başlık" maxlength="60">
+                        <small class="form-help">60 karakter altında, anahtar kelimeleri içeren başlık</small>
+                        <div class="character-count">
+                            <span id="edit-seo-title-count">0</span>/60
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-seo-description">SEO Açıklaması</label>
+                        <textarea id="edit-seo-description" rows="3" placeholder="Arama motorları için meta açıklama" maxlength="160"></textarea>
+                        <small class="form-help">160 karakter altında, uygulamanın özelliklerini özetleyen açıklama</small>
+                        <div class="character-count">
+                            <span id="edit-seo-description-count">0</span>/160
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-seo-keywords">Anahtar Kelimeler</label>
+                        <input type="text" id="edit-seo-keywords" placeholder="mac, uygulama, ücretsiz, oyun, program" maxlength="200">
+                        <small class="form-help">Virgülle ayrılmış anahtar kelimeler (maksimum 200 karakter)</small>
+                        <div class="character-count">
+                            <span id="edit-seo-keywords-count">0</span>/200
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-seo-slug">URL Slug</label>
+                        <input type="text" id="edit-seo-slug" placeholder="uygulama-adi" pattern="[a-z0-9-]+" maxlength="100">
+                        <small class="form-help">URL'de kullanılacak kısa isim (sadece küçük harf, rakam ve tire)</small>
+                        <div class="character-count">
+                            <span id="edit-seo-slug-count">0</span>/100
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-seo-image-alt">Görsel Alt Metni</label>
+                        <input type="text" id="edit-seo-image-alt" placeholder="Uygulama logosu ve özellikleri" maxlength="125">
+                        <small class="form-help">Görsel için açıklayıcı alt metin (125 karakter altında)</small>
+                        <div class="character-count">
+                            <span id="edit-seo-image-alt-count">0</span>/125
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-seo-featured">Öne Çıkarılan Uygulama</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="edit-seo-featured">
+                                <span class="checkmark"></span>
+                                Ana sayfada öne çıkarılsın
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- AI SEO Assistant -->
+                    <div class="ai-seo-assistant">
+                        <h5><i class="fas fa-robot"></i> AI SEO Asistanı</h5>
+                        <div class="ai-controls">
+                            <button type="button" class="btn btn-ai" id="edit-ai-suggest-title">
+                                <i class="fas fa-magic"></i> Başlık Öner
+                            </button>
+                            <button type="button" class="btn btn-ai" id="edit-ai-suggest-description">
+                                <i class="fas fa-magic"></i> Açıklama Öner
+                            </button>
+                            <button type="button" class="btn btn-ai" id="edit-ai-suggest-keywords">
+                                <i class="fas fa-magic"></i> Anahtar Kelime Öner
+                            </button>
+                            <button type="button" class="btn btn-ai" id="edit-ai-analyze-seo">
+                                <i class="fas fa-chart-line"></i> SEO Analiz Et
+                            </button>
+                        </div>
+                        <div class="ai-suggestions" id="edit-ai-suggestions" style="display: none;">
+                            <h6><i class="fas fa-lightbulb"></i> AI Önerileri</h6>
+                            <div class="suggestion-content" id="edit-suggestion-content"></div>
+                        </div>
+                    </div>
+
+                    <!-- SEO Önizleme -->
+                    <div class="seo-preview">
+                        <h5><i class="fas fa-eye"></i> SEO Önizleme</h5>
+                        <div class="seo-preview-content">
+                            <div class="seo-preview-title" id="edit-seo-preview-title">Başlık burada görünecek</div>
+                            <div class="seo-preview-url" id="edit-seo-preview-url">https://macfree.app/uygulama-adi</div>
+                            <div class="seo-preview-description" id="edit-seo-preview-description">Açıklama burada görünecek</div>
+                        </div>
+                    </div>
+
+                    <!-- SEO Skorlama -->
+                    <div class="seo-scoring">
+                        <h5><i class="fas fa-star"></i> SEO Skoru</h5>
+                        <div class="score-container">
+                            <div class="score-circle" id="edit-score-circle">
+                                <span class="score-number" id="edit-score-number">0</span>
+                                <span class="score-label">/100</span>
+                            </div>
+                            <div class="score-details" id="edit-score-details">
+                                <div class="score-item">
+                                    <span class="score-name">Başlık</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" id="edit-title-score" style="width: 0%"></div>
+                                    </div>
+                                    <span class="score-value" id="edit-title-value">0/100</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-name">Açıklama</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" id="edit-description-score" style="width: 0%"></div>
+                                    </div>
+                                    <span class="score-value" id="edit-description-value">0/100</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-name">Anahtar Kelimeler</span>
+                                    <div class="score-bar">
+                                        <div class="score-fill" id="edit-keywords-score" style="width: 0%"></div>
+                                    </div>
+                                    <span class="score-value" id="edit-keywords-value">0/100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="edit-cancel-btn">İptal</button>
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+        <section class="apps-section">
+            <div class="section-header">
+                <h2>Mevcut Uygulamalar</h2>
+                <div class="apps-stats" id="apps-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span id="total-apps">0</span> Uygulama
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-tag"></i>
+                        <span id="total-categories">0</span> Kategori
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Toplu İşlemler Paneli -->
+            <div class="bulk-actions-panel" style="background: #e3f2fd; border: 1px solid #2196f3; border-radius: 8px; padding: 15px; margin: 20px 0; display: none;">
+                <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="selectAll" style="transform: scale(1.2);">
+                        <label for="selectAll" style="font-weight: 600; color: #1976d2;">
+                            <span id="selectedCount">0</span> uygulama seçildi
+                        </label>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <button id="bulkEdit" class="btn-bulk-action" disabled>
+                            <i class="fas fa-edit"></i> Toplu Düzenle
+                        </button>
+                        <button id="bulkDelete" class="btn-bulk-action" disabled>
+                            <i class="fas fa-trash"></i> Toplu Sil
+                        </button>
+                        <button id="bulkCategory" class="btn-bulk-action" disabled>
+                            <i class="fas fa-tags"></i> Kategori Değiştir
+                        </button>
+                        <button id="bulkFeatured" class="btn-bulk-action" disabled>
+                            <i class="fas fa-star"></i> Öne Çıkar
+                        </button>
+                        <button id="bulkExport" class="btn-bulk-action" disabled>
+                            <i class="fas fa-download"></i> Dışa Aktar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="search-admin" class="filter-label">
+                        <i class="fas fa-search"></i>
+                        Uygulama Ara
+                    </label>
+                    <input type="text" id="search-admin" placeholder="Uygulama adı, kategori veya açıklama ara...">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="category-filter" class="filter-label">
+                        <i class="fas fa-filter"></i>
+                        Kategori Filtresi
+                    </label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="">Tüm Kategoriler</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="badge-filter" class="filter-label">
+                        <i class="fas fa-star"></i>
+                        Rozet Filtresi
+                    </label>
+                    <select id="badge-filter" class="filter-select">
+                        <option value="">Tüm Rozetler</option>
+                        <option value="new">YENİ</option>
+                        <option value="updated">GÜNCELLENDİ</option>
+                        <option value="none">Rozetsiz</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <button type="button" id="toggleBulkMode" class="btn btn-primary btn-sm">
+                        <i class="fas fa-check-square"></i>
+                        Toplu Seçim
+                    </button>
+                </div>
+                
+                <div class="filter-group">
+                    <button type="button" id="clear-filters" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-times"></i>
+                        Filtreleri Temizle
+                    </button>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <div id="app-list-container">
+                    <div class="spinner"></div>
+                </div>
+                <table class="app-table" style="display:none;">
+                    <thead>
+                        <tr>
+                            <th class="logo-col">Logo</th>
+                            <th class="sortable-header" data-sort-key="name">
+                                <i class="fas fa-sort"></i>
+                                İsim
+                                <span class="sort-indicator"></span>
+                            </th>
+                            <th>Sürüm</th>
+                            <th>İndirme Linki</th>
+                            <th class="sortable-header" data-sort-key="category">
+                                <i class="fas fa-sort"></i>
+                                Kategori
+                                <span class="sort-indicator"></span>
+                            </th>
+                            <th class="sortable-header" data-sort-key="badgeType">
+                                <i class="fas fa-sort"></i>
+                                Rozet
+                                <span class="sort-indicator"></span>
+                            </th>
+                            <th class="sortable-header" data-sort-key="featured">
+                                <i class="fas fa-sort"></i>
+                                Öne Çıkarılan
+                                <span class="sort-indicator"></span>
+                            </th>
+                            <th class="sortable-header" data-sort-key="creationDate">
+                                <i class="fas fa-sort"></i>
+                                Eklenme Tarihi
+                                <span class="sort-indicator"></span>
+                            </th>
+                            <th class="actions-col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="app-list-body"></tbody>
+                </table>
+            </div>
+            
+            <div class="pagination-container" id="pagination-container" style="display:none;">
+                <div class="pagination-info">
+                    <span id="pagination-info">1-10 / 50 uygulama</span>
+                </div>
+                <div class="pagination-controls">
+                    <button type="button" id="prev-page" class="btn btn-secondary btn-sm" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Önceki
+                    </button>
+                    <div class="page-numbers" id="page-numbers"></div>
+                    <button type="button" id="next-page" class="btn btn-secondary btn-sm">
+                        Sonraki
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+<script src="admin.js"></script>
+<script>
+    // Test if admin.js loaded
+    console.log('Admin page loaded');
+    setTimeout(() => {
+        console.log('Testing after 2 seconds...');
+        if (typeof testFeaturedToggle === 'function') {
+            console.log('testFeaturedToggle function found');
+        } else {
+            console.log('testFeaturedToggle function NOT found');
+        }
+        
+        const checkboxes = document.querySelectorAll('.featured-checkbox');
+        console.log('Found checkboxes:', checkboxes.length);
+        
+        if (checkboxes.length === 0) {
+            console.log('No checkboxes found - table might not be loaded yet');
+        }
+    }, 2000);
+</script>
+</body>
+</html>

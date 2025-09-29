@@ -1,0 +1,736 @@
+[
+    {
+        "name": "‎Final Cut Pro",
+        "category": "Fotoğraf ve Video",
+        "version": "11.2",
+        "fileSize": "5,5 GB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/54/82/52/54825208-b4e4-446f-e81a-be26af5f426c/AppIcon-85-220-0-5-0-0-2x-sRGB-0-0.png/1200x630bb.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/final-cut-pro/id424389933?l=tr&mt=12 Final Cut Pro",
+        "description": "Final Cut Pro, yenilikçi video düzenleme ile güçlü ortam organizasyonunu ve olağanüstü performansı birleştirerek düşündüğünüz hızda yaratmanıza olanak tanır.Yenilikçi Video Düzenleme• Manyetik zaman ekseni, daha hızlı ve kolay düzenleme için ileri düzey üst verileri ve klip bağlantılarını kullanır• Gelişmiş zaman ekseni dizini, ses rollerini sürükleyip bırakarak zaman ekseninizin yerleşimini yeniden düzenlemenizi sağlar• Altyazılara Çevir, sesli içerikleri inceleyerek zaman ekseninde açıklamalı altyazıları oluşturmak için yapay zekâyı kullanır• Yapay zekâ destekli manyetik maske, çekimlerdeki kişileri, nesneleri ve şekilleri otomatik olarak izler ve ayırır• Stereoskopik uzamsal video klipleri içe aktarıp düzenleyin ve doğrudan Apple Vision Pro’ya gönderin• Otomatik eşzamanlama ve en fazla 64 kamera açısı desteği ile çok kameralı projeleri düzenleyin• Akıllı Uyum ile projeleri kare veya düşey sunmak üzere otomatik olarak dönüştürün• Arka plan gürültüsünü azaltıp ses düzeylerini en iyi duruma getirerek konuşmaları geliştirmek için Ses İzolasyonu ile yapay zekâyı kullanın• Üçüncü parti iş akışı genişletmeleri ile Final Cut Pro’nun yeteneklerini genişletinGüçlü Ortam Organizasyonu• Verimli ortam yönetimi ve ortak çalışma için arşivlerdeki çalışmalarınızı organize edin• Taşınabilirlik ve performans için ortamlarınızın proxy kopyalarını yaratın• Klip aralıklarını seçerken özel anahtar sözcükleri veya favorileri anında uygulayın• Akıllı koleksiyonlar, herhangi bir çekimi birkaç tıklamayla hızlıca bulmanız için içerikleri dinamik olarak düzenler• Vurgulanan klip aralıklarını veya zaman ekseni indeksini kullanarak zaman ekseninde yinelenen ortamları bulunOlağanüstü Performans• Son nesil Apple Silicon çip iyileştirmeleriyle rakipsiz hız ve verimlilik• ProRes, ProRes RAW, RED, XAVC, AVCHD, Avid DNxHR®, Avid DNxHD®, H.264, HEVC vb. dahil olmak üzere birçok biçimle çalışınİlgi Çeken, Özelleştirilebilir Efektler• Harika bir şekilde canlandırılan, kolayca özelleştirilebilen 2B ve 3B başlıklar• Sezgisel denetimlerle başlıkların, geçişlerin ve efektlerin görünümünü değiştirin• Özel arayüzleri olan üçüncü parti FxPlug yazılım ekleri ekosisteminden seçim yapınTümleşik Ses Düzenleme• Projenizi kolayca takip edip organize etmek için içe aktarma sırasında roller atayın• Çok kanallı ses dosyalarını doğrudan zaman ekseninde genişletin ve düzenleyin• Logic tabanlı sezgisel efektleri uygulayın ve sesleri ayırmak için arka plan gürültüsünü azaltın• Anında ses dalga biçimi eşleme ile videoyu ayrı bir ses ile tek bir adımda eşzamanlayınSezgisel Renk Derecelendirme• Videoyu standart renk uzaylarında veya Rec. 2020 ve HLG renk uzaylarında içe aktarın, düzenleyin ve sunun• Anahtarlama ve maskeler ile hassas ayarlamalar için güçlü renk tekerleri ve eğriler• YZ destekli Işığı ve Rengi İyileştir efektini kullanarak videoların veya hareketsiz görüntülerin rengini, renk dengesini, kontrastını ve parlaklığını otomatik olarak iyileştirin• Daha da fazla derecelendirme esnekliği için iPhone 15 Pro’da ve 15 Pro Max’te veya daha yeni modellerde çekilen log biçiminde kodlanmış videodan yararlanın• MacBook Pro’da ve Pro Display XDR’da doğru bir şekilde HDR görüntüleyinTek Adımda En İyi Duruma Getirilmiş Çıkış• Apple aygıtlarında oynatım için inanılmaz hızlı dışa aktarma, Vimeo ve YouTube gibi web sitelerine yükleme• Ses gövdelerini ve tamamlanan videonun birden fazla sürümünü rol üst verilerini kullanarak dışa aktarın• Renk derecelendirme ve ses miksleme gibi üçüncü parti iş akışları için XML içe ve dışa aktarmaSistem Gereksinimleri: macOS 15.6 veya daha yenisi; 8 GB bellek (16 GB önerilir); Metal özellikli grafik kartı (yalnızca Intel tabanlı Mac bilgisayarları); 7,2 GB kullanılabilir disk alanı.Bazı özellikler Apple Silicon çipli bir Mac gerektirir. Bazı özellikler internet erişimi gerektirir; ek ücretler uygulanabilir.",
+        "features": [
+            "📅 19 Eyl 2025 - Sürüm 11.2",
+            "Final Cut Pro 11.2, aşağıdaki iyileştirmeleri ve hata düzeltmelerini içerir:* iPhone’da çekilen ProRes RAW video için daha da fazla denetimin kilidini açarak pozlamayı, renk sıcaklığını, renk tonunu ve renkleri tam oluşturma işlemini (demosaicing) ayarlayabilirsiniz. (ProRes RAW çekim için desteklenen iPhone modelleri gerekir.)* Apple Log 2 LUT’u uygulayarak Apple Log 2 çekimlerinizi özgün sahnenin canlılığı ile düzenleyin ve oynatın.* Kararlılık ve performans iyileştirmeleri içerir."
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/81/0a/1f/810a1fc0-fa2a-12ce-a8b0-1f6d4369465a/01_FCP_Mac_Hero_2880x1800.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f0/ea/4e/f0ea4e3d-6ef4-bf93-2f54-14ff69b59079/02_FCP_Mac_MagneticMask_2880x1800.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ef/ca/5a/efca5a4d-f6c2-ba75-d9a0-8aab6ce1ad4a/03_FCP_Mac_SpatialVideoEditing_2880x1800.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4e/12/fa/4e12fa4d-3e1c-c115-2feb-4bcb3b0db2ed/04_FCP_Mac_TranscribeToCaptions2_2880x1800.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/40/8e/b8/408eb8d8-3d98-3c89-a1ab-e083393f53b6/05_FCP_Mac_Multicam_2880x1800.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fd/42/f2/fd42f2dd-4e89-21b9-042f-96d0266eeac4/06_FCP_Mac_Third_Party_Templates_2880x1800.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "Mac: macOS 15.6 veya üst sürümünü gerektirir."
+        ],
+        "seoTitle": "‎Final Cut Pro - Mac Medya Uygulaması | MacFree",
+        "seoDescription": "Mac için medya uygulaması ‎Final Cut Pro. MacFree ile ücretsiz indirin.",
+        "seoKeywords": "mac, uygulama, ücretsiz, indir, macfree, ‎final, cut, pro, fotoğraf, video",
+        "seoSlug": "final-cut-pro",
+        "seoImageAlt": "Mac medya uygulaması ‎Final Cut Pro ekran görüntüsü",
+        "featured": false,
+        "creationDate": "2025-09-29T15:04:45.399406+00:00",
+        "lastModified": "2025-09-29T15:05:04.610486+00:00",
+        "reviews": [],
+        "badgeType": "new"
+    },
+    {
+        "name": "‎Assassin’s Creed Shadows",
+        "category": "Kategorisiz",
+        "version": "1.0.20",
+        "fileSize": "136,4 GB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/14/c0/d4/14c0d402-3358-d439-b292-a7f377152faf/icon.png/1200x630bb.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/assassins-creed-shadows/id6497794841?l=tr&mt=12 Assassin’s Creed Shadows",
+        "description": "Feodal Japonya’da geçen epik bir tarihî aksiyon macera hikâyesini deneyimleyin! Kargaşa dolu bir devirde hayran olunası bir açık dünyayı keşfederken ölümcül bir şinobi suikastçısı ve güçlü bir efsanevi samuray olun. Beklenmedik şekilde aynı safta yer alan iki müttefik arasında geçiş yaparak ortak kaderlerini keşfedin. Birbirini tamamlayan oyun tarzlarında ustalaşın, şinobi birliğinizi yaratın, sığınağınızı özelleştirin ve Japonya’da yeni bir çağı başlatın.- Muhteşem kale yerleşimlerinden ve hareketli limanlardan huzurlu mabetlere ve savaşın yıktığı kırsallara, Feodal Japonya’nın baştan çıkarıcı açık dünyasını keşfedin. Öngörülemeyen hava koşulları, değişen mevsimler ve duyarlı ortamlarda maceralara atılın.- Şinobi suikastçısı Naoe ve efsanevi samuray Yasuke olarak sürükleyici hikâyelerini deneyimleyin ve birbirini tamamlayan oyun tarzlarında ustalaşın. Naoe’yle görünmemek için gizliliğe, düşmanlarınızı şaşırtmak için de çevikliğe başvurun. Yasuke’yle düşmanlarınıza ölümcül bir kesinlik ve güçle saldırın. İki karakter için de farklı yeni beceriler, ekipmanlar ve ilerlemeyi açın.- Dünyayı keşfederken bilgiyi silaha dönüştürün ve bir sonraki hedefinizi avladığınız sırada dört bir yandaki gözünüz ve kulağınız olacak kendi casus ağınızı kurun. Yolculuğunuz sırasında görevlerinizi tamamlamanıza yardımcı olacak, benzersiz kabiliyetlere sahip yeni müttefikler edinin.- Büyüyen şinobi birliğinize; ekibinizi eğittiğiniz, yeni ekipmanlar ürettiğiniz, kilit karakterlerle etkileştiğiniz ve üssünüzün yerleşim düzenini, dekorasyonlarını ve aksesuarlarını seçtiğiniz, tamamen özelleştirilebilir bir sığınak yaratın.Minimum specs:Resolution/FPS using dynamic resolution and MetalFX: 720p at 30 FPSChip: M1 Max / M2 ProRay-tracing: Software selectiveHardware recommendations for sustained performance: MacBook Pro, iMac, Mac Mini, Mac Studio, Mac ProRAM: 16 GBOS: macOS Sequoia (15)Storage: 130GB of free spacehttps://www.ubisoft.com/en-us/help/assassins-creed-shadows/connectivity-and-performance/article/system-requirements-for-assassins-creed-shadows/000111013",
+        "features": [
+            "📅 12 Eyl 2025 - Sürüm 1.0.20",
+            "PATCH HIGHTLIGHTS• New Expansion: Claws of Awaji – Available September 16th• New Free Story Quest: “Go with the Bo” - complete the quest and receive the Bo, the new free weapon developed for Claws of Awaji (Available September 16th).• Level Cap Increase from 80 to 100• New Hideout Upgrades: Each building now includes 2 additional upgrade levels, alongside 3 new Hideout levels.• Advance Time of Day: After upgrading the Nando to level 2, players can meditate and skip time forward to the next 6 o’clock by holding the up button (L on keyboard).• Enhanced Gear Quality: Upgrade the Forge to level 6 and discover two new gear quality tiers – Mythic and Artifact.• New Project: Sanctuary – unlocks Ezio’s Legacy Outfit for Naoe.• New Anomalies in Awaji: only available for players who have the Claws of Awaji Expansion."
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7b/02/bb/7b02bbbd-560b-bb46-84ef-ca202187363f/0770c3c5-53f5-4b4b-9eb4-1351b5a4f1b1_4-AC_RED_Dual_Protagonists.jpg_2880x1800.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/22/60/9e/22609e6b-9696-4645-28c2-39e27ecae136/2__U00282_U0029.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/57/57/86/57578644-bcd6-a84c-92b6-e14b0b465752/3__U00282_U0029.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/63/a7/32/63a73266-ffd6-e546-804d-04df68994922/4__U00282_U0029.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/66/dc/24/66dc2443-09bf-649b-9567-2a394815668b/5.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ad/97/ef/ad97ef4e-2711-1b82-dc7c-8ece4b7a8242/6__U00282_U0029.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/db/25/85/db258516-186f-4e68-6795-e8ab6d1fd805/7.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/01/a4/86/01a486b0-620c-1741-4391-92d021967c55/70b137de-c0b7-4a91-af03-4f662b733d66_1-AC_RED_Vista_Autumn.jpg_2880x1800.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/dd/a9/da/dda9daa5-7245-ea49-31ce-b6a28fc6fe04/c4264300-59b7-4f99-91b7-fbb9e613b054_3-AC_RED_Naoe_Knife_At_Night.jpg_2880x1800.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/09/46/f9/0946f951-0113-8dd9-edc1-c7413fe3794c/AC_RED_Naoe_MacYasukeHideout_2880x1800_20250401.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "Mac: macOS 15.0 veya üst sürümünü ve Apple M1 veya üzeri çipe sahip bir Mac gerektirir."
+        ],
+        "seoTitle": "‎Assassin’s Creed Shadows - Ücretsiz Mac Uygulaması  MacFree",
+        "seoDescription": "‎Assassin’s Creed Shadows ücretsiz Mac uygulamasını indirin.",
+        "seoKeywords": "‎assassin’s creed shadows, mac, uygulama, ücretsiz, indir, download, macfree",
+        "seoSlug": "",
+        "seoImageAlt": "",
+        "featured": false,
+        "creationDate": "2025-09-29T14:49:54.145454+00:00",
+        "lastModified": "2025-09-29T14:49:54.145454+00:00",
+        "reviews": [],
+        "badgeType": "new"
+    },
+    {
+        "name": "‎Ulysses: Writing App",
+        "category": "Verimlilik",
+        "version": "38.4",
+        "fileSize": "42.9 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5e/7a/3a/5e7a3ad7-dfd6-6706-6ff6-4f281b615b3d/Ulysses-Release-0-0-85-220-0-0-5-0-2x-0-0-0.png/1200x630wa.png",
+        "downloadUrl": "",
+        "website": "https://apps.apple.com/tr/app/ulysses-writing-app/id1225570693?l=tr Ulysses: Writing App",
+        "description": "Ulysses is your one-stop writing environment for Mac, iPhone and iPad. Its pleasant, focused writing experience, combined with effective document management, seamless sync, and flexible export, make Ulysses the first choice for writers of all kinds.++ Apple Design Award Winner 2016 ++“The app is amazing. An absolute delight to use. Well done.”– David Hewson, Bestselling Author (The Killing)### A Text Production PowerhouseUlysses’ markup-based, distraction-free editor lets you focus on your most important task: Write, edit, and write some more. Formatting is kept for later, so you can completely immerse yourself in the text. Ulysses’ uniquely streamlined toolset covers the entire writing process, and its clean and simple interface will boost your productivity. From first to final draft, from prologue to closing chapter – Ulysses keeps you in the flow, so you can get stuff done.### All Your Texts, All the TimeEverything you’ll ever write is stored in Ulysses’ unified library. You can manage projects of all kinds and sizes, be it novels, diaries or study notes – they are always saved, and automatically in sync. And since Ulysses offers feature parity across macOS and iOS, it doesn’t matter where you are or when inspiration hits: All its tools, and all your texts, are always at your fingertips.### Built-In Proofreader and Editing AssistantWrite with confidence, thanks to Ulysses’ integrated grammar and style check. Available for over 20 languages, it analyzes your text and offers informed suggestions for capitalization, punctuation, semantics, redundancy, style and more.### Create eBooks, DOCX, PDFs and HTMLUlysses’ export is flexible enough to cover any writer’s needs: Transform your text into beautiful PDFs, Word documents or eBooks. Or export HTML code, ready to be used anywhere on the web. You can even choose between a variety of pre-made formatting styles for all kinds of purposes, or create your own and share it with other users.### Publish to WordPress, Ghost & MoreDo you blog? Ulysses’ offers best-in-class publishing to WordPress, Ghost, Medium, and Micro.blog. You can post to WordPress, Ghost and Micro.blog from right within the app – complete with images, tags, categories etc. Publishing to Medium works just as easy, and all four offer a built-in preview to proofread before submission.### PricingUlysses requires a subscription. We offer monthly and yearly subscription plans. They include a fully functional trial, so you can test Ulysses (including export and sync). There’s also a special discount for students.All plans unlock the app on Mac, iPhone and iPad, and feature full synchronization.### QuestionsPlease visit ulysses.app for more information. You can also reach us via help@ulysses.app or on Twitter @ulyssesapp – we’re happily awaiting your feedback!Terms of Use: https://ulysses.app/app-terms-of-servicePrivacy Policy: https://ulysses.app/app-privacy-policy",
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/dd/03/d8/dd03d819-a3eb-0ad9-2e86-d5b46c4711f9/Ulysses_Mac_01_EN.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/44/f6/9c/44f69c8e-7973-cddd-06dc-2522a34d3378/Ulysses_Mac_02_EN.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f9/1e/89/f91e8934-6d31-5fe0-97f2-1014a7504dee/Ulysses_Mac_03_EN.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e5/a9/48/e5a94826-9f2b-af93-f042-f8a0f1947cbb/Ulysses_Mac_04_EN.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/04/26/d5/0426d5ee-c55f-c3e4-3b3d-abbbb6f5697b/Ulysses_Mac_05_EN.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d4/af/1a/d4af1a73-2a94-4d4f-462b-50344abe067b/Ulysses_Mac_06_EN.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/16/d0/97/16d0971f-6f1d-0b25-f80d-212c13bbc1fa/Ulysses_Mac_07_EN.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/28/ca/05/28ca05fc-4ba5-b612-50a9-0408a6b85145/Ulysses_Mac_08_EN.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/22/02/80/22028053-4111-1a86-f4f5-517775e53dfa/Ulysses_Mac_09_EN.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7b/9c/e3/7b9ce304-470d-81d2-515a-cccb4c458404/Ulysses_Mac_10_EN.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 17.0 or later.",
+            "iPad: Requires iPadOS 17.0 or later.",
+            "Mac: Requires macOS 13.0 or later."
+        ],
+        "features": [
+            "📅 13 Aug 2025 - Version 38.4",
+            "- Added new group icons, including additional social media outlets.- Fixed sign-in failures to blogs on WordPress.comIf you're happy with the app, please rate it, or even leave a review. This is a great way to support us indie developers. Thanks a lot!"
+        ],
+        "creationDate": "2025-09-29T12:46:37.025946+00:00",
+        "lastModified": "2025-09-29T14:39:11.846197+00:00",
+        "reviews": [],
+        "badgeType": "new",
+        "seoTitle": "",
+        "seoDescription": "‎Ulysses: Writing App Mac uygulaması - Verimlilik kategorisinde en çok tercih edilen uygulamalardan biri. Ücretsiz, güvenli ve hızlı. MacFree ile hemen indirin.",
+        "seoKeywords": "",
+        "seoSlug": "",
+        "seoImageAlt": "",
+        "featured": true
+    },
+    {
+        "name": "‎Linearity Curve Graphic Design",
+        "category": "Grafik ve Tasarım",
+        "version": "6.0.1",
+        "fileSize": "469.4 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9f/b9/e0/9fb9e075-db56-5a0b-a8b1-52fabf6b3b71/AppIcon-0-0-1x_U007euniversal-0-0-0-1-0-0-85-220.png/1200x630wa.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/grafik-tasar%C4%B1m-linearity-curve/id1219074514?l=tr Grafik Tasarım Linearity Curve",
+        "description": "Linearity Curve is your essential Graphic Design app designed specifically for creating exceptional Vector Art and precise Vector Drawing across Mac, iPad, and iPhone. Whether you're crafting detailed illustrations, iconic logos, or engaging posters, Linearity Curve offers powerful, intuitive tools for every graphic artist. Featuring professional-grade background remover, intuitive logo maker, versatile poster maker, easy-to-use font picker, and streamlined vector art creation, it elevates your creative workflow seamlessly.Professional Graphic Design & Vector Art ToolsLinearity Curve gives you robust tools to excel in all your Vector Drawing projects. Create precise paths effortlessly using the Pen Tool, brush detailed strokes smoothly with the Brush Tool, and edit anchor points with precision using advanced node manipulation. Quickly generate eye-catching visuals such as logos and posters using pre-built shapes, Boolean operations, and multi-layered artboards optimized specifically for detailed illustration projects.Smart AI Features for Graphic DesignersAccelerate your workflow with built-in AI-driven Graphic Design features. The advanced Auto Trace feature effortlessly converts sketches and photos into clean, editable Vector Art, allowing graphic artists to focus purely on creativity. Additionally, create professional-quality posters and logos efficiently with templates designed specifically for designers.Instantly remove image backgrounds with the powerful AI-powered background remover, making your product images or marketing visuals stand out clearly.Typography & Font Picker for Graphic DesignEnhance your designs using Linearity Curve’s intuitive typography tools, including the versatile font picker. Preview and select fonts instantly right on your canvas.Comprehensive Graphic Design Assets & TemplatesJumpstart your creative projects with thousands of carefully curated graphic design assets, including extensive image libraries, convenient logo maker templates, and creative poster maker layouts. Access a wide array of high-resolution images and graphic art elements, perfect for rapidly developing eye-catching visuals, from marketing campaigns to personal artwork.Optimized Workflow & CollaborationExperience a smooth, uninterrupted creative workflow with tools designed specifically for graphic artists. Easily access essential Graphic Design tools through an intuitive, quick-access interface. Seamlessly synchronize your Vector Drawing projects across devices, whether starting on iPad, refining on iPhone, or finalizing on Mac. For professionals, Linearity Pro unlocks real-time collaboration within shared workspaces, making feedback and design iterations effortless and efficient.Import & Export Capabilities Tailored for DesignersEffortlessly produce transparent images, print-ready documents, and scalable vector files, ideal for any professional graphic design context. Import projects directly from popular design software like Illustrator, Figma, and Sketch with ease. Import the various file types like .ai, JPEG, PNG, SVG, and PDF.Upgrade to Linearity Pro to unlock unlimited artboards, unlimited files, and exports.Questions or feedback?Reach out at support@linearity.ioPrivacy policy: linearity.io/privacy-policyFollow us on social media: YouTube, LinkedIn, Instagram, X & TikTok (@linearityhq)",
+        "features": [
+            "📅 26 Sept 2025 - Version 6.0.1",
+            "This is our biggest update of the year, marking a new chapter for Curve.With a redesigned interface, a more unified experience across devices, and our first Apple Intelligence–powered features, Linearity Curve 6.0 is built for the next generation of creative workflows on iPhone, iPad, and Mac.ALL-NEW INTERFACE WITH LIQUID GLASSCurve now features Apple’s new Liquid Glass design system. The interface is cleaner, more consistent, and more responsive, and it stays visually aligned across iPhone, iPad, and Mac.UNIFIED NEW DOCUMENT FLOWStarting a new project now feels faster and more intuitive. We’ve brought document creation, template selection, and file import into a single streamlined flow, making it easier to get started whether you’re picking up where you left off or beginning something new.GENERATE COLOR PALETTES WITH APPLE INTELLIGENCEQuickly create custom color palettes from natural language prompts.- Works directly in the Color Palettes panel- Fully integrated into your design workflow- Runs privately and offline with Apple IntelligenceARTBOARD TRANSLATION WITH APPLE INTELLIGENCETranslate the full content of any artboard into multiple languages while preserving layout, fonts, and design.- Each language is generated on its own artboard, ready for export or fine-tuning- Supports major languages including English, German, Spanish, French, Portuguese, and more- All processing happens on device, with no internet required- Translations remain editable so you stay in controlEXPANDED LAYOUT ON IPADWe’ve introduced a new expanded layout on iPad that takes full advantage of larger screens. You can now view both the Layers panel and the Inspector side by side, just like on Mac. It adapts to multitasking modes and makes complex editing more efficient on the go.REFINED IPHONE EXPERIENCEWe’ve improved spacing, touch targets, and gestures across the board to make using Curve on iPhone smoother and more comfortable, including one-handed use.Linearity Curve 6.0 ships alongside iOS 26, iPadOS 26, and macOS 26.Update to the latest OS and the newest version of Linearity Curve to experience everything we’ve built and what comes next.---We're on a mission to empower designers with the ultimate tools for bringing ideas to life. Our software is constantly evolving, but we need your feedback to improve even more. Whether you have a question, opinion, or an idea, we want to hear it! Contact us directly in the Linearity Forum or email us at support@linearity.io. If you enjoy using Linearity Curve, please rate the app and share your review. Thank you for being part of our community!"
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b1/46/4d/b1464d31-7bbd-55cd-9476-b8dac3567f88/Mac_Eng_01.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/80/e6/08/80e6082b-5b2a-6f56-8c1f-7c6884d0040d/Mac_Eng_04.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/8a/45/9b8a459f-b5fb-8a05-fc58-e28e8c2e9d84/Mac_Eng_03.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ae/00/56/ae0056c3-1554-f5b3-4489-deaa98bb5b0c/Mac_Eng_06.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5b/83/8b/5b838bb4-5f80-8501-9eae-7a42269b6e01/Mac_Eng_05.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a2/37/73/a2377360-8e37-f8af-82ca-80060e020b49/Mac_Eng_07.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a7/03/21/a70321a1-3f79-bf2e-cfd9-54a32f65a554/Mac_Eng_02.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/38/2e/08/382e085f-cf4f-122a-71d5-e19fbc6f184a/Mac_Eng_08.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e6/13/6f/e6136fe8-de16-ec08-44df-d9bb0fbda6c7/10.jpg/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 16.0 or later.",
+            "iPad: Requires iPadOS 16.0 or later.",
+            "Mac: Requires macOS 13.0.0 or later."
+        ],
+        "creationDate": "2025-09-29T12:46:03.387973+00:00",
+        "lastModified": "2025-09-29T14:39:12.918042+00:00",
+        "reviews": [],
+        "badgeType": "new",
+        "featured": true
+    },
+    {
+        "name": "‎Affinity Publisher 2",
+        "category": "Grafik ve Tasarım",
+        "version": "2.6.4",
+        "fileSize": "545,7 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c3/06/29/c30629fc-4eca-6223-67ea-e32137aee966/AppIcon-0-0-85-220-0-0-4-0-2x.png/1200x630bb.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/affinity-publisher-2/id1606941598?l=tr&mt=12 Affinity Publisher 2",
+        "description": "A next-gen version of the Mac App of the Year software, Affinity Publisher 2 delivers an incredible design experience. Whether you’re creating a book, magazine, marketing materials, social media template or something else, it has everything you need to make beautiful layouts ready for publication. And with the ground-breaking ability to fully integrate with other Affinity apps, it’s completely revolutionising the way creatives work.REFINED & REDESIGNED WITH POWERFUL NEW FEATURES• Fully redeveloped UI, tool and button icons• Completely revamped Layers Panel• Book creation and management – combine multiple Affinity Publisher files as chapters, with linked text styles, table of contents and indexes• Footnotes, sidenotes and endnotes via new Notes panel• Style Picker Tool• Quick grid• Autoflow of multiple images and multi-page PDFs• Layer visibility override for placed linked files (PDF/DWG/DXF and Affinity files)• AutoCAD DWG/DXF import, place and edit• Place linked web images using their URLs• Resave packages with auto-update of resources• Force scale of stroke, effect and fills on object resizePROFESSIONAL LAYOUT TOOLS• Facing page spreads• Live master pages, including nested master pages• Image frames with intelligent scaling options• Advanced guides, grids and snapping• Tables and custom table formats• Wrap text around any object or image with fine padding control• Create text frames of any shape• Link multiple text frames together across your document• Text column dividing linesADVANCED TYPOGRAPHY• Full control over character and paragraph styles• Comprehensive OpenType support• Text decorations, drop caps and initial words• Flow text along any path• Advanced flow options and hyphenation• Baseline grid and text frame rulersPERFECT IMAGES & GRAPHICS• Link or embed images in your document• Place PSD, AI, PDF, JPG, TIFF, PNG, DWG or Affinity files• Correct and enhance images with non-destructive adjustment layers• Precision engineered pen and node tools for creating vector curves and shapes• Boolean operations to add, subtract, combine and divide shapes• Incredibly smooth gradient and transparency controls• Live preview of all effects, blend modes and image adjustmentsBUILT FOR YOUR WORKFLOW• Fully optimised for the latest Mac hardware and operating systems, including M1 chips• IDML & XLSX import• Section manager to organise your documents• Pan, zoom and scroll through documents at 60fps• Regular Expressions search and replace• Saveable undo history with alternate futures• Customisable keyboard shortcuts and saveable presets, including studio layout presets for the UI layout• Smart master pages• Automatically generate indexes and table of contents• Manage and create anchors• Consolidate images linked from various locations into a single folder• Merge multiple documents together into a single file• Save documents as template files to re-use time and time again• Collate your document alongside all used image and font resources into a folder using the Package feature• Convert pixel layer to image node• Integrate text and image links into documents by merging from external data sources• PDF passthroughPROFESSIONAL OUTPUT• End-to-end CMYK, PANTONE© and spot colour• Crop, bleed and registration• Live preflight checking• PDF/X-1a, PDF/X-3, PDF/X-4 output for professional printFULL INTEGRATION WITH OTHER AFFINITY APPS• Instantly switch to the advanced photo editing features of Affinity Photo and precise vector tools of Affinity Designer without leaving Affinity Publisher with StudioLink• The most fluid workflow ever conceived in a creative suite of applications",
+        "features": [
+            "📅 23 Eyl 2025 - Sürüm 2.6.4",
+            "- Bug fixes and stability improvements.More info in the 'News and Information' section of the Support Forums,access forums via the Help menu."
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/24/d1/fc/24d1fcb7-1b00-e0d1-c839-2f6b7e72ded4/9c8c7607-8fdc-4735-bbce-9c6485b1ddfb_publisher-pathtext-macbook-en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/38/0a/bc/380abc32-4b67-c17a-8745-dcf26305a706/ca1e4471-d72b-4629-8f7b-846923814d68_publisher-masterpages-macbook-en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/31/de/ce/31dece42-3de0-9b6f-f149-35a4df037092/e8a9a4af-60e7-4961-8133-96282e0b265b_publisher-footnotes-macbook-en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/02/8c/84/028c8420-7cd6-173c-2eaa-6ad64f2d0de6/b2bffded-166b-466e-9dd2-c3989e1a203f_publisher-opentype-macbook-en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0f/09/fe/0f09fe3f-7227-7ffb-8f79-273828ed6867/d20dcc10-4262-4eef-bb50-2aefca4815e4_publisher-books-macbook-en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/28/54/d7/2854d7e6-6ede-aab9-645c-1468ff522a18/ef0c16ed-4f71-4478-ad16-5af6b75a0269_publisher-package-macbook-en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d3/3e/e2/d33ee2bc-b2c3-b776-4d82-d472a3d50d1a/87170c53-dcee-416a-aafe-6b3db17e5e7a_publisher-preflight-macbook-en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a2/e1/3f/a2e13f1d-bdf7-5a0f-5ba3-14ebcad37bb8/publisher-2.6-multiple-pages-macbook-en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/81/ec/6a81ec73-3680-077b-d167-2e89804d38e0/2c4504bf-64d4-43fd-a66b-3f913c7fb5e3_publisher-colour-macbook-en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/25/76/9f/25769f82-d4b1-bafe-45f4-027a759d5984/a470c220-7829-46e6-945c-59b982d0ec7d_publisher-tables-macbook-en.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "Mac: macOS 10.15 veya üst sürümünü gerektirir."
+        ],
+        "creationDate": "2025-09-29T12:45:39.850669+00:00",
+        "lastModified": "2025-09-29T12:45:39.850669+00:00",
+        "reviews": [],
+        "badgeType": "new"
+    },
+    {
+        "name": "‎Macrowave - Private P2P Radio",
+        "category": "Eğlence",
+        "version": "1.0.4",
+        "fileSize": "20.2 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5d/0a/58/5d0a58a0-6a94-e36f-855b-47c24afcbd2c/AppIcon-85-220-5-0-0-2x-0-0.png/1200x630wa.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/macrowave-private-p2p-radio/id6746954963?l=tr Macrowave - Private P2P Radio",
+        "description": "Macrowave turns your Mac into a private radio station. Share system audio with friends in real-time – perfect for listening to music together, watching videos simultaneously, or sharing any audio from your computer.BROADCASTERCreate your own radio station in seconds. Stream your entire system audio or select specific apps and windows. Want to share a video? Stream it. Listening to music? Share it. Hosting a podcast? Broadcast it. Get a shareable link and send it to anyone you want to invite to your audio stream. Your friends won’t need the app to listen to your radio station, they can use any web browser.RECEIVERJoin your friends' stations instantly. Open their broadcast link and start listening – no account needed, no sign-ups required. It's as simple as clicking a link to tune into someone's audio stream.KEY FEATURES• Stream full system audio or individual apps/windows• Real-time peer-to-peer streaming – like a phone call for audio• Generate instant shareable links for your broadcasts• Join streams with one click• Native macOS app built for performancePRIVACY FIRSTMacrowave doesn't collect any data. Your audio streams are peer-to-peer connections between you and your listeners. No servers storing your content, no tracking, no analytics – just direct audio sharing between friends.Perfect for remote movie nights, sharing music discoveries, collaborative work sessions, or creating your own private podcast. If you can hear it on your Mac, you can share it with Macrowave.SUPPORT / FEEDBACK / CONTACTIf you need direct contact with the developer, you can send an email to xoxo@lucas.love.I welcome feedback and like to help with any problems.Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+        "features": [
+            "📅 28 Aug 2025 - Version 1.0.4",
+            "• Includes several minor bug fixes"
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/26/aa/9b/26aa9b8f-2609-c70c-4b34-f58475f79bed/macOS_2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ad/bf/ff/adbfff9c-9d8a-d0d2-11d3-9821bfc7766b/macOS_1.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 17.0 or later.",
+            "Mac: Requires macOS 14.4 or later."
+        ],
+        "creationDate": "2025-09-29T12:44:49.365891+00:00",
+        "lastModified": "2025-09-29T12:44:49.365891+00:00",
+        "reviews": [],
+        "badgeType": "new"
+    },
+    {
+        "name": "‎Video Effect Vfx Editor Riveo",
+        "category": "Fotoğraf ve Video",
+        "version": "3.79",
+        "fileSize": "118.5 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/3b/c6/583bc6c4-bc71-d758-3b0a-6f2e39989d4a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/riveo-video-efekt-edit%C3%B6r%C3%BC/id1546053158?l=tr Riveo - Video Efekt Editörü",
+        "description": "Try Riveo — the only special effects video editor and maker you need to create immersive, professionally edited videos that go viral.Riveo’s easy-to-use AI-driven FX composer unlocks your creativity whether you record video on your iPhone or film with professional-grade gear. Adapt ideas from paper into captivating social media reels, short clips, music videos, movie trailers, promos, collages, ads, montages, vlogs, stories, intros, slideshows, TV transitions, and even short films!RIVEO IS FOR CONTENT CREATORS WHO WANT TO:* Add keyframes, masks, and blend modes for everything to come together /* Apply special effects, motion effects, 3D text & color grading filters /* Mix images, videos, effects, filters, and more /* Retime videos in slow motion* Access live preview editing & green screen tools /* Bring your film ideas to life /[100+ Special Effects]• Layer color graded filters, motion, and special effects for unlimited possibilities. Style your footage to look like VHS tape, turn it retro, add glitches or blur out the edges. The possibilities are endless using particle effects like gas, smoke, soap bubbles, cartoon fire, 3D butterflies, broken glass, pencil sketches, halftones, beauty filters, and spooky mist.[Video Filters]• Enhance your video footage with trendy color grading filters and effects, including Bokeh, Glitch, Cartoon, Fog, Vintage, Sparkles, 90s TV, Old School Camera, Pixelate, Fire, Rain, VHS, Retro, and even a Stranger Things-inspired filter.[Motion Effects]• Click and drag to add transitions and animations that respond to your movements. Throw fire, water, rain, and more in your videos.[3D Text Effects]• Get started with text-style presets ranging from chrome to glass to animate your words in 3D. Make text bounce in or have your message pop out. Tweak the settings to make text overlays your own.[Retime Videos]• Modify a clip's speed, length, and timing with HD motion to create missing frames to make the movement buttery smooth. Add in slow-motion and boomerangs for even more impact.[Keyframe Scenes]• Specify the start and end of your transitions to create perfect timing. Ramp up the fire, move in an image. Keyframes let you animate what you add to your scene.[Integrated Camera]• Record, enhance, and share videos with the world using the built-in camera. The integrated workflow makes it easier to create your videos from 15fps to 200fps.[Animated Stickers]• Enhance your videos with access to a fun variety of Giphy stickers ranging from reactions and memes to weird and celebrities.[Stock Music Library]• Adding the ideal audio track is essential to making your video go viral. Seamlessly synchronize royalty-free sound with over 100+ trendy audio tracks.[Gesture-Driven UI]• The devil is in the details. Gesture-driven components make navigating through editor settings intuitive. It is no coincidence that the effect previews update when you scrub the video.[Live Preview]• Edit videos in real-time using instant filters and special effect previews in real-time. Preview your changes to see how they look on your current scene. And quickly scrub through the video timeline to apply it at the exact moment.[Masking]• AI-driven masking provides you with a green screen for isolating a silhouette to change the background location.[Export in 4K, 720p]Render your creations in 720p for social media, 1080p for your TV at home,, or 4K at 60fps for that buttery smooth project that you want to shine.[Backgrounds]• Apply and blend linear, radial, and mesh gradient backgrounds to your video. Riveo also gives you the freedom to create your own.__________Questions or feedback? Get support directly from the developer at hello@forgeandform.co. I created Riveo for you to develop professional videos without a big studio budget or in-house editor. Enjoy!ToS: https://forgeandform.co/appDocs/riveo/tosEn.htmlPrivacy Policy: https://forgeandform.co/appDocs/riveo/privacyPolicyEn.html",
+        "features": [
+            "📅 19 Aug 2025 - Version 3.79",
+            "Some bug fixes"
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/78/0d/6b/780d6bb3-f30a-86cf-6ffd-e7d52a26b8fd/en_mac_a.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8d/1e/f9/8d1ef997-3b12-796a-3804-5005b4115b4b/en_mac_b.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/af/12/62/af126266-9bb4-ff06-a4f2-0a1387399f95/en_mac_c.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3f/e5/e2/3fe5e263-bca0-fa66-1532-6f9bbae8cfe3/en_mac_d.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/74/2d/0c/742d0c0b-17d2-30b5-947f-13aaa8f43472/en_mac_e.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/66/17/29/661729b1-cee4-10eb-4b73-5cbdfbb461c0/en_mac_f.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bf/dd/d2/bfddd21f-3cba-a65d-3d24-3f58bbaa5c6c/en_mac_g.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/44/02/f6/4402f6b7-a132-c8e3-18ad-f1ab4717d8b5/en_mac_h.jpg/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 16.6 or later.",
+            "iPad: Requires iPadOS 16.6 or later.",
+            "Mac: Requires macOS 13.5 or later and a Mac with Apple M1 chip or later."
+        ],
+        "creationDate": "2025-09-29T12:44:26.765973+00:00",
+        "lastModified": "2025-09-29T12:44:26.765973+00:00",
+        "reviews": [],
+        "badgeType": "new"
+    },
+    {
+        "name": "‎djay - DJ App & AI Mixer",
+        "category": "Müzik",
+        "version": "5.4.3",
+        "fileSize": "301.6 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2f/d3/f8/2fd3f80d-cf47-a6e6-64e2-916a6403d4fb/AppIcon-0-0-85-220-0-0-5-0-2x-P3.png/1200x630wa.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/djay-dj-app-ai-mixer/id450527929?l=tr djay - DJ App & AI Mixer",
+        "description": "*** Now with Spotify Integration ***Welcome to djay Pro! Algoriddim’s acclaimed DJ software and winner of the Apple Design Award is built from the ground up for Mac. Connect your Spotify or Apple Music account to access millions of songs instantly and mix your favorite playlists – right from within djay Pro.With its modern interface and sophisticated integration with your music library, djay Pro delivers pristine sound quality and powerful features – including industry-leading beat sync, Neural Mix™, Automix, and seamless hardware support. Whether you’re learning the basics at home or performing live on stage, djay Pro gives you everything you need to mix, perform, and build DJ sets with endless creativity.APPLE MUSIC INTEGRATION• Access to over 100 million songs• Match: recommendations based on the currently playing song• Your library: all your playlists and songs• Home, charts, and personalized playlists• Add songs directly to your Apple Music librarySPOTIFY INTEGRATION• Access to the full Spotify music catalog• Your playlists, editorial playlists, searchPOWERFUL MEDIA LIBRARY• Spotify: Millions of tracks + your own playlists (Spotify Premium subscription)• Apple Music: Millions of tracks + your personal library in the cloud (Apple Music subscription)• TIDAL: Millions of tracks, music videos, high quality sound (TIDAL DJ Extension)• SoundCloud: Millions of underground and premium tracks (SoundCloud Go+)• Beatport: Millions of electronic music tracks (Beatport Advanced Subscriptions)• Beatsource: Millions of open-format music tracks (Beatsource Subscription)• Finder: access files on your Mac or from external hard drives seamlessly• My Collection: Powerful playlists management and meta data editingNEURAL MIX™ STEMS• Isolate vocals, drums, and instrumentals in real time (not available with Apple Music or Spotify)AWARD-WINNING USER INTERFACE• 2- and 4-Deck views• Single Deck preparation view• Video and Automix viewsAUTOMIX• Automatic, beat-matched mixes• Queue and Playlist automationMUSIC PRODUCTION TOOLS• Sequencer: create instant beats on top of music• Looper: remix music with up to 48 loops per track• Beat-matched sequencing of drums and samples• Extensive content library with 1000+ loops and samplesVIDEOS, VISUALS, and PHOTOS• Mix videos, visuals, and photos• Music video streaming through TIDAL• Beat-matched photo slideshowsPOWERFUL AUDIO ENGINE• State-of-the-art audio engine• Real-time music source separation• Crossfader Fusion™• High-quality mixer, filter, EQ, isolator, and limiter• Advanced time-stretching and pitch shifting• Over 40 built-in audio effects• Master output effects through Audio Unit plug-ins• Live recording• Ableton Link integrationADVANCED AUDIO ANALYSIS• Fluid Beat Grid: the world’s most sophisticated beat detection and sync engine• Key detection• Colored waveforms• Auto-GainHARDWARE INTEGRATION• Native support for over 100 MIDI controllers• Pioneer DJ CDJ integration• Digital Vinyl System (DVS) integration• RANE Twelve integration• Advanced MIDI Learn• External Mixer Mode• Support for multi-channel USB audio interfaces• Support for external audio input and microphonesThe optional PRO subscription allows you to subscribe once and use djay Pro across all your Mac and iOS devices, including access to all PRO features, as well as 1000+ loops, samples, and visuals.A supported streaming subscription and an internet connection are required to access songs from a streaming service in djay. No recording available for streamed songs. Neural Mix cannot be used when streaming from Apple Music or Spotify. Specific songs may not be available or accessible on your account or in your country. Streaming service availability and pricing may vary depending on country, currency and service.",
+        "features": [
+            "📅 24 Sept 2025 - Version 5.4.3",
+            "This update is a big one: Spotify is now fully integrated into djay Pro for Mac!Mix your entire Spotify library directly in djay – including your own playlists and Spotify’s editorial playlists. Whether you’re performing with hardware, mixing on up to four decks, or letting Automix seamlessly blend your favorite playlists, Spotify is now at the heart of your djay experience.NEW• Spotify integration• Access the full Spotify music catalog, including your own playlists, Spotify's editorial playlists, and searchIMPROVED• Added option to show Neural Mix controls on regular waveforms• Added option to log out of a streaming service via source list• Added MIDI actions to select a specific view mode• Undo/redo support for renaming cue pointsFIXED• Fixed compatibility issue with AirPods when microphone is enabled• Added missing pre-cueing auto-select toggle in external mixer mode• DDJ-GRV6: fixed stems FX resetting on song load• DDJ-REV5: fixed parameter buttons affecting all FX instead of selected only• RANE ONE Mk2: reordered stems button mappings to match hardware labels; added Shift + Acapella/Instr to solo with mute FX• Various bug fixes and performance improvements"
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/85/50/09/855009d7-8b03-88d4-d0d9-dc6b15ac084e/0_APP_MAC_0.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/61/db/75/61db75f5-4410-6168-5a75-fa9d9a08732e/1_APP_MAC_1.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d9/15/d7/d915d73c-d806-9e7c-5fc9-9e4ea6d8d913/2_APP_MAC_2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/28/90/da/2890da54-5599-006c-5a93-f603ee59bf28/3_APP_MAC_3.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/f9/01/a9f9016c-36d0-46cb-a6ad-8d20492fec8e/4_APP_MAC_4.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2e/3a/54/2e3a54d4-ab67-fefe-635d-f0369540283e/5_APP_MAC_5.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/cb/bb/93/cbbb93c8-0934-0b02-4102-ca310deba200/6_APP_MAC_6.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e4/85/80/e4858033-2390-6971-d321-e7dbf14a2500/7_APP_MAC_7.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/76/04/63/76046341-07f7-dcc3-265b-7960a91a019d/8_APP_MAC_8.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 15.0 or later.",
+            "iPad: Requires iPadOS 15.0 or later.",
+            "Mac: Requires macOS 10.15 or later."
+        ],
+        "creationDate": "2025-09-29T12:43:58.258305+00:00",
+        "lastModified": "2025-09-29T12:43:58.258305+00:00",
+        "reviews": [],
+        "badgeType": "new"
+    },
+    {
+        "name": "‎Author",
+        "category": "Verimlilik",
+        "version": "11.2",
+        "fileSize": "5.5 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5e/90/31/5e903143-d07b-9580-f2b0-3b1624e9ef67/macos26-0-85-220-0-6-0-0-2x-0-0.png/1200x630wa.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/author/id951792010?l=tr Author",
+        "description": "Author features an integrated concept Map, ‘Ask AI’ to help you write (not write for you), Journal and a streamlines citation system, along with many other functions to augment how you write to think and communicate. To try Author for free, (without Export or AI), download 'Author | Basic'.",
+        "features": [
+            "📅 24 Sept 2025 - Version 11.2",
+            "Updated AI and interface improvements."
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/54/18/1e/54181ec8-c4b3-5770-97e6-59599c5beb92/front.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/63/d7/0f/63d70f88-5423-225e-518e-ccf07dd6bd57/themes.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6a/44/ed/6a44ed9b-2a58-4e52-1dbc-799bfeed7418/export-w-ai.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/22/f1/71/22f17120-2920-7c3b-c6b1-dd0f80c4ea0e/ai-ai.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/67/6b/32/676b32f1-c840-b659-1f16-26ffdd5cfb59/citecite.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2d/dc/3b/2ddc3bc4-e328-0158-2b55-eb2a1f88906b/mpa-map.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a4/cd/ca/a4cdca54-a910-6c98-2fc3-a5b17216cbb7/outlines.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/83/69/bd/8369bdff-17da-de19-18e1-68ca84ed9aff/journal.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/80/65/e4/8065e41f-c574-7813-7f7b-ccc0ec2cfd29/commenta.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0f/86/0c/0f860c77-1fc5-49d7-7ea0-b3ac17cbdd11/authorship.jpg/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 18.0 or later.",
+            "iPad: Requires iPadOS 18.0 or later.",
+            "Mac: Requires macOS 12.0 or later."
+        ],
+        "creationDate": "2025-09-29T12:43:37.257730+00:00",
+        "lastModified": "2025-09-29T12:43:37.257730+00:00",
+        "reviews": [],
+        "badgeType": "new"
+    },
+    {
+        "name": "‎Fugue Machine Rubato",
+        "category": "Müzik",
+        "version": "1.1.0",
+        "fileSize": "4.7 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/17/38/eb/1738ebd2-4f17-d8e1-f61c-d20f54327896/AppIcon-0-0-1x_U007epad-0-10-0-85-220.png/1200x630wa.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/fugue-machine-rubato/id6670253122?l=tr Fugue Machine Rubato",
+        "description": "Demo available via TestFlight at fuguemachinerubato.com. Fugue Machine Classic users: see iOS App Store for discount bundle.Bend time. Automate notes. A single grid as a multi-dimensional musical canvas — for iPad, iPhone, and Mac.Fugue Machine Rubato dives deeper into the multi-playhead piano roll concept of Fugue Machine Classic by adding time-bending playheads, parameter automation, and much more.At the heart of the sequencer is a nonlinear time engine that lets playheads move with a natural — or surreal — feel. Unlike conventional sequencers, where time advances at a constant rate, time in this engine can expressively accelerate, decelerate, freeze, and change direction. Playheads are now free to swing, strum, bounce, move elastically, and more.Built upon the time engine is a robust parameter automation system with time-bending automation playheads and envelopes sculpted with points, curves, and shapes. Nearly everything can be automated — even the notes.Eight years in the making, Fugue Machine Rubato is rock-solid and absolutely packed with features.HIGHLIGHTS• Bend time with curves, rates, and offsets• Automate notes and nearly everything else• Sculpt envelopes with curves and shapes• Position playheads anywhere on the grid• Play up to eight playheads at once• Apply note echoes per-playhead• Arpeggiate notes from multiple playheads• Blend notes from multiple playheads• Offset, stack, spread, and invert pitches• Clamp, compress, and expand velocities• Program drums via per-note Drum Trigs• Route notes to up to eight MIDI outputs• Organize patterns in nestable folders• Launch patterns quantized to the beat• Revert state via auto-saved Snapshots• Learn contextually via popovers• Explore ~150 built-in patterns• Control via touch, keyboard, and cursor• Resize Mac window at native resolutionCOMPATIBILITYFugue Machine Rubato supports iPad, iPhone, Mac, Ableton Link, MIDI, and AUv3* MIDI. With the included AUv3 MIDI plugin, you can run multiple instances of Fugue Machine Rubato within AUv3 host apps — like AUM, Logic Pro for iPad, Loopy Pro, and Cubasis.UNIVERSAL APP — ONE-TIME PURCHASEPay once and use on iPad, iPhone, and Mac.LEARN MORE — TRY A FREE DEMOTo learn more or try a free demo via TestFlight, visit fuguemachinerubato.com.",
+        "features": [
+            "📅 29 Jun 2025 - Version 1.1.0",
+            "- AUv3 support for Mac.- added AUv3 settings to customize behavior when the host is cycling around a loop."
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2a/ee/da/2aeeda20-1528-9c7c-577c-e85992c7aff4/4-automation.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/52/ef/76/52ef7653-5326-7777-fce8-849c062e216a/3-velTransform.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7a/81/07/7a810785-5627-2ce5-9968-11a773c7d172/5-keyboard.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/db/e2/d9/dbe2d9e1-d947-3661-757d-04dca439fb06/2-aum-v2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e1/d0/df/e1d0df89-4ea3-80d5-94c1-cf1ccb0167f1/1-vel.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/86/ba/b9/86bab90d-5281-1bb8-454a-55f1ac393fb4/6-start2025.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/38/92/44/38924420-1775-a1b1-8b65-36e759467801/7-patterns.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/d2/0a/5ad20aeb-4a76-9623-0541-494bf5066c79/8-file.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/74/87/bb/7487bbcc-48b5-bc2b-205c-58f5976804e9/9-tempo.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/33/db/1a/33db1a2c-e929-e25b-8252-d2d46641eff0/10-settings.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 15.6 or later.",
+            "iPad: Requires iPadOS 15.6 or later.",
+            "Mac: Requires macOS 15.0.0 or later."
+        ],
+        "creationDate": "2025-09-29T12:38:13.363199+00:00",
+        "lastModified": "2025-09-29T12:38:13.363199+00:00",
+        "reviews": [],
+        "badgeType": "new"
+    },
+    {
+        "badgeType": "new",
+        "category": "Aksiyon",
+        "creationDate": "2025-09-29T10:41:50.527318+00:00",
+        "description": "Harold Halibut is a handmade narrative game about friendship, and life on a city-sized spaceship submerged in an alien ocean. Join Harold as he explores a vibrant retro-future world in his quest to find the true meaning of ‘home’.It’s been 250 years since your home - an ark-like spaceship - fled an Earth on the verge of cold war to find a habitable planet to preserve the human race.You are Harold, a young lab assistant for the ship’s lead scientist, Jeanne Mareaux. While most of the ship’s inhabitants have reconciled themselves to a life lived aboard the sunken ship, Mareaux still works tirelessly to find a way for the ship to leave the planet and find a new, dryer home.But the weird, wonderful and diverse people of the FEDORA I keep Harold busy too… Until one fateful encounter plunges Harold into a world no one could have imagined - and one that may hold the key to Mareaux’s re-launch plans.Join Harold as he explores a vibrant retro-future world in his quest to find the true meaning of ‘home’.",
+        "downloadLink": "",
+        "features": [],
+        "fileSize": "40,8 GB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/77/71/5b/77715b74-c0d6-7f03-0e75-6a2123d73789/PlayerIcon.png/1200x630bb.png",
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0a/26/d7/0a26d714-9838-9e72-76c8-f53e0be6fc18/HaroldHalibut_HaroldBuddy-2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/88/ab/b4/88abb4a7-657f-be96-6066-d308a3bb4d09/HaroldHalibut_Cockpit.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/47/4e/d2/474ed242-3cb4-2def-a2e0-f00371bf77db/HaroldHalibut_Arcades.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/72/11/86/7211869e-ea20-aa59-bd7b-25d82fc265bf/HaroldHalibut_Cave.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/98/a0/75/98a075fc-f7a2-d846-e360-0415272c3337/HaroldHalibut_AgoraArcades-2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/65/94/0a/65940a0f-55ce-f16f-0b75-ac83e4628d35/HaroldHalibut_TheCave.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d9/fa/0e/d9fa0e44-9890-6220-2736-baf1eb070246/HaroldHalibut_PDA.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c8/16/27/c8162711-a262-c17d-217c-0ab5ea308515/HaroldHalibut_Mareauxs_Room.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1e/13/6c/1e136c16-47b5-1910-582e-64a35d72ecca/HaroldHalibut_Minigame.png/1286x0w.webp"
+        ],
+        "lastModified": "2025-09-29T10:43:13.774676+00:00",
+        "name": "‎Harold Halibut",
+        "reviews": [],
+        "systemRequirements": [
+            "Mac: macOS 14.0.0 veya üst sürümünü ve Apple M1 veya üzeri çipe sahip bir Mac gerektirir."
+        ],
+        "version": "1.0",
+        "website": "https://apps.apple.com/tr/app/harold-halibut/id6711357246?l=tr&mt=12 Harold Halibut",
+        "downloadUrl": "https://akirabox.com/Pbe3PMWx2zlX/file"
+    },
+    {
+        "name": "‎Parcel - Delivery Tracking",
+        "category": "Alışveriş",
+        "version": "1.0",
+        "fileSize": "7.2 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b1/a0/ca/b1a0ca4c-80f7-2aa3-c9d4-0361b411a7d5/AppIcon-0-0-85-220-0-0-5-0-2x-0-0-0.png/1200x630wa.png",
+        "downloadUrl": "https://akirabox.com/Pbe3PMWx2zlX/file",
+        "website": "https://apps.apple.com/tr/app/parcel-delivery-tracking/id375589283?l=tr Parcel - Delivery Tracking",
+        "description": "If you see \"Purchased\" instead of \"Get\", sign out of the App Store in System Settings –> Apple Account –> Media & Purchases, then go back into the App Store signed out.If you are looking for an app to track deliveries on Mac, iPhone, iPad or Apple Watch - Parcel is the best choice for you.With this application you can promptly access tracking information for 300 delivery services, including DPD, Parcelforce, Evri, UK Mail, Yodel, Deutsche Post, Amazon Logistics, TNT, UPS, USPS, FedEx and many other postal services. Full list of supported carriers is available at: https://parcel.appTracking data is collected on our server, so you will get it right to your device with a click of a button. With unique carrier automatic recognition function, adding new delivery is just a matter of seconds.Push notifications provided by Parcel are more convenient than from any other app. They arrive simultaneously on your Mac and iOS devices. You can also locate your delivery on the map or manage your deliveries using Web Access (web.parcelapp.net) - easy and simple.Parcel utilizes the power of macOS to provide you the best possible user experience. You can use Spotlight to look for your deliveries and widget to add new deliveries or see expected deliveries for today or tomorrow (when there is an estimated delivery date available).Amazon integration in Parcel allows you to get your packages added automatically from your Amazon account. Once an order is shipped, it will appear in Parcel. This is done in a secure and privacy-friendly way with your credentials never leaving the device.Some features, such as push notifications and tracking more than 3 deliveries are limited to premium subscribers. Current price for the premium subscription is £4.49 per year, and may vary from country to country. Parcel's privacy policy, as well as subscription terms are available at https://parcel.app/privacy-with-terms.html.",
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7d/0d/f0/7d0df05a-b570-ef3f-a106-52930a893fc2/UK-1.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bc/68/7d/bc687da3-7013-0bd8-47b7-920f4c80f9bf/UK-2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/02/25/95/022595c1-b85d-b9d2-375d-11849f9fdfc4/UK-3.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 18.0 or later.",
+            "iPad: Requires iPadOS 18.0 or later.",
+            "Mac: Requires macOS 26.0 or later."
+        ],
+        "features": [],
+        "creationDate": "2025-09-29T00:15:19.072240+00:00",
+        "lastModified": "2025-09-29T12:17:39.439884+00:00",
+        "reviews": [],
+        "badgeType": "updated",
+        "featured": false
+    },
+    {
+        "badgeType": "updated",
+        "category": "Fotoğraf ve Video",
+        "creationDate": "2025-09-28T23:53:39.993173+00:00",
+        "description": "Video düzenleyiciler için tasarlanmış, güçlü bir hareketli grafik aracı olan Motion, 2B ve 3B başlıkları, akıcı geçişleri ve gerçekçi efektleri gerçek zamanlı olarak yaratmayı kolaylaştırır.2B ve 3B Başlıklar• 360° ortamları içe aktarın ve 360° başlıklar, oluşturucular ve efektler tasarlayın• Sıfırdan 3B başlıklar oluşturun, bunları kullanımı kolay şablonlarla tasarlayın veya var olan 2B başlığı anında 3B’ye dönüştürün• 100’den fazla sürükle-bırak davranışı ve sezgisel metin canlandırma araçlarını kullanarak canlandırabileceğiniz harika başlıkları kolayca yaratın• Metal, ahşap ve taş yüzeyler de dahil olmak üzere, Apple tarafından tasarlanmış 90’dan fazla 3B malzemeyle sayısız görünüm yaratmak için 3B başlıkları özelleştirinFinal Cut Pro için hareketli grafikler• Herhangi bir başlığı, efekti, geçişi veya oluşturucuyu kaydedin ve doğrudan Final Cut Pro’da erişin• Final Cut Pro başlıklarını, efektlerini ve geçişlerini Motion’da açarak özelleştirin• Final Cut Pro’da bir grup parametreyi bir sürgü, açılır menü veya onay kutusu ile denetlemenizi sağlayan, tek tek parametrelerin ve ayar kümelerinin herhangi bir birleşimiyle Motion şablonları yaratın• Birden fazla en boy oranını destekleyen şablonlar yaratmak için Ekranın En Boy Oranı Enstantaneleri’ni kullanınBüyüleyici Efektler• Anahtar kare olmadan doğal canlandırma için 230’dan fazla davranış arasından seçim yapın• Anahtarlama filtresi ile tek adımda hassas bir renk anahtarı yaratın• iPhone’da Sinematik modda çekilmiş videolar için odak noktalarını veya derinlik efektini değiştirin (macOS Monterey veya daha yenisini gerektirir)• Duman ve pırıltı gibi gerçek dünyadaki efektler için kendi parçacık yayıcınızı tasarlayın veya 200 ön ayar arasından seçim yapın• Rotoskop için denetim noktalarını hızla çizmek ve ayarlamak için profesyonel maskeleme araçlarını kullanın• Makine öğrenimini kullanarak yüzlerin veya nesnelerin hareketini otomatik olarak algılayın, izleyin ve eşleştirin• Farklı izleme analizi türleri arasından seçim yapın• Metinlere, şekillere, videolara, fotoğraflara ve daha fazlasına kolayca bir neon parlaması eklemek için Neon filtresi ekleyin• İleri düzey izleme, ileri düzey hareketli grafikler ve benzeri görevler için üçüncü parti FxPlug yazılım ekleri ekosisteminden yararlanınKolay 3B• Kameralar ekleyerek 2B’den 3B uzaya geçiş yapın• Aşırı gerçekçi 360° ortamlara yönelik bir 360° projede 3B sahneler yaratın• Kameraların ve ışıkların hareketiyle dinamik olarak canlandırılan gerçekçi gölgeler ayarlayın• Herhangi bir şekli, video düzlemini veya fırça darbesini 3B uzayda yansıtıcı bir yüzeye dönüştürün• Üçüncü parti USDZ nesnelerini içe aktarın veya Motion arşivindeki önceden hazırlanmış 60 nesneden birini kullanınÇığır Açan Hız, Kalite ve Çıktı• Geniş renk HDR görüntüleri içe aktarın, bunları desteklenen Mac bilgisayarlarında görüntüleyin ve standart Rec. 709 veya geniş Rec. 2020 renk uzayında dışa aktarın• Son nesil Apple Silicon çip iyileştirmeleriyle rakipsiz hız ve verimlilikSistem Gereksinimleri: macOS 15.6 veya daha yenisi; 8 GB bellek (16 GB önerilir); Metal özellikli grafik kartı (yalnızca Intel tabanlı Mac bilgisayarları); 4,7 GB kullanılabilir disk alanı.",
+        "downloadLink": "",
+        "downloadUrl": "https://www.instagram.com/stilfotografcilik09/",
+        "features": [
+            "📅 19 Eyl 2025 - Sürüm 5.11",
+            "Motion 5.11, aşağıdaki iyileştirmeleri ve hata düzeltmelerini içerir:• Apple Log 2 videolarının dinamik aralık ve daha da geniş renk gamı avantajlarını kullanın.• Kararlılık ve performans iyileştirmeleri içerir."
+        ],
+        "fileSize": "2,4 GB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/15/cf/7e/15cf7ed7-1fba-ac9e-e0a3-e84e9fc2bb82/AppIcon-85-220-0-5-0-0-2x-0-0.png/1200x630bb.png",
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/2a/75/b1/2a75b12f-47de-468e-4d63-3591fc1f4d77/ef289dd0-d810-4f5e-9bae-609dda504af2_1_Text_Animations_NEW_resized_2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/df/f8/2e/dff82e22-2052-cc6b-133d-17b3d62577a2/f9cfba6c-d3b5-48ba-a88f-f2957e030887_2_Tracker_Resized_2.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/e7/77/51/e77751eb-fc35-f722-1515-1bca0f904602/a9aabd07-a472-41c9-b7ca-b42bade34ee3_3_Particles_NEW_resized_2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/8c/6f/64/8c6f6487-5357-4d5a-e99b-4ad1be12e7ac/655f60d7-f2bb-406e-8646-b6da8f6019b5_4_Motion_3D_Text_EXISTING_resized_2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource115/v4/4b/71/0e/4b710e76-455e-da8d-687e-c7d49dd716ed/a11e9145-58a3-4ac8-af46-fc904c9289a1_5_NEON_resized_2.jpg/1286x0w.webp"
+        ],
+        "lastModified": "2025-09-29T00:20:14.799181+00:00",
+        "name": "‎Motion",
+        "reviews": [],
+        "systemRequirements": [
+            "Mac: macOS 15.6 veya üst sürümünü gerektirir."
+        ],
+        "version": "5.12",
+        "website": "https://apps.apple.com/tr/app/motion/id434290957?l=tr&mt=12 Motion"
+    },
+    {
+        "badgeType": "new",
+        "category": "Verimlilik",
+        "creationDate": "2025-09-28T23:50:19.841880+00:00",
+        "description": "OmniFocus is powerful task management software for busy professionals. With tools to help tame the chaos, you can focus on the right tasks at the right time.Two-week free trial!OmniFocus 4 introduces a modernized, unified interface across Mac, iPhone, iPad, Apple Watch, and Apple Vision Pro. Centered around your task outline, OmniFocus 4 brings a consistent experience, optimized for each device type, to all of your Apple devices.Easily create tasks anytime–from anywhere–and organize them with projects, tags, and dates. Quickly navigate OmniFocus on any device using the Perspectives Bar, Quick Open, and Back and Forward history. With Pro, use Focus to help focus your attention on specific projects or folders, and customize OmniFocus to only display the information most relevant to you.New to OmniFocus? The simple, efficient OmniFocus 4 interface will help you discover and implement a trusted system that works and grows with you.Upgrading from a previous version of OmniFocus? In OmniFocus 4, discover enhanced versions of all the powerful task management features you already rely on, along with new features that will level-up your workflow.Omni offers a free and secure sync service, protected with end-to-end encryption, ensuring only devices you authorize can access your data. And now, for the first time ever, OmniFocus is available as a universal cross-platform purchase: get full access to OmniFocus 4 on your Mac, iPhone, iPad, Apple Watch, and Apple Vision Pro with a single license purchase.Accomplish more every day–anywhere you go–with OmniFocus 4.",
+        "downloadLink": "",
+        "features": [
+            "📅 22 Sept 2025 - Version 4.8.3",
+            "OmniFocus 4.8.3 is a minor update focused on bug fixes.For full release notes, including platform-specific changes, see app or www.omnigroup.com/releasenotes/omnifocus.If you have any feedback or questions, we’d love to hear from you! The Omni Group offers free tech support; you can email omnifocus@omnigroup.com or call 1–206–523–4152.If OmniFocus empowers you, we would appreciate an App Store review. Your review will help other people find OmniFocus and make them more productive too."
+        ],
+        "fileSize": "35.5 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/13/f1/a5/13f1a504-5505-451a-3dc4-33e74bec5a02/AppIcon-0-0-85-220-0-0-6-0-2x-0-0-0.png/1200x630wa.png",
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/de/a1/18/dea118bc-5ed3-aa90-bc1c-99b499a499e2/01_Mac.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d2/a4/5d/d2a45dd5-8eaf-7eac-36b5-9a06101625dd/02_Mac.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/75/1d/05/751d0569-714e-74dc-1cda-65a82b8b45b9/03_Mac.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/14/9a/22/149a22a9-0a44-5f51-1be2-6f4a6102ff26/04_Mac.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/74/da/2f/74da2fb0-63ff-fc58-5b16-9e52e4dfca15/05_Mac.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a5/1e/51/a51e51e9-401a-47de-2fbb-f62aa74f6786/06_Mac.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a4/92/80/a49280f0-6ab4-b1ad-685f-11023dc6400a/07_Mac.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/68/31/36/68313611-d3a4-7e07-004b-4e463d6f0574/08_Mac.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9b/07/64/9b0764b8-ceae-340a-e95f-4c307df573c1/09_Mac.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e3/02/81/e302810f-e75e-631d-8579-6762157376f1/10_Mac.png/1286x0w.webp"
+        ],
+        "lastModified": "2025-09-29T12:17:42.258139+00:00",
+        "name": "‎OmniFocus 4",
+        "reviews": [],
+        "systemRequirements": [
+            "iPhone: Requires iOS 17.0 or later.",
+            "iPad: Requires iPadOS 17.0 or later.",
+            "Mac: Requires macOS 14.0 or later."
+        ],
+        "version": "4.8.3",
+        "website": "https://apps.apple.com/tr/app/omnifocus-4/id1542143627?l=tr OmniFocus 4",
+        "downloadUrl": "https://www.instagram.com/stilfotografcilik09/",
+        "featured": false
+    },
+    {
+        "badgeType": "new",
+        "category": "Verimlilik",
+        "creationDate": "2025-09-28T23:44:26.346335+00:00",
+        "description": "Fantastical is the multiple award-winning calendar app with powerful features including intuitive natural language text parsing, a full calendar window with day, week, month, quarter and year views, an ultra-quick access mini window, tasks, time zone support, and much, much more.Fantastical's natural language event and task creation, beautiful calendar views, and ultra-smart event list make it the best calendar and tasks app you'll ever use. Just type in that you have \"Lunch with John on Friday at 1pm\" and Fantastical will schedule it! Or type in \"remind me to Buy Milk on Tuesday\" and Fantastical will create a task with a due date!TRY FANTASTICAL FOR FREE• Beautiful, clean, and easy to use calendar app allowing you to manage basic events• Use the mini window to quickly check your schedule with customizable keyboard shortcut• Full screen day, week, month, quarter, and year views• Full task support including Todoist and Google Tasks• 3 day weather forecast (powered by AccuWeather)• 14 day free trial for Flexibits PremiumUPGRADE TO FLEXIBITS PREMIUM FOR EVEN MORE (requires subscription)• Includes Fantastical on all platforms: Mac, iPhone, Apple Watch, and iPad• Openings: Schedule events based on your availability• Proposals: Create meeting polls• Add Zoom, Google Meet, Webex, and Microsoft Teams calls• Extended 10 day weather forecast with RealFeel and MinuteCast up-to-the-minute weather data (powered by AccuWeather)• Browse and instantly subscribe to interesting calendars, including sports, TV shows, holidays, and much more (powered by SchedJoules)• Calendar sets - quickly toggle multiple calendars on or off with a simple click or automatically when you leave or arrive, based on location• Event and task templates• Sync calendar sets and templates across devices• Apple Watch app with Up Next and Weather (and works over LTE)• Parser autocomplete recommendations for invitees, locations, and calendars/task lists• Propose multiple times to easily ask people when they can meet• Combine duplicate events across multiple calendars• Invitees and availability lookups• Respond to event invitations• Default alerts• Time zone override• Favorite time zones• Push updates for Google and Exchange• Set event travel time and receive time to leave notifications• Custom event colors• Hide events without deleting them• Add attachments to events on iCloud, Google, and Exchange• Priority email supportTHE EASIEST WAY TO ADD EVENTS AND TASKS• Open Fantastical with a single click or keystroke• Type in your details or use dictation and watch your words magically turn into an actual event or task!• Powerful parser features, including:- Create tasks by starting your sentence with “task” ”reminder\", \"todo\", or \"remind me to\"- Powerful and expressive repeating events such as third Thursday of every month, every weekend, last weekday of the month, and more- Create alerts with phrases like \"remind me tomorrow at 3PM\", \"alert 1 hour before\", or \"alarm 3PM\"WORKS THE WAY YOU DO• Connects to your favorite calendar services including iCloud, Google, Exchange, Office 365, Todoist, and more• Automatically add alarms to your new events• Fantastical is fully localized in English, French, German, Italian, Japanese, Spanish, and Portuguese• Start typing your event or task in any of these languages and Fantastical will automagically understand!EVEN MORE FANTASTICAL• Lots and lots of macOS Widgets• Share Extension• Handoff support between Fantastical for Mac, iPhone, and iPad• Time zone support including floating time zone support• Dark and light themes• And much, much more!",
+        "downloadLink": "",
+        "features": [
+            "📅 22 Eyl 2025 - Sürüm 4.1.2",
+            "- Fantastical has a beautifully updated Liquid Glass design on macOS 26- Fantastical's natural language parser now uses Apple Intelligence to recognize events and tasks from complex sentences (requires Apple Intelligence and macOS 26)- Added an option to quickly show or hide calendars (right-click on the calendar sets menu)- Added support for the default icon to support the new icon appearance modes in macOS 26- Fixed an issue where custom repeat or custom alert settings could appear off the screen when using multiple displays- Fixed an issue where events on Microsoft Graph calendars might not show up- Fixed declining google events- Fixed an issue where it wouldn't be possible to accept invitations on Google Calendar for some events- Fixed an issue that made selected dates in widgets unreadable- Fixed two issues with creating events from a URL- Fixed a crash when using the parser on macOS 12 and 13- Various fixes and improvementsBy the way, App Store reviews are very helpful to us. If you think Fantastical is worthy, would you mind taking a moment to write a nice review? We'd greatly appreciate it. Thanks for using Fantastical! :)"
+        ],
+        "fileSize": "59,8 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a9/9c/92/a99c9214-8e73-3f39-2a23-220b52032262/AppIcon-0-0-85-220-0-0-6-0-2x-P3.png/1200x630bb.png",
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c1/cf/eb/c1cfeb8f-9a6a-dbee-ecbd-00ca71633832/Screen_1.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9c/39/45/9c39451c-bed1-231f-8193-053ba4122677/Screen_2.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c2/cf/91/c2cf910a-ec0e-d964-d4e5-c442a3bc5eac/Screen_3.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f9/41/5c/f9415c1c-208c-fb9d-03db-7dfe34bf913e/Screen_4.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/26/73/dc/2673dca1-e702-3ad1-ae78-32818475d879/Screen_5.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/6f/96/9b6f961f-6e88-584d-7c8d-2b6181375a10/Screen_6.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7f/55/34/7f55345f-3b2e-3b84-3537-bea36c54f292/Screen_7.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c4/14/71/c414714e-0285-b3f7-5c91-0f4020a8d8b3/Screen_8.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6c/cb/13/6ccb1377-7339-0514-be1c-bb4cd9b74be8/Screen_9.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e6/e1/bd/e6e1bd9a-3f8d-95b7-7eef-547adba4d256/Screen_10.jpg/1286x0w.webp"
+        ],
+        "lastModified": "2025-09-29T12:17:41.624473+00:00",
+        "name": "‎Fantastical - Calendar",
+        "reviews": [],
+        "systemRequirements": [
+            "Mac: macOS 12.4 veya üst sürümünü gerektirir."
+        ],
+        "version": "Sürüm 4.1.2",
+        "website": "https://apps.apple.com/tr/app/fantastical-calendar/id975937182?l=tr&mt=12 Fantastical - Calendar",
+        "downloadUrl": "https://www.instagram.com/stilfotografcilik09/",
+        "featured": false
+    },
+    {
+        "name": "‎Adobe Lightroom",
+        "category": "Fotoğraf ve Video",
+        "version": "Sürüm 8.5.1",
+        "fileSize": "1,8 GB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cc/01/8b/cc018ba3-2de5-2dbf-8423-d178e7010228/lr_appicon.png/1200x630bb.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/adobe-lightroom/id1451544217?l=tr&mt=12 Adobe Lightroom",
+        "description": "** Apple App Store Awards 2024 Winner – Mac App of the Year **A qualifying Adobe Photoshop Lightroom subscription is required. Non-subscribers may try the product free for 7 days before incurring the monthly Lightroom subscription fee.Join millions of users who trust Adobe Photoshop Lightroom as their AI-assisted photo editor for editing, organizing, storing, and sharing their photos and videos across desktop, mobile, and web.• Lightroom offers powerful photo and video editing features in an easy-to-use interface.• Supercharge your workflow and image quality with features made possible by AI, like Denoise, Super Resolution, and one-click selections of your subject.• Fix lighting by editing exposure, highlights, and more with precision sliders. Edit colors with hue, saturation, luminance, and color grading.• Create your own presets or explore built-in presets for quick and easy photo looks with a single click.• Selectively adjust parts of your image with adaptive presets or masking options that give you full control.• Easily remove distractions and unwanted objects using the AI-powered Remove tool.• Edit your full-resolution photos anywhere — on mobile devices, the web, or your desktop. Edits on one device are automatically applied everywhere else.• Lightroom’s popular photo editing can also be used with your videos. Apply presets, edit, trim, and retouch videos with the same tools you know and love.• Search your photos without ever having to tag anything. AI search makes searching a snap.• Choose to store your images locally or in the cloud. Customizable amounts of cloud storage ensure that you can access your entire library of full-resolution photos anytime you want, anywhere you are, from any device.• Share your photographs with loved ones, clients, or the world. Post photos directly to social media, share Lightroom albums on the web, showcase your photos on your website, and even share your edits with the Lightroom Community.• Explore in-app inspirational content from pros and educators as they take you through their process, step-by-step.Subscription terms:Your first week is free. Once your free trial ends, the recurring monthly payment or upfront payment for a year in full, whichever option you selected, is automatically charged.To stop service, go to account settings and turn off auto-renew at least 24 hours before the end of your billing period. Prorating is unavailable – when you turn off auto-renew, service will continue until the end of that billing period.Fine print:You must be 13 years of age or older to agree to Adobe’s terms and privacy policy: http://www.adobe.com/go/privacy_policy_linkfree.Use of Adobe apps and online services requires registration for a free Adobe ID as part of a free Creative Cloud membership. Adobe online services require an Internet connection, are not available in all countries or languages, and may be subject to change or discontinuation without notice.",
+        "features": [
+            "📅 27 Ağu 2025 - Sürüm 8.5.1",
+            "•\tGenerative Remove and people distraction removal are now better than ever with more seamless and speedy results.•\tItems added to the trash will be permanently deleted after 30 days.•\tBug fixes and support for new cameras and lenses."
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/49/c1/90/49c19017-ff1b-34bc-3db1-9e0c92097254/08be8c4d-f181-40ab-9b9c-64ef5511e06e_01_Adobe_Photoshop_Lightroom_AI_Magic_2880x1800_EN.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/cc/c7/f1ccc718-0bf5-1431-4dc0-81f404a67b1b/6d1ed9c0-647f-4ad9-9dc7-da010f080c94_02_Adobe_Photoshop_Lightroom_Editing_2880x1800_EN.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/70/d2/62/70d26210-91d1-056c-79ba-740425529d96/ab2d1292-dfeb-4164-87b2-3011db2986e8_03_Adobe_Photoshop_Lightroom_Video_2880x1800_EN.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/91/1a/e6/911ae647-8b0f-12be-6a6c-708c33fcd6e8/2eb48dba-e22d-4525-8746-29c6fef20a13_04_Adobe_Photoshop_Lightroom_Presets_2880x1800_EN.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/f0/d8/f1f0d84a-8b28-1b1b-2921-c1d507672995/6efa09b3-2616-4749-b18f-3592d944db83_Adobe_Photoshop_Lightroom_AIRemove_2880x1800_EN.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/11/48/5a/11485a6e-d9fe-d553-594f-ba1997bac2bd/df7f9f19-f01f-4f27-9e7a-c077782e8fa3_06_Adobe_Photoshop_Lightroom_Masking_2880x1800_EN.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/07/cc/31/07cc3179-3ac4-426a-5d97-f21c750ef5da/a996aa27-b8e9-422f-9bea-01eb86996de1_07_Adobe_Photoshop_Lightroom_HDR_Pano_2880x1800_EN.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/30/89/bf/3089bf08-348c-33ac-30fb-e9de903cf384/cc22869e-b49b-4b0a-96fe-368e295cbc9e_08_Adobe_Photoshop_Lightroom_Community_2880x1800_EN.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/44/1d/a1/441da131-d0bb-72a7-07df-e767ab83b97a/5bcbd292-20b3-43a1-9d32-86be4b28d19a_09_Adobe_Photoshop_Lightroom_Local_2880x1800_EN.jpg/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e8/c5/5a/e8c55ab7-2059-b93a-cb99-7bdcc27defb4/6ced9d5a-c1ed-4643-8261-539acb6587ec_10_Adobe_Photoshop_Lightroom_Ecosystem_2880x1800_EN.jpg/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "Mac: macOS 13.1 veya üst sürümünü gerektirir."
+        ],
+        "creationDate": "2025-09-28T23:43:11.793526+00:00",
+        "lastModified": "2025-09-29T12:09:46.344626+00:00",
+        "reviews": [],
+        "badgeType": "new",
+        "featured": true
+    },
+    {
+        "name": "‎Canva: AI Video & Photo Editor",
+        "category": "Fotoğraf ve Video",
+        "version": "Sürüm 1.116.0",
+        "fileSize": "150.8 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f0/f8/08/f0f80889-f8cc-77d1-6df8-db349264a263/icon.png/1200x630wa.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/canva-foto-video-d%C3%BCzenleyici/id897446215?l=tr Canva: foto, video düzenleyici",
+        "description": "Canva is an all-in-one visual communication platform that empowers the world to design. It’s a simple way to create beautiful presentations, infographics, videos, t-shirts, websites, social media posts, and more. Canva is for everyone with an idea to share, whether you’re a student, executive, or entrepreneur.The Canva Mac app lets you enjoy all the features you love in a dedicated program. Launch Canva instantly from your desktop. Dive into deep work without the tab overload.WORK SMARTER WITH THE VISUAL SUITEA complete suite of tools for our visual world- Craft professional content with 250,000+ free templates.- Design visual Docs with videos, charts, or linked Canva designs.- Capture your team’s best ideas with Whiteboards.- Present with confidence. Wow your audience with visual slides.- Design, schedule, and track your social posts in one place.- Print anything from t-shirts to mugs, posters, and packaging.- Turn your designs into a website. Save on domain costs.- Collaborate in real time with your team, from anywhere.- Connect your favourite work apps for a seamless workflow.PHOTO & VIDEO EDITING MADE SIMPLEFresh content at your fingertips- Edit photos instantly. Auto enhance, focus, or blur to add depth.- Personalize with ease. Filter photos, add text, and adjust image lighting.- Need to remove photo clutter? Add, replace, or modify details with AI tools.- Restore photos or customize emojis. Discover new possibilities with Canva apps.- Play with video editing. Crop, split, or speed up videos.- Finish with the perfect audio track. Sync to the beat in a snap.MEET MAGIC STUDIOAll the power of AI. All in one place.- Find the right words, fast, with Magic Write.- Create custom presentations and posts in seconds with Magic Design.- Turn ideas into images and videos with Magic Media.- Swap design formats, languages, or dimensions with Magic Switch.- Extend an image in any direction with Magic Expand.- Instantly add transitions to your design with Magic Animate.CANVA PRO GIVES YOU MORE MAGICUnlock premium templates, powerful tools, and AI-powered magic.- Unlimited access to 100+ million premium templates and content.- Full access to 20+ AI-powered tools with Magic Studio.- Set up, manage, and grow your brand with Brand Kit.- Resize designs without limits with Magic Switch.- Remove image and video backgrounds in a click.- Turn slides and brainstorms into a doc with Magic Switch.- Schedule social media posts to 8 platforms with Content Planner.- Working with a team? Collaborate faster with Canva for Teams.https://about.canva.com/terms-of-usehttps://about.canva.com/privacy-policy",
+        "features": [
+            "📅 19 Sept 2025 - Version 1.116.0",
+            "Your most-requested features are currently being built and tested! In the meantime, we want you to have a better design experience each week — so here’s an update full of fresh fixes and improvements.Need help? Let us know at https://www.canva.com/help/Keep on creating!"
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9b/54/ba/9b54baea-0e29-6120-f94f-10a821734369/aso_01_en-CENTRAL_macdesktop_GASO25017_canva_create_2025_photoeditor__202404_var1.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f4/c1/e4/f4c1e4ff-817e-5b23-325f-cd56d8befb07/aso_01_en-CENTRAL_macdesktop_GASO25017_canva_create_2025_ai-conversational-design_canva-code_202404_var1.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/55/a7/e6/55a7e652-7e7c-fcbc-4103-47bc32996a96/aso_01_en-CENTRAL_macdesktop_GASO25017_canva_create_2025_sheets-charts__202404_var1.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ff/ad/23/ffad234f-5f53-0c20-6f79-184a8f93af0c/aso_09_en-CENTRAL_macdesktop_desktopbaselinescreens_multiplefeatures__sp24.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/78/97/fd/7897fd20-05b5-cf54-52bb-608372034ed3/aso_04_en-CENTRAL_macdesktop_desktopbaselinescreens_multiplefeatures__sp24.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f1/33/31/f13331a0-b5e7-2773-06ab-f4ad7ed990cf/aso_03_en-CENTRAL_macdesktop_desktopbaselinescreens_multiplefeatures__sp24.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/26/dd/4e/26dd4ebf-6a82-d098-f999-69b9cda25be5/aso_05_en-CENTRAL_macdesktop_desktopbaselinescreens_multiplefeatures__sp24.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/e0/d6/53e0d6af-0224-95b7-f09f-d0ca3fb02e13/aso_06_en-CENTRAL_macdesktop_desktopbaselinescreens_multiplefeatures__sp24.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4e/41/b7/4e41b7ef-e25e-58af-e018-eb9a662b5095/aso_08_en-CENTRAL_macdesktop_desktopbaselinescreens_multiplefeatures__sp24.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1e/c6/d6/1ec6d660-d416-592a-72e0-28f6448aec20/aso_07_en-CENTRAL_macdesktop_desktopbaselinescreens_multiplefeatures__sp24.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 14.0 or later.",
+            "iPad: Requires iPadOS 14.0 or later.",
+            "Mac: Requires macOS 12.0 or later."
+        ],
+        "creationDate": "2025-09-28T23:41:45.862856+00:00",
+        "lastModified": "2025-09-28T23:41:45.862856+00:00",
+        "reviews": [],
+        "badgeType": "none"
+    },
+    {
+        "badgeType": "updated",
+        "category": "Fotoğraf ve Video",
+        "creationDate": "2025-09-28T23:39:25.145915+00:00",
+        "description": "DaVinci Resolve Studio 20Hollywood’s most powerful tools for professional editing, color correction, audio post and visual effects!DaVinci Resolve Studio is the world’s only solution that combines professional editing, color correction, visual effects and audio post production all in one software tool! You can instantly move between editing, color, effects, and audio with a single click. Whether you’re an individual artist, or part of a large team, it’s easy to see why DaVinci Resolve is the standard for high end post production and finishing on more Hollywood feature films, television shows and commercials than any other software.Blackmagic CloudDaVinci Resolve supports Blackmagic Cloud for remote collaboration using cloud based workflows! You can host project libraries using Blackmagic Cloud and collaborate on the same timeline, in real time with multiple users all over the world.Cut Page EditingDesigned for projects with tight deadlines that need to be turned around quickly, the cut page is designed for editing speed. The sync bin and source overwrite tools are the fastest way to edit multi cam programs. You can work faster than ever with dual timelines, source tape and smart editing tools. The cut page has a new layout for vertical timelines, voice over palette, dedicated keyframe editor, MultiText tool, new live overwrite controls and more!Professional EditingPerfect for both offline editorial and online finishing. You get every editing and trimming tool imaginable, stacked and tabbed timelines, multi cam, closed caption and subtitling tools, on screen annotations, faster project loading, 2D and 3D title templates, and dozens of other new features!Advanced Color CorrectionHollywood’s favorite color corrector keeps getting better! You get advanced HDR primary color grading tools with unlimited secondary corrections, power windows and tracking. The new AI Magic Mask gives you even more refined tracking and AI depth map 2 enables faster scene analysis and mattes, plus there’s new chroma warp grading and more.Fusion Visual EffectsFusion gives you a true 3D workspace with over 250 tools for creating feature film quality visual effects and stunning motion graphics! DaVinci Resolve 20 has a new deep image compositing toolset as well as a multi-layer pipeline for OpenXR, and psd files. There’s a new vector warp toolset, support for 180 VR, 3D scene dome light and support for native Cryptomatte workflows.Fairlight Audio PostFairlight is a full blown digital audio workstation with high performance multi track sample level editing and mixing! You get ADR tools, support for sound libraries, audio and video scrollers for quickly syncing sound, a scrolling timeline, normalization and Fairlight FX plugins including a hum remover, de-esser, reverb and more. DaVinci Resolve 20 features AI Audio Assistant which automatically creates a final mix.Upgrade to the paid version of DaVinci Resolve Studio 20 and you also get IntelliScript to create a timeline from script text, dialogue matcher, music editor to adjust track length automatically, animated subtitles, beat detector and MultiCam SmartSwitch for automatic camera angle switching. New Fusion toolsets include deep image compositing, multi layer pipelining and vector warping plus there’s support for VR 180. Studio v20 also includes major updates to Magic Mask and depth map. IntelliCut to remove silence and checkerboard speakers and audio assistant for a mastered final mix.DaVinci Resolve 20 App Store LimitationsThe Mac App store version of DaVinci Resolve Studio 20 does not support some external control panels, and may not be compatible with all 3rd party OpenFX or VST plugins. If you need these features, please download DaVinci Resolve Studio 20 from the Blackmagic Design support website.System RequirementsCurrent model Mac with Apple silicon. 8GB of system memory, 16GB when using Fusion, Mac OS X 14 or higher, at least a 1440 x 900 resolution display.",
+        "downloadLink": "",
+        "features": [
+            "📅 23 Eyl 2025 - Sürüm 20.2.1",
+            "• Paste attributes dialog now retains user selections across copies.• Improved magic mask response when adding and deleting points.• Addressed paste insert edits not following sync lock state.• Trim to and extend edits now honor the 1 second J and L edit threshold.• Addressed insert with in out not honoring source timeline track configuration.• Addressed jittery playback when scrubbing with go to mouse cursor.• Addressed issue with live preview on single viewer set up.• Addressed delays with shift click to change edit track controls.• Addressed issue with detaching audio from synced video subclip.• Addressed marker position when detaching audio from synced video.• Addressed MultiText entry issue for Chinese, Japanese or Korean.• Addressed a media pool clip context menu crash with split colorspace and gamma.• Addressed issue with color picker cursor on SDI viewer output.• Addressed search all effects not returning Resolve FX results.• Addressed video playback issues in the Fairlight page.• Addressed slow bounce operations in the Fairlight page.• Voiceover beeps now follow monitoring gain, mute and dim settings.• Addressed Fusion viewer guides context menu issue with quad view.• Addressed output blanking showing as viewer background color.• Addressed decode issues with some Apple ProRes RAW clips.• Addressed Sony ARW color artefacts in overexposed areas.• General performance and stability improvements."
+        ],
+        "fileSize": "5,1 GB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/e6/09/a0e60971-0d09-de64-ebe7-4c8b113e5bcc/Resolve.png/1200x630bb.png",
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1d/8e/70/1d8e701d-06e3-9ed5-fd5a-926788cb10d9/DaVinciResolve20_AppStore_Cut.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fb/ff/e0/fbffe04c-59f0-9253-3451-85baad667899/DaVinciResolve20_AppStore_Edit.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/d9/7a/4cd97a6b-1bea-9bca-1633-c6881b038f5b/DaVinciResolve20_AppStore_Fusion.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/05/d9/70/05d970f1-0571-cdd5-2246-668bc80962b3/DaVinciResolve20_AppStore_Color.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/17/75/85/1775850b-b620-b66a-49a5-da812589989b/DaVinciResolve20_AppStore_Fairlight.png/1286x0w.webp"
+        ],
+        "lastModified": "2025-09-29T12:17:43.473542+00:00",
+        "name": "‎DaVinci Resolve Studio",
+        "reviews": [],
+        "systemRequirements": [
+            "Mac: macOS 14.5 veya üst sürümünü gerektirir."
+        ],
+        "version": "Sürüm 20.2.1",
+        "website": "https://apps.apple.com/tr/app/davinci-resolve-studio/id900392332?l=tr&mt=12 DaVinci Resolve Studio",
+        "downloadUrl": "https://akirabox.com/BnkmWVjMqGR0/file",
+        "featured": true
+    },
+    {
+        "name": "‎Flighty – Live Flight Tracker",
+        "category": "Seyahat",
+        "version": "Sürüm 4.6.1",
+        "fileSize": "146.4 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4d/3a/1b/4d3a1b4f-d659-6acb-18aa-fd5c6abc9eeb/AppIcon-0-1x_U007euniversal-0-1-0-85-220-0.png/1200x630wa.png",
+        "downloadLink": "",
+        "website": "https://apps.apple.com/tr/app/flighty-live-flight-tracker/id1358823008?l=tr Flighty – Live Flight Tracker",
+        "description": "\"Don't Fly Without This App\" WSJ • Finalist for App of The Year • Winner of Apple Design Award • Made for passengers firstNo-credit-card free trial.No account required.No spam emails.No ads.▶ WORLD'S FASTEST DELAY ALERTS- 2-90 minutes faster than most airlines- 24-48 hours faster cancellation alerts- Always be the first to know, with no effort▶ INDUSTRY-FIRST FEATURES- See WHY you're flight is delayed- 25-hour where's my plane- Flighty Friends – private sharing among family/friends- Pilot-Grade data – FAA and Eurocontrol- Delay Predictions- Flighty Passport – auto-create your personal flight map- Taxi times- Ground radar- Proximity radar▶ AUTOMATIONS- Calendar sync- TripIt sync- Email forwarding- Flighty Friends: private flight sharing with friends▶ PILOT-GRADE DATA- Live-streaming- Actual flight plans- Commercial data – same source used by your pilot- FAA advisories, warnings, and delays- Tail number – with birthday, type, and even name- Full flight timetable- Proximity radar - see flights around you- Ground radar - radar even while taxiing▶ BE THE FIRST TO KNOW- Late arriving aircraft delays – up to 6 hours before your airline!- Alerts for canceled inbound aircraft- Alerts for airport weather or traffic- Delay forecast▶ ASSISTANTS- Morning-Of Assistant - wake up informed- Check In Assistant - your reservation number and check in link at the right time- Connection Assistant - make tight connections a breeze- Import Assistant - seamless import (plus data enrichment!) from myFlightradar24, App In The Air, OpenFlights.org, FlightMemory, Logmyflight, and JetLovers▶ WORLDWIDE + LIVE + UNLIMITED- Every airline- Every flight- 24/7/365 live global coverage▶ FLIGHTY FRIENDS- Often sharing with Family and Friends? Invite them to see your flights and never manually share again!- Picking someone up, excited for a friend to visit, meeting a colleague? Share your live flight status with one tap.▶ WHAT'S FREE?- No ads- Unlimited flights- Flighty Friends- Live data- Weather- Actual flight route- Aircraft model and image- Personal flight log and map- Personal all-time and annual stats- Apple Watch app- iCloud backup & sync- Historical flight input and import limited to past 365 days (due to costs)- Lock screen widgets (limited refresh for costs)▶ WHAT'S PRO?- See why your flight is delayed- Industry's fastest push alerts- 25-hour where's my plane- Live activities- Live data, even on 'messaging-only' plane wifi- Live lock screen widgets- Pilot-grade FAA delay alerts- FAA delay reasons- Unlimited past flight lookup- Unlimited bulk import- Delay predictions- Arrival forecast- TripIt sync- Calendar sync- Email forwarding- Apple Watch complications- Tail number- Taxi times- And morePro is free on your first flight. No trial required.flightyapp.com/privacy Zero personal information is required.flightyapp.com/terms Personal use only. Business@flightyapp.com for business usage.",
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/43/ac/b3/43acb359-d8c8-2892-d98c-e6aed0996074/0x0ss.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0f/60/59/0f6059d6-e965-b019-c580-fd2c770cb652/0x0ss-2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5c/18/11/5c18118c-9b99-8191-c3c9-0ab5a988b6a0/0x0ss-3.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a0/29/52/a02952b1-dcec-5be4-ae0d-540dd48a2ada/0x0ss-4.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "iPhone: Requires iOS 17.0 or later.",
+            "iPad: Requires iPadOS 17.0 or later.",
+            "Mac: Requires macOS 14.0 or later."
+        ],
+        "features": [
+            "📅 22 Sept 2025 - Version 4.6.1",
+            "Introducing a bold new look for Live Activities, data improvements, liquid glass details throughout, and a new toolbar for essential flight actions.# LIQUID GLASSOur industry-defining Live Activity takes a big step up in design, is powered by app-wide data upgrades, and includes a beautiful new visual flight path.# DATA IMPROVEMENTS NEVER STOPAccuracy is foundational to Flighty. In 2025 we have increased accuracy across every metric. Flight status, gates, baggage, and tail numbers are especially improved, with even further Europe and Asia gains. (Individual flight results vary based on airline, airport, and region.# AI-POWERED CALENDAR IMPORTImproved parsing by 20% since March thanks to a new AI pipeline. New airline formats are learned automatically –  delivering fewer errors and wider compatibility.# MORE- Tap any yellow gate badge in Flight Details to zoom to it on the map.- Open Airport Maps in your default Map app- Improved diversion handling- Live Activities on macOS 26"
+        ],
+        "creationDate": "2025-09-28T23:18:35.301353+00:00",
+        "lastModified": "2025-09-28T23:23:18.839367+00:00",
+        "reviews": []
+    },
+    {
+        "name": "‎eMail Address Extractor",
+        "category": "Geliştirici Araçları",
+        "version": "Sürüm 6.1",
+        "fileSize": "1,6 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/52/f1/da/52f1da45-d135-e4c2-6dce-3f5bb3e5b78d/AppIcon-0-0-85-220-0-6-0-2x-0-0-0.png/1200x630bb.png",
+        "downloadLink": "https://akirabox.com/Pbe3PMo21zlX/file",
+        "website": "https://apps.apple.com/tr/app/email-address-extractor/id580832319?l=tr&mt=12 eMail Address Extractor",
+        "description": "eMail Address Extractor is highly intuitive, just select your output file format, then Drop data files or entire directories onto the hand drop-zone to quickly produce a non-duplicate list of all valid email addresses.Easily extract addresses from websites, your entire Apple Mail database, selected Mail.app folders, iWork projects (Pages, Keynote, Numbers), Microsoft Office (docx, xlsx). You can even scans within zip archives! so there's no need to extract your archived databases and documents.eMail Address Extractor is great for:*creating personal and business mailing lists*processing SQLite databases*scanning multiple documents at one time*removing duplicate adresses from mailing lists*merging lists*getting contact details from websitesFiles can be processed:*via the menubar*drag and dropConfiguration to streamline your workflow:*less false positives*add flies types to an ignore list (speed up your workflow by not needing to manually sort through valid file types)*ignore email addresses containing strings (mailer-daemon, noreply addresses for example)*option to also scan the contents of emails (not just the headers)*output results to CSV or TXT file*notifications when tasks have been completed*pdf files need to be in a text format. OCR data retrieval is not currently supported.",
+        "features": [
+            "📅 27 Eyl 2025 - Sürüm 6.1",
+            "updated for macOS Tahoe"
+        ],
+        "installation": [],
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/42/54/b9/4254b984-dead-a455-e9fa-723827270f4a/Screenshot_2025-09-27_at_7.43.30_U202fpm.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/40/82/40/408240b9-f519-6683-6a6a-5e7f339eb997/Screenshot_2025-09-27_at_7.46.16_U202fpm.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/32/99/a1/3299a146-b322-5c13-9b73-65073c672ab0/Screenshot_2025-09-27_at_7.40.18_U202fpm.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/90/f1/5f/90f15f08-0268-0969-6926-ce109e9ef1e6/Screenshot_2025-09-27_at_7.41.12_U202fpm.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ba/79/01/ba7901cb-971b-071e-a91f-0e7d9ff3f214/Screenshot_2025-09-27_at_7.40.30_U202fpm.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b0/95/5f/b0955f1b-1165-029d-7ef5-b20292e35ea0/Screenshot_2025-09-27_at_7.39.47_U202fpm.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/69/d5/ec/69d5eccf-1ec5-c6b7-c397-0ca9901413ab/Screenshot_2025-09-27_at_7.45.01_U202fpm.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "Mac: macOS 11.0 veya üst sürümünü gerektirir."
+        ],
+        "creationDate": "2025-09-28T22:54:45.872602+00:00",
+        "lastModified": "2025-09-28T22:54:45.872602+00:00",
+        "reviews": []
+    },
+    {
+        "name": "‎OmniReader - Pro Doc Read",
+        "category": "Verimlilik",
+        "version": "Sürüm 3.3.3",
+        "fileSize": "24,1 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/98/cf/ce/98cfced9-fa63-4080-16b3-39ae8e62031f/AppIcon.png/1200x630bb.png",
+        "downloadLink": "https://akirabox.com/ZvqzlYNZnGaD/file",
+        "website": "https://apps.apple.com/tr/app/omnireader-pro-doc-read/id1510511137?l=tr&mt=12 OmniReader - Pro Doc Read",
+        "description": "OmniReader – Smart & Versatile eBook ReaderA Powerful AI-Enhanced Reading ExperienceOmniReader is a feature-rich book reader designed for users who demand flexibility, efficiency, and intelligence in their reading experience. With broad format support, AI-powered assistance, and advanced customization options, it’s the ultimate tool for reading and managing digital content.Key Features:- AI Reading Assistant – Powered by the full-version DeepSeek-R1 model, providing intelligent reading support. Users can also integrate their own AI models for a highly personalized experience.- Comprehensive Format Support – Read EPUB, PDF, Kindle (MOBI, AZW3, PRC, TPZ, AZW, AZW4, AZS, AZL), CHM, RTF, DJVU, FB2, TXT, HTML, MHTML and more.- Advanced Search – Search within a single page or across the entire document, with highlighted results for quick reference.- Annotations & Bookmarks – Add highlights, notes, and bookmarks to keep track of important information.- Smart Navigation – Easily browse through reading history, jump between pages, and adjust page layouts.- Customization & Dark Mode – Customize fonts, colors, and themes for an optimized reading experience.- Text-to-Speech – Listen to your books with AI-powered voice reading. Read where you click, so that your learning efficiency is greatly improved.- File Conversion & Image Extraction – Export files to EPUB, PDF, HTML or TXT, and extract images from documents.- Organized Bookshelf – Automatically saves reading progress, supports search, sorting, renaming, and folder management.- Printing Support – Print pages directly from the app.- Support automatic scrolling reading.- Multilingual & Encoding Support – Read content in Simplified or Traditional Chinese with proper encoding to prevent text issues.- Simplified/Traditional Chinese Conversion – Seamlessly switch between Simplified and Traditional Chinese.Keyboard Shortcuts for Efficiency:- H / Left Arrow – Previous chapter- L / Right Arrow – Next chapter- J – Scroll down- K – Scroll up- Spacebar – Scroll to the next page- T – Toggle left sidebar- I – Toggle immersive mode- B – Toggle bottom toolbarDesigned for Efficiency and IntelligenceOmniReader is more than just a book reader—it’s an AI-powered reading assistant that enhances productivity, adapts to user preferences, and ensures a seamless reading experience.For inquiries or support, contact gmshrekhelp@outlook.com.Download OmniReader today and experience the future of digital reading.By using this app, you agree to our Terms of Use, governed by the standard Apple End User License Agreement (EULA). https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9e/75/25/9e75250b-b427-f2c3-126d-cdab834bea28/1cc9a37e-85c0-484c-a099-ca90eefadae3_2.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5b/c0/9e/5bc09ee3-1d55-1258-af0e-ff0cbeddde87/en.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ed/c0/7f/edc07f07-782d-4370-7751-43aedc9775f1/en1.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/16/f3/3e/16f33eda-f185-90f8-ed30-2875aec060db/1376b74b-6575-45d6-95af-d27082230075_1.jpg/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "Mac: macOS 10.14 veya üst sürümünü gerektirir."
+        ],
+        "features": [
+            "📅 17 Ağu 2025 - Sürüm 3.3.4",
+            "- Fixed some known issues."
+        ],
+        "creationDate": "2025-09-28T22:52:49.839061+00:00",
+        "lastModified": "2025-09-28T23:43:41.092566+00:00",
+        "reviews": [],
+        "badgeType": "updated"
+    },
+    {
+        "name": "‎Final Draft 13",
+        "category": "Verimlilik",
+        "version": "Sürüm 13.2.5",
+        "fileSize": "92,3 MB",
+        "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8c/bd/4d/8cbd4d26-db2f-710a-e37c-9adc19cc7be1/appicon.png/1200x630bb.png",
+        "downloadLink": "https://www.torrentmac.net/download?NzIwOTU=",
+        "website": "https://apps.apple.com/tr/app/final-draft-13/id6450966627?l=tr&mt=12 Final Draft 13",
+        "description": "Write your screenplay with Final Draft 13, the best-selling screenwriting software in the world.Final Draft 13 is used by production companies, studios, and filmmakers worldwide including James Cameron, JJ Abrams, Guillermo del Toro, Jon Favreau, Aaron Sorkin and Sophia Coppola. Final Draft automatically formats your screenplay to entertainment industry standards so you can focus on what you do best – writing. Final Draft 13 offers a fully customizable writing environment where you can plan, outline, collaborate and share your story, transforming your idea into a production-ready script.Works seamlessly with the Final Draft Go app for iPhone and iPad (sold separately).KEY WRITING FEATURES INCLUDE:Automatic Formatting - Your story is automatically formatted into a script according to industry standards.Advanced Editing - Insert ScriptNotes™, track changes, store multiple lines of dialogue plus more.Powerful Story Planning - Brainstorm, visualize, outline and navigate through your draft with the Beat Board™ and Outline Editor™.Real-time Collaboration – Collaborate simultaneously with your writing partners in real time on both the script and the Beat Board.Write Wherever, Whenever - Write on multiple devices, including Windows or Mac.Customize Your Workspace – Customize your toolbar for the way you work and use Midnight, Night, and Focus Mode to reduce distractions and eyestrain.Autosave – Backup your script automatically as you write.Watermarking in Printing and PDF Options - Print your watermarked script or save directly to PDF in script format.Retina and Full Screen Support - Distraction-free writing in full screen mode and retina display compatibility.Image Support - Insert images into your script to help visualize your story.Multi-Language Support - Write in over 95 different languages.NEW IN FINAL DRAFT 13:Writing Stats – Set goals, get valuable insights into your writing habits and productivity, identify trends, and take your work to the next level.Emoji – Sprinkle emoji across scripts, beats, title pages, and ScriptNotes. Craft more realistic onscreen text and social media exchanges.Typewriter – New Typewriter view option automatically scrolls to keep the line you’re working on centered, improving focus and ergonomics.Navigator 2.0 - Customize your Navigator for a full view and control of your script. Outline directly in the Navigator, edit scene headings, monitor inclusivity stats, and so much more.Character Development Tools - Use the new Navigator 2.0 to explore your characters. Track how much screen time each character gets, see how often different characters interact, even assign characters voices to read your script back to you.Midnight Mode - a sleek new alternative dark view theme.Enhanced Outline Editor™ & Improved Beat Board™ - Add, label, and customize lanes in Outline Editor and customize the look of beats in Beat Board view.Structure Lines - Assign colors to outlines, acts, sequences, and scenes to track them visually in your script.PRODUCTION FEATURES INCLUDE:Title Page - Create and easily include a professional Title Page with your script.Revision Mode - Revise your script as often as you'd like and track changes. Save different revisions for production purposes.Page Locking - Omit scenes, lock pages and A-pages, and apply revision set colors to A-pages and B-Pages.Colored Production Pages for Revisions - Colored border allows for writing ease, with solid color production pages in PDF for distribution.Character Highlighting – Easily see characters’ dialogue in color. Great for table reads or tracking a character’s dialogue throughout your script.Customizable Reporting - Final Draft offers eight different reports for production including Scene, Character, and Location reports.",
+        "internalImages": [
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/d6/31/e5/d631e523-9843-9d5b-21cc-f9c8c2b1866c/cbdb7285-6d47-4c34-b67a-a8524210d48e_Script.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/f2/47/0d/f2470d94-2c78-d40a-89e6-6616449e9648/cde80911-7b47-48f8-aaa8-a052d6e1c127_Midnight_Mode.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/fa/aa/a8/faaaa8f1-a96a-a9bc-3b35-30541f466dd1/db1514e6-5846-4d56-b52c-46fb7fe83266_Custom_Beat_Views.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/d5/3b/d5/d53bd5a2-f2c4-bd29-92d4-4d2c7232ef1f/8948fad2-b7ff-4bd0-9f1b-21e8c455db61_Custom_Color_PDFs.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/f4/91/d5/f491d532-b20d-9c5f-539c-f6a829c2489c/9a7f38f3-8921-4269-8dbb-8f23d9033cac_Enhanced_Outline_Editor.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/a4/11/81/a4118129-4394-2ca4-aa5b-94538543c478/274cafd1-4c8d-4e20-8d28-4e1a66c4c9ae_Writing_Goals.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/35/83/0e/35830ec7-4bde-ea2b-f974-c9756edc88fb/ee920fb6-55f9-4626-bfbc-2a60fef075f7_Writing_Stats.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/0d/46/68/0d4668dc-2452-b691-e482-94cf62379eef/bb7ef06c-6b94-4809-bfe2-516abd4c4243_Emoji.png/1286x0w.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/1c/05/4d/1c054d7c-c1f7-87cb-ac57-5c1748dee756/a91ec100-209c-4ab6-afe8-626bf5d047a6_Navigator_2.0.png/1286x0w.webp"
+        ],
+        "systemRequirements": [
+            "Mac: macOS 10.15 veya üst sürümünü gerektirir."
+        ],
+        "features": [
+            "📅 7 Ağu 2025 - Sürüm 13.2.5",
+            "• Screenplay for Beginners template• Find > Replace All - Optimizations• Improved stability for large Undo stacks• Minor bug fixes"
+        ],
+        "creationDate": "2025-09-28T21:48:07.535064+00:00",
+        "lastModified": "2025-09-28T23:38:34.795278+00:00",
+        "reviews": [],
+        "badgeType": "new"
+    }
+]

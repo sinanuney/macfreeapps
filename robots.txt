@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://macfreeapps.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin.html
+Disallow: /admin.js
+Disallow: /server.py
+Disallow: /apps.json
+Disallow: /__pycache__/
+Disallow: /node_modules/
+
+# Allow important files
+Allow: /style.css
+Allow: /script.js
+Allow: /logo.png
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /favicon-32x32.png
+Allow: /favicon-16x16.png
+Allow: /site.webmanifest
+
+# Host
+Host: https://macfreeapps.com

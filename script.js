@@ -143,7 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             const response = await fetch('/.netlify/functions/categories');
-            if (!response.ok) throw new Error('Kategoriler yüklenemedi');
+            if (!response.ok) {
+                console.log('API not available (status:', response.status, '), using fallback data');
+                throw new Error('Kategoriler yüklenemedi');
+            }
             
             // Response'un JSON olup olmadığını kontrol et
             const contentType = response.headers.get('content-type');
@@ -305,7 +308,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const response = await fetch(url);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            if (!response.ok) {
+                console.log('API not available (status:', response.status, '), using fallback data');
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             
             // Response'un JSON olup olmadığını kontrol et
             const contentType = response.headers.get('content-type');
@@ -316,6 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             const data = await response.json();
+            console.log('API working, using server data');
 
             appList.innerHTML = '';
             
@@ -724,6 +731,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Fetching featured apps...');
             const response = await fetch('/.netlify/functions/featured-apps');
             if (!response.ok) {
+                console.log('Featured apps API not available (status:', response.status, '), using fallback data');
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             

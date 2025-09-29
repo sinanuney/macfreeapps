@@ -142,6 +142,15 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch('/.netlify/functions/categories');
             if (!response.ok) throw new Error('Kategoriler yüklenemedi');
+            
+            // Response'un JSON olup olmadığını kontrol et
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                const text = await response.text();
+                console.error('Expected JSON but got:', text.substring(0, 200));
+                throw new Error('Server returned non-JSON response');
+            }
+            
             const categoryData = await response.json();
             
             // Yeni API formatından kategorileri al
@@ -201,7 +210,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Kategoriler yüklenirken hata:', error);
-            categoryList.innerHTML = '<li><a href="#" class="active" data-category="Tümü">Tümü</a></li><li><a href="#" data-category="Favoriler">Favoriler</a></li>';
+            // Fallback kategoriler
+            const fallbackCategories = {
+                hierarchy: {
+                    "Oyunlar": {
+                        subcategories: ["Aksiyon", "Macera", "Masa Oyunları", "Kart Oyunları"]
+                    },
+                    "Programlar": {
+                        subcategories: ["İş", "Geliştirici Araçları", "Eğitim", "Eğlence", "Finans", "Grafik ve Tasarım", "Müzik", "Fotoğraf ve Video"]
+                    }
+                },
+                existing: ["Fotoğraf ve Video", "Grafik ve Tasarım", "Müzik", "Geliştirici Araçları", "İş", "Eğitim"]
+            };
+            
+            const hierarchy = fallbackCategories.hierarchy || {};
+            const existing = fallbackCategories.existing || [];
+            
+            categoryList.innerHTML = '';
+            
+            // Tümü ve Favoriler seçeneklerini ekle
+            ['Tümü', 'Favoriler'].forEach(cat => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#" data-category="${cat}">${cat}</a>`;
+                if (cat === currentCategory) {
+                    li.querySelector('a').classList.add('active');
+                }
+                categoryList.appendChild(li);
+            });
+            
+            // Mevcut kategorileri ekle
+            existing.forEach(cat => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#" data-category="${cat}">${cat}</a>`;
+                if (cat === currentCategory) {
+                    li.querySelector('a').classList.add('active');
+                }
+                categoryList.appendChild(li);
+            });
         }
     }
 
@@ -228,6 +273,15 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            
+            // Response'un JSON olup olmadığını kontrol et
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                const text = await response.text();
+                console.error('Expected JSON but got:', text.substring(0, 200));
+                throw new Error('Server returned non-JSON response');
+            }
+            
             const data = await response.json();
 
             appList.innerHTML = '';
@@ -253,10 +307,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Failed to fetch apps:', error);
-            const errorMessage = error.message.includes('Failed to fetch') 
-                ? 'Sunucuya bağlanılamıyor. Sunucunun çalıştığından emin olun.' 
-                : `Hata: ${error.message}`;
-            appList.innerHTML = `<p class="error-message">${errorMessage}</p>`;
+            // Fallback to local data if API fails
+            const fallbackApps = [
+                {
+                    name: "DaVinci Resolve Studio",
+                    category: "Fotoğraf ve Video",
+                    version: "18.5",
+                    fileSize: "5.1 GB",
+                    image: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/e6/09/a0e60971-0d09-de64-ebe7-4c8b113e5bcc/Resolve.png/1200x630bb.png",
+                    description: "Profesyonel video düzenleme yazılımı. Hollywood kalitesinde post-production araçları sunar.",
+                    downloadUrl: "https://www.blackmagicdesign.com/products/davinciresolve",
+                    badgeType: "new"
+                },
+                {
+                    name: "Visual Studio Code",
+                    category: "Geliştirici Araçları",
+                    version: "1.85",
+                    fileSize: "200 MB",
+                    image: "https://code.visualstudio.com/assets/images/code-stable.png",
+                    description: "Microsoft tarafından geliştirilen ücretsiz kod editörü.",
+                    downloadUrl: "https://code.visualstudio.com/",
+                    badgeType: "updated"
+                }
+            ];
+            
+            appList.innerHTML = '';
+            let appsToDisplay = fallbackApps;
+            if (currentCategory === 'Favoriler') {
+                appsToDisplay = appsToDisplay.filter(app => favorites.includes(app.name));
+            }
+            
+            appsToDisplay.forEach(app => {
+                const appCard = createAppCard(app);
+                appList.appendChild(appCard);
+            });
+            
+            // Hide pagination for fallback
+            const paginationContainer = document.querySelector('.pagination-container');
+            if (paginationContainer) {
+                paginationContainer.innerHTML = '';
+            }
         } finally {
             isLoading = false;
             hideLoadingState();
@@ -602,12 +692,34 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
+            
+            // Response'un JSON olup olmadığını kontrol et
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                const text = await response.text();
+                console.error('Expected JSON but got:', text.substring(0, 200));
+                throw new Error('Server returned non-JSON response');
+            }
+            
             const featuredApps = await response.json();
             console.log('Featured apps received:', featuredApps);
             renderFeaturedApps(featuredApps);
         } catch (error) {
             console.error('Error fetching featured apps:', error);
-            // Hide featured section if there's an error
+            // Fallback to local data if API fails
+            const fallbackFeaturedApps = [
+                {
+                    name: "DaVinci Resolve Studio",
+                    category: "Fotoğraf ve Video",
+                    version: "18.5",
+                    fileSize: "5.1 GB",
+                    image: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/e6/09/a0e60971-0d09-de64-ebe7-4c8b113e5bcc/Resolve.png/1200x630bb.png",
+                    description: "Profesyonel video düzenleme yazılımı",
+                    downloadUrl: "https://www.blackmagicdesign.com/products/davinciresolve",
+                    badgeType: "new"
+                }
+            ];
+            renderFeaturedApps(fallbackFeaturedApps);
             const featuredSection = document.querySelector('.featured-section');
             if (featuredSection) {
                 featuredSection.style.display = 'none';

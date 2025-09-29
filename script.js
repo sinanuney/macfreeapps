@@ -141,23 +141,39 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchAndRenderCategories() {
         console.log('Loading categories...');
         
+        // Önce fallback data'yı kullan, sonra API'yi test et
+        const fallbackCategories = {
+            hierarchy: {
+                "Oyunlar": {
+                    subcategories: ["Aksiyon", "Macera", "Masa Oyunları", "Kart Oyunları", "Kumarhane Oyunları", "Basit Eğlence", "Aile", "Müzik Oyunları", "Bulmaca", "Yarış", "Rol Yapma", "Simülasyon", "Spor Oyunları", "Strateji", "Bilgi Yarışması", "Kelime Oyunları"]
+                },
+                "Programlar": {
+                    subcategories: ["İş", "Geliştirici Araçları", "Eğitim", "Eğlence", "Finans", "Grafik ve Tasarım", "Sağlık ve Fitness", "Yaşam Tarzı", "Tıp", "Müzik", "Haberler", "Fotoğraf ve Video", "Verimlilik", "Referans", "Alışveriş", "Sosyal Ağ", "Spor", "Seyahat", "Yardımcı Programlar", "Hava Durumu"]
+                }
+            },
+            existing: ["Fotoğraf ve Video", "Grafik ve Tasarım", "Müzik", "Geliştirici Araçları", "İş", "Eğitim", "Sağlık ve Fitness", "Yaşam Tarzı", "Verimlilik", "Haberler"]
+        };
+        
+        // Fallback data'yı hemen render et
+        console.log('Using fallback categories data');
+        renderCategories(fallbackCategories);
+        
+        // API'yi test et (arka planda)
         try {
             const response = await fetch('/.netlify/functions/categories');
             if (!response.ok) {
-                console.log('API not available (status:', response.status, '), using fallback data');
-                throw new Error('Kategoriler yüklenemedi');
+                console.log('API not available (status:', response.status, '), already using fallback data');
+                return;
             }
             
-            // Response'un JSON olup olmadığını kontrol et
             const contentType = response.headers.get('content-type');
             if (!contentType || !contentType.includes('application/json')) {
-                const text = await response.text();
-                console.error('Expected JSON but got:', text.substring(0, 200));
-                throw new Error('Server returned non-JSON response');
+                console.log('API returned non-JSON, already using fallback data');
+                return;
             }
             
             const categoryData = await response.json();
-            console.log('API working, using server data');
+            console.log('API working, updating with server data');
             
             // Yeni API formatından kategorileri al
             const hierarchy = categoryData.hierarchy || {};
@@ -286,7 +302,61 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function renderCategories(categoryData) {
+        const hierarchy = categoryData.hierarchy || {};
+        const existing = categoryData.existing || [];
 
+        categoryList.innerHTML = '';
+
+        // Tümü ve Favoriler seçeneklerini ekle
+        ['Tümü', 'Favoriler'].forEach(cat => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="#" data-category="${cat}">${cat}</a>`;
+            if (cat === currentCategory) {
+                li.querySelector('a').classList.add('active');
+            }
+            categoryList.appendChild(li);
+        });
+
+        // Ana kategorileri ekle
+        Object.keys(hierarchy).forEach(mainCategory => {
+            const li = document.createElement('li');
+            li.classList.add('parent-category');
+            li.innerHTML = `<a href="#" data-category="${mainCategory}"><span class="toggle-icon">▶</span>${mainCategory}</a>`;
+            
+            // Alt kategorileri ekle
+            const subList = document.createElement('ul');
+            hierarchy[mainCategory].subcategories.forEach(subCategory => {
+                const subLi = document.createElement('li');
+                subLi.innerHTML = `<a href="#" data-category="${subCategory}">${subCategory}</a>`;
+                subList.appendChild(subLi);
+            });
+            
+            li.appendChild(subList);
+            categoryList.appendChild(li);
+        });
+
+        // Mevcut kategorileri de ekle (hiyerarşide olmayanlar)
+        const existingNotInHierarchy = existing.filter(cat => 
+            !Object.values(hierarchy).some(data => data.subcategories.includes(cat))
+        );
+        
+        if (existingNotInHierarchy.length > 0) {
+            const customLi = document.createElement('li');
+            customLi.classList.add('parent-category');
+            customLi.innerHTML = `<a href="#" data-category="Mevcut Kategoriler"><span class="toggle-icon">▶</span>Mevcut Kategoriler</a>`;
+            
+            const customSubList = document.createElement('ul');
+            existingNotInHierarchy.forEach(category => {
+                const subLi = document.createElement('li');
+                subLi.innerHTML = `<a href="#" data-category="${category}">${category}</a>`;
+                customSubList.appendChild(subLi);
+            });
+            
+            customLi.appendChild(customSubList);
+            categoryList.appendChild(customLi);
+        }
+    }
 
     async function fetchApps(page = 1, search = '', category = 'Tümü', sort = 'default') {
         if (isLoading) return;
@@ -295,34 +365,95 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show loading state
         showLoadingState();
 
-        const url = new URL('/.netlify/functions/apps', window.location.origin);
-        url.searchParams.append('page', page);
-        url.searchParams.append('limit', 20); // 20 uygulama per sayfa
-        if (search) url.searchParams.append('search', search);
-        
-        if (category !== 'Tümü') {
-            url.searchParams.append('category', category);
-        }
-        
-        url.searchParams.append('sort', sort);
+        // Önce fallback data'yı kullan
+        const fallbackApps = [
+            {
+                name: "DaVinci Resolve Studio",
+                category: "Fotoğraf ve Video",
+                version: "18.5",
+                fileSize: "5.1 GB",
+                image: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/e6/09/a0e60971-0d09-de64-ebe7-4c8b113e5bcc/Resolve.png/1200x630bb.png",
+                description: "Profesyonel video düzenleme yazılımı. Hollywood kalitesinde post-production araçları sunar.",
+                downloadUrl: "https://www.blackmagicdesign.com/products/davinciresolve",
+                badgeType: "new",
+                features: ["8K video desteği", "Gelişmiş renk düzeltme", "Ses düzenleme araçları", "VFX ve motion graphics"],
+                installation: ["Dosyayı indirin", "DMG dosyasını açın", "Uygulamayı Applications klasörüne sürükleyin", "Launchpad'den çalıştırın"],
+                systemRequirements: ["macOS 11.0 veya üzeri", "8GB RAM (16GB önerilen)", "4GB boş disk alanı", "Metal uyumlu grafik kartı"]
+            },
+            {
+                name: "Visual Studio Code",
+                category: "Geliştirici Araçları",
+                version: "1.85",
+                fileSize: "200 MB",
+                image: "https://code.visualstudio.com/assets/images/code-stable.png",
+                description: "Microsoft tarafından geliştirilen ücretsiz kod editörü. Modern web ve bulut uygulamaları geliştirmek için tasarlanmıştır.",
+                downloadUrl: "https://code.visualstudio.com/",
+                badgeType: "updated",
+                features: ["IntelliSense kod tamamlama", "Hata ayıklama desteği", "Git entegrasyonu", "Genişletilebilir eklenti sistemi"],
+                installation: ["VS Code'u indirin", "DMG dosyasını açın", "Uygulamayı Applications klasörüne sürükleyin", "İlk açılışta eklentileri yapılandırın"],
+                systemRequirements: ["macOS 10.15 veya üzeri", "2GB RAM", "200MB boş disk alanı", "İnternet bağlantısı (eklentiler için)"]
+            },
+            {
+                name: "Sketch",
+                category: "Grafik ve Tasarım",
+                version: "98.2",
+                fileSize: "45 MB",
+                image: "https://cdn.sketch.com/images/sketch-logo.png",
+                description: "Dijital tasarım için profesyonel araç. UI/UX tasarımcıları için özel olarak geliştirilmiştir.",
+                downloadUrl: "https://www.sketch.com/",
+                badgeType: "new",
+                features: ["Vektör tabanlı çizim araçları", "Prototipleme desteği", "Eklenti ekosistemi", "Takım çalışması araçları"],
+                installation: ["Sketch'i indirin", "DMG dosyasını açın", "Uygulamayı kurun", "Lisans anahtarınızı girin"],
+                systemRequirements: ["macOS 11.0 veya üzeri", "4GB RAM", "500MB boş disk alanı", "Retina ekran önerilen"]
+            },
+            {
+                name: "Logic Pro",
+                category: "Müzik",
+                version: "10.7.9",
+                fileSize: "6.2 GB",
+                image: "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/music/logic-pro-icon.png",
+                description: "Apple'ın profesyonel müzik üretim yazılımı. Kayıt, düzenleme ve miksaj için kapsamlı araçlar sunar.",
+                downloadUrl: "https://www.apple.com/logic-pro/",
+                badgeType: "updated",
+                features: ["Profesyonel kayıt araçları", "3000+ ses ve loop", "MIDI düzenleme", "Gelişmiş miksaj konsolu"],
+                installation: ["Mac App Store'dan indirin", "Apple ID ile giriş yapın", "İndirme tamamlandıktan sonra açın", "İlk kurulum sihirbazını takip edin"],
+                systemRequirements: ["macOS 12.3 veya üzeri", "8GB RAM (16GB önerilen)", "6GB boş disk alanı", "Audio interface önerilen"]
+            }
+        ];
 
+        // Fallback data'yı hemen render et
+        console.log('Using fallback apps data');
+        const data = {
+            apps: fallbackApps,
+            currentPage: 1,
+            totalPages: 1,
+            totalApps: fallbackApps.length
+        };
+        renderApps(data);
+
+        // API'yi test et (arka planda)
         try {
+            const url = new URL('/.netlify/functions/apps', window.location.origin);
+            url.searchParams.append('page', page);
+            url.searchParams.append('limit', 20);
+            if (search) url.searchParams.append('search', search);
+            if (category !== 'Tümü') url.searchParams.append('category', category);
+            url.searchParams.append('sort', sort);
+
             const response = await fetch(url);
             if (!response.ok) {
-                console.log('API not available (status:', response.status, '), using fallback data');
-                throw new Error(`HTTP error! status: ${response.status}`);
+                console.log('API not available (status:', response.status, '), already using fallback data');
+                return;
             }
             
-            // Response'un JSON olup olmadığını kontrol et
             const contentType = response.headers.get('content-type');
             if (!contentType || !contentType.includes('application/json')) {
-                const text = await response.text();
-                console.error('Expected JSON but got:', text.substring(0, 200));
-                throw new Error('Server returned non-JSON response');
+                console.log('API returned non-JSON, already using fallback data');
+                return;
             }
             
-            const data = await response.json();
-            console.log('API working, using server data');
+            const apiData = await response.json();
+            console.log('API working, updating with server data');
 
             appList.innerHTML = '';
             
@@ -724,6 +855,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.querySelector('.featured-container');
         container.scrollBy({ left: -container.clientWidth, behavior: 'smooth' });
     });
+
+    function renderApps(data) {
+        appList.innerHTML = '';
+        
+        const isMainPage = data.currentPage === 1 && !currentSearch && currentCategory === 'Tümü';
+        if (!isMainPage) {
+            const featuredSection = document.querySelector('.featured-apps');
+            if (featuredSection) featuredSection.style.display = 'none';
+        }
+        
+        let appsToDisplay = data.apps;
+        if (currentCategory === 'Favoriler') {
+            appsToDisplay = appsToDisplay.filter(app => favorites.includes(app.name));
+        }
+        
+        displayApps(appsToDisplay);
+        currentPage = data.currentPage;
+        totalPages = data.totalPages;
+        renderPagination(totalPages, currentPage);
+        
+        isLoading = false;
+        hideLoadingState();
+    }
 
     // Fetch featured apps from server
     async function fetchFeaturedApps() {

@@ -139,6 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     async function fetchAndRenderCategories() {
+        console.log('Loading categories...');
+        
         try {
             const response = await fetch('/.netlify/functions/categories');
             if (!response.ok) throw new Error('Kategoriler yüklenemedi');
@@ -152,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             const categoryData = await response.json();
+            console.log('API working, using server data');
             
             // Yeni API formatından kategorileri al
             const hierarchy = categoryData.hierarchy || {};
@@ -210,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Kategoriler yüklenirken hata:', error);
+            console.log('Using fallback categories data');
             // Fallback kategoriler - orijinal tasarımı koru
             const fallbackCategories = {
                 hierarchy: {
@@ -336,6 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Failed to fetch apps:', error);
+            console.log('Using fallback apps data');
             // Fallback to local data if API fails
             const fallbackApps = [
                 {
@@ -735,6 +740,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderFeaturedApps(featuredApps);
         } catch (error) {
             console.error('Error fetching featured apps:', error);
+            console.log('Using fallback featured apps data');
             // Fallback to local data if API fails
             const fallbackFeaturedApps = [
                 {

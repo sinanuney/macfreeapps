@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchAndRenderCategories() {
         try {
-            const response = await fetch('/api/categories');
+            const response = await fetch('/.netlify/functions/categories');
             if (!response.ok) throw new Error('Kategoriler yüklenemedi');
             const categoryData = await response.json();
             
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show loading state
         showLoadingState();
 
-        const url = new URL('/api/apps', window.location.origin);
+        const url = new URL('/.netlify/functions/apps', window.location.origin);
         url.searchParams.append('page', page);
         url.searchParams.append('limit', 20); // 20 uygulama per sayfa
         if (search) url.searchParams.append('search', search);
@@ -598,7 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchFeaturedApps() {
         try {
             console.log('Fetching featured apps...');
-            const response = await fetch('/api/featured-apps');
+            const response = await fetch('/.netlify/functions/featured-apps');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -632,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.testFeaturedApps = async function() {
         console.log('Testing featured apps...');
         try {
-            const response = await fetch('/api/featured-apps');
+            const response = await fetch('/.netlify/functions/featured-apps');
             const featuredApps = await response.json();
             console.log('Featured apps from API:', featuredApps);
             
@@ -691,7 +691,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show loading state
         showLoadingState();
 
-        const url = new URL('/api/apps', window.location.origin);
+        const url = new URL('/.netlify/functions/apps', window.location.origin);
         url.searchParams.append('page', page);
         url.searchParams.append('limit', 20);
         if (search) url.searchParams.append('search', search);

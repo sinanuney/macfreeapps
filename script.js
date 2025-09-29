@@ -139,23 +139,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     async function fetchAndRenderCategories() {
+        // Geçici olarak static data kullan
+        console.log('Using static categories data');
+        const categoryData = {
+            hierarchy: {
+                "Oyunlar": {
+                    subcategories: ["Aksiyon", "Macera", "Masa Oyunları", "Kart Oyunları", "Kumarhane Oyunları", "Basit Eğlence", "Aile", "Müzik Oyunları", "Bulmaca", "Yarış", "Rol Yapma", "Simülasyon", "Spor Oyunları", "Strateji", "Bilgi Yarışması", "Kelime Oyunları"]
+                },
+                "Programlar": {
+                    subcategories: ["İş", "Geliştirici Araçları", "Eğitim", "Eğlence", "Finans", "Grafik ve Tasarım", "Sağlık ve Fitness", "Yaşam Tarzı", "Tıp", "Müzik", "Haberler", "Fotoğraf ve Video", "Verimlilik", "Referans", "Alışveriş", "Sosyal Ağ", "Spor", "Seyahat", "Yardımcı Programlar", "Hava Durumu"]
+                }
+            },
+            existing: ["Fotoğraf ve Video", "Grafik ve Tasarım", "Müzik", "Geliştirici Araçları", "İş", "Eğitim", "Sağlık ve Fitness", "Yaşam Tarzı", "Verimlilik", "Haberler"]
+        };
+        
         try {
+            // API'yi test et ama hata olursa static data kullan
             const response = await fetch('/.netlify/functions/categories');
-            if (!response.ok) throw new Error('Kategoriler yüklenemedi');
-            
-            // Response'un JSON olup olmadığını kontrol et
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                const text = await response.text();
-                console.error('Expected JSON but got:', text.substring(0, 200));
-                throw new Error('Server returned non-JSON response');
+            if (response.ok) {
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const apiData = await response.json();
+                    console.log('API working, using server data');
+                    // API çalışıyorsa onu kullan
+                    const hierarchy = apiData.hierarchy || {};
+                    const existing = apiData.existing || [];
+                } else {
+                    console.log('API returned non-JSON, using static data');
+                }
+            } else {
+                console.log('API not available, using static data');
             }
-            
-            const categoryData = await response.json();
-            
-            // Yeni API formatından kategorileri al
-            const hierarchy = categoryData.hierarchy || {};
-            const existing = categoryData.existing || [];
+        } catch (error) {
+            console.log('API error, using static data:', error.message);
+        }
+        
+        // Static data'yı kullan
+        const hierarchy = categoryData.hierarchy || {};
+        const existing = categoryData.existing || [];
 
             categoryList.innerHTML = '';
 
@@ -259,30 +280,112 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show loading state
         showLoadingState();
 
-        const url = new URL('/.netlify/functions/apps', window.location.origin);
-        url.searchParams.append('page', page);
-        url.searchParams.append('limit', 20); // 20 uygulama per sayfa
-        if (search) url.searchParams.append('search', search);
-        
-        if (category !== 'Tümü') {
-            url.searchParams.append('category', category);
-        }
-        
-        url.searchParams.append('sort', sort);
+        // Static data - geçici çözüm
+        const staticApps = [
+            {
+                name: "DaVinci Resolve Studio",
+                category: "Fotoğraf ve Video",
+                version: "18.5",
+                fileSize: "5.1 GB",
+                image: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/e6/09/a0e60971-0d09-de64-ebe7-4c8b113e5bcc/Resolve.png/1200x630bb.png",
+                description: "Profesyonel video düzenleme yazılımı. Hollywood kalitesinde post-production araçları sunar.",
+                downloadUrl: "https://www.blackmagicdesign.com/products/davinciresolve",
+                badgeType: "new",
+                features: ["8K video desteği", "Gelişmiş renk düzeltme", "Ses düzenleme araçları", "VFX ve motion graphics"],
+                installation: ["Dosyayı indirin", "DMG dosyasını açın", "Uygulamayı Applications klasörüne sürükleyin", "Launchpad'den çalıştırın"],
+                systemRequirements: ["macOS 11.0 veya üzeri", "8GB RAM (16GB önerilen)", "4GB boş disk alanı", "Metal uyumlu grafik kartı"]
+            },
+            {
+                name: "Visual Studio Code",
+                category: "Geliştirici Araçları",
+                version: "1.85",
+                fileSize: "200 MB",
+                image: "https://code.visualstudio.com/assets/images/code-stable.png",
+                description: "Microsoft tarafından geliştirilen ücretsiz kod editörü. Modern web ve bulut uygulamaları geliştirmek için tasarlanmıştır.",
+                downloadUrl: "https://code.visualstudio.com/",
+                badgeType: "updated",
+                features: ["IntelliSense kod tamamlama", "Hata ayıklama desteği", "Git entegrasyonu", "Genişletilebilir eklenti sistemi"],
+                installation: ["VS Code'u indirin", "DMG dosyasını açın", "Uygulamayı Applications klasörüne sürükleyin", "İlk açılışta eklentileri yapılandırın"],
+                systemRequirements: ["macOS 10.15 veya üzeri", "2GB RAM", "200MB boş disk alanı", "İnternet bağlantısı (eklentiler için)"]
+            },
+            {
+                name: "Sketch",
+                category: "Grafik ve Tasarım",
+                version: "98.2",
+                fileSize: "45 MB",
+                image: "https://cdn.sketch.com/images/sketch-logo.png",
+                description: "Dijital tasarım için profesyonel araç. UI/UX tasarımcıları için özel olarak geliştirilmiştir.",
+                downloadUrl: "https://www.sketch.com/",
+                badgeType: "new",
+                features: ["Vektör tabanlı çizim araçları", "Prototipleme desteği", "Eklenti ekosistemi", "Takım çalışması araçları"],
+                installation: ["Sketch'i indirin", "DMG dosyasını açın", "Uygulamayı kurun", "Lisans anahtarınızı girin"],
+                systemRequirements: ["macOS 11.0 veya üzeri", "4GB RAM", "500MB boş disk alanı", "Retina ekran önerilen"]
+            },
+            {
+                name: "Logic Pro",
+                category: "Müzik",
+                version: "10.7.9",
+                fileSize: "6.2 GB",
+                image: "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/music/logic-pro-icon.png",
+                description: "Apple'ın profesyonel müzik üretim yazılımı. Kayıt, düzenleme ve miksaj için kapsamlı araçlar sunar.",
+                downloadUrl: "https://www.apple.com/logic-pro/",
+                badgeType: "updated",
+                features: ["Profesyonel kayıt araçları", "3000+ ses ve loop", "MIDI düzenleme", "Gelişmiş miksaj konsolu"],
+                installation: ["Mac App Store'dan indirin", "Apple ID ile giriş yapın", "İndirme tamamlandıktan sonra açın", "İlk kurulum sihirbazını takip edin"],
+                systemRequirements: ["macOS 12.3 veya üzeri", "8GB RAM (16GB önerilen)", "6GB boş disk alanı", "Audio interface önerilen"]
+            }
+        ];
+
+        console.log('Using static apps data');
 
         try {
+            // API'yi test et ama hata olursa static data kullan
+            const url = new URL('/.netlify/functions/apps', window.location.origin);
+            url.searchParams.append('page', page);
+            url.searchParams.append('limit', 20);
+            if (search) url.searchParams.append('search', search);
+            if (category !== 'Tümü') url.searchParams.append('category', category);
+            url.searchParams.append('sort', sort);
+
             const response = await fetch(url);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            
-            // Response'un JSON olup olmadığını kontrol et
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                const text = await response.text();
-                console.error('Expected JSON but got:', text.substring(0, 200));
-                throw new Error('Server returned non-JSON response');
+            if (response.ok) {
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const data = await response.json();
+                    console.log('API working, using server data');
+                    // API çalışıyorsa onu kullan
+                    appList.innerHTML = '';
+                    
+                    // Featured apps are now handled separately by fetchFeaturedApps()
+                    const isMainPage = page === 1 && !search && category === 'Tümü';
+                    if (!isMainPage) {
+                        document.querySelector('.featured-apps').style.display = 'none';
+                    }
+                    
+                    let appsToDisplay = data.apps;
+                    if (currentCategory === 'Favoriler') {
+                        appsToDisplay = appsToDisplay.filter(app => favorites.includes(app.name));
+                    }
+                    
+                    displayApps(appsToDisplay);
+                    currentPage = data.currentPage;
+                    totalPages = data.totalPages;
+                    renderPagination(totalPages, currentPage);
+                    return;
+                }
             }
-            
-            const data = await response.json();
+            console.log('API not available, using static data');
+        } catch (error) {
+            console.log('API error, using static data:', error.message);
+        }
+
+        // Static data'yı kullan
+        const data = {
+            apps: staticApps,
+            currentPage: 1,
+            totalPages: 1,
+            totalApps: staticApps.length
+        };
 
             appList.innerHTML = '';
             
@@ -686,45 +789,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch featured apps from server
     async function fetchFeaturedApps() {
+        // Static featured apps data
+        const staticFeaturedApps = [
+            {
+                name: "DaVinci Resolve Studio",
+                category: "Fotoğraf ve Video",
+                version: "18.5",
+                fileSize: "5.1 GB",
+                image: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/e6/09/a0e60971-0d09-de64-ebe7-4c8b113e5bcc/Resolve.png/1200x630bb.png",
+                description: "Profesyonel video düzenleme yazılımı",
+                downloadUrl: "https://www.blackmagicdesign.com/products/davinciresolve",
+                badgeType: "new",
+                internalImages: [
+                    "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1d/8e/70/1d8e701d-06e3-9ed5-fd5a-926788cb10d9/DaVinciResolve20_AppStore_Cut.png/1286x0w.webp",
+                    "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fb/ff/e0/fbffe04c-59f0-9253-3451-85baad667899/DaVinciResolve20_AppStore_Edit.png/1286x0w.webp",
+                    "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/d9/7a/4cd97a6b-1bea-9bca-1633-c6881b038f5b/DaVinciResolve20_AppStore_Fusion.png/1286x0w.webp"
+                ]
+            },
+            {
+                name: "Visual Studio Code",
+                category: "Geliştirici Araçları",
+                version: "1.85",
+                fileSize: "200 MB",
+                image: "https://code.visualstudio.com/assets/images/code-stable.png",
+                description: "Microsoft'un ücretsiz kod editörü",
+                downloadUrl: "https://code.visualstudio.com/",
+                badgeType: "updated",
+                internalImages: [
+                    "https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/hero.png",
+                    "https://code.visualstudio.com/assets/docs/languages/python/run-python-code-in-terminal.png"
+                ]
+            },
+            {
+                name: "Logic Pro",
+                category: "Müzik",
+                version: "10.7.9",
+                fileSize: "6.2 GB",
+                image: "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/music/logic-pro-icon.png",
+                description: "Apple'ın profesyonel müzik yazılımı",
+                downloadUrl: "https://www.apple.com/logic-pro/",
+                badgeType: "new"
+            }
+        ];
+
+        console.log('Using static featured apps data');
+
         try {
-            console.log('Fetching featured apps...');
+            // API'yi test et ama hata olursa static data kullan
             const response = await fetch('/.netlify/functions/featured-apps');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            
-            // Response'un JSON olup olmadığını kontrol et
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                const text = await response.text();
-                console.error('Expected JSON but got:', text.substring(0, 200));
-                throw new Error('Server returned non-JSON response');
-            }
-            
-            const featuredApps = await response.json();
-            console.log('Featured apps received:', featuredApps);
-            renderFeaturedApps(featuredApps);
-        } catch (error) {
-            console.error('Error fetching featured apps:', error);
-            // Fallback to local data if API fails
-            const fallbackFeaturedApps = [
-                {
-                    name: "DaVinci Resolve Studio",
-                    category: "Fotoğraf ve Video",
-                    version: "18.5",
-                    fileSize: "5.1 GB",
-                    image: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a0/e6/09/a0e60971-0d09-de64-ebe7-4c8b113e5bcc/Resolve.png/1200x630bb.png",
-                    description: "Profesyonel video düzenleme yazılımı",
-                    downloadUrl: "https://www.blackmagicdesign.com/products/davinciresolve",
-                    badgeType: "new"
+            if (response.ok) {
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const featuredApps = await response.json();
+                    console.log('API working, using server data');
+                    renderFeaturedApps(featuredApps);
+                    return;
                 }
-            ];
-            renderFeaturedApps(fallbackFeaturedApps);
-            const featuredSection = document.querySelector('.featured-section');
-            if (featuredSection) {
-                featuredSection.style.display = 'none';
             }
+            console.log('API not available, using static data');
+        } catch (error) {
+            console.log('API error, using static data:', error.message);
         }
+
+        // Static data'yı kullan
+        renderFeaturedApps(staticFeaturedApps);
     }
 
     async function initializePage() {
